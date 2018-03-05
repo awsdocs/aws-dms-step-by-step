@@ -34,7 +34,7 @@ Following are some things to consider when launching your Aurora MySQL instance:
   ALTER, CREATE, DROP, INDEX, INSERT, UPDATE, DELETE, SELECT
   ```
 
-  Additionally, AWS DMS needs complete access to the awsdms\_control databse\. This database holds information required by AWS DMS specific to the migration\. To provide access, run the following command\.
+  Additionally, AWS DMS needs complete access to the awsdms\_control database\. This database holds information required by AWS DMS specific to the migration\. To provide access, run the following command\.
 
   ```
   ALL PRIVILEGES ON awsdms_control.* TO 'dms_user'
