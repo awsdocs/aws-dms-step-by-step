@@ -5,9 +5,7 @@ This walkthrough gets you started with heterogeneous database migration from Ama
 It is important to understand that AWS DMS and AWS SCT are two different tools and serve different needs\. They don’t interact with each other in the migration process\. At a high level, the steps involved in this migration are:
 
 1.  Using the AWS SCT to:
-
    +  Run the conversion report for Oracle to Aurora MySQL to identify the issues, limitations, and actions required for the schema conversion\.
-
    +  Generate the schema scripts and apply them on the target before performing the data load via AWS DMS\. AWS SCT will perform the necessary code conversion for objects like procedures and views\.
 
 1.  Identify and implement solutions to the issues reported by AWS SCT\. For example, an object type like Oracle Sequence that is not supported in the Amazon Aurora MySQL can be handled using the auto\_increment option to populate surrogate keys or develop logic for sequences at the application layer\. 
@@ -22,7 +20,7 @@ This walkthrough uses a custom AWS CloudFormation template to create an Amazon R
 
 This walkthrough takes approximately two hours to complete\. The estimated cost to complete it, using AWS resources, is about $5\.00\. Be sure to follow the instructions to delete resources at the end of this walkthrough to avoid additional charges\.
 
-
+**Topics**
 + [Costs](#CHAP_RDSOracle2Aurora.Costs)
 + [Prerequisites](CHAP_RDSOracle2Aurora.Prerequisites.md)
 + [Migration Architecture](CHAP_RDSOracle2Aurora.Architecture.md)
@@ -49,19 +47,13 @@ To estimate what it will cost to run this walkthrough on AWS, you can use the AW
 | Data transfer out | First 1 GB per month free |  | 
 
 Assuming you run this walkthrough for two hours, we estimate the following pricing for AWS resources:
-
 + Amazon Aurora MySQL \+ 10 GB storage pricing estimated by using the [AWS Simple Monthly Calculator](https://calculator.s3.amazonaws.com/index.html#r=PDX&s=RDS&key=calc-73CBE401-DF5A-42CE-8B96-E9AB5D3765EE) is $1\.78\.
-
 + Amazon RDS Oracle SE2 \(license included\) \+ 10 GB GP2 storage cost, estimated as per the [pricing site](https://aws.amazon.com/rds/oracle/pricing/) at \($0\.226\) \* 2 hours \+ \($0\.115\) \* 10 GB, is $1\.602\.
-
 + AWS DMS service cost for the t2\.small instance with 50 GB GP2 storage, estimated as per the [pricing site](https://aws.amazon.com/dms/pricing/) at \($0\.036\) \* 2 hours, is $0\.072\.
 
 Total estimated cost to run this project = $1\.78 \+ $1\.602 \+ $0\.072 = $3\.454—approximately $5\.00\.
 
 This pricing is based on the following assumptions:
-
 + We assume the total data transfer to the Internet is less than a gigabyte\. The preceding pricing estimate assumes that data transfer and backup charges associated with the RDS and DMS services are within Free Tier limits\.
-
 + Storage consumed by the Aurora MySQL database is billed in per GB\-month increments, and I/Os consumed are billed in per\-million request increments\.
-
 + Data transfer between DMS and databases in RDS instances in the same Availability Zone is free\.

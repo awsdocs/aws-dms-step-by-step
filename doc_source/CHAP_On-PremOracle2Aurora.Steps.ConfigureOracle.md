@@ -39,9 +39,7 @@ exec rdsadmin.rdsadmin_util.set_configuration('archivelog retention hours',24);
    ```
 
    If a table does not have a primary key you have two options\.
-
    + You can add supplemental logging to all columns involved in the first unique index on the table \(sorted by index name\.\) 
-
    + You can add supplemental logging on all columns of the table\. 
 
    To add supplemental logging on a subset of columns in a table, that is those involved in a unique index, run the following command\.

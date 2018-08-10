@@ -27,19 +27,14 @@ Amazon RDS limits each AWS account to one snapshot copy into each region at a ti
 ### How Much Space Do I Need?<a name="CHAP_MySQL2Aurora.RDSMySQL.Snapshot.Space"></a>
 
 When you migrate a snapshot of a MySQL DB instance into an Aurora MySQL DB cluster, Aurora MySQL uses an Amazon Elastic Block Store \(Amazon EBS\) volume to format the data from the snapshot before migrating it\. In some cases, additional space is needed to format the data for migration\. When migrating data into your DB cluster, observe the following guidelines and limitations:
-
 + Although Amazon Aurora MySQL supports storage up to 64 TB in size, the process of migrating a snapshot into an Aurora MySQL DB cluster is limited by the size of the EBS volume of the snapshot\. Thus, the maximum size for a snapshot that you can migrate is 6 TB\.
-
 + Tables that are not MyISAM tables and are not compressed can be up to 6 TB in size\. If you have MyISAM tables, then Aurora MySQL must use additional space in the volume to convert the tables to be compatible with Aurora MySQL\. If you have compressed tables, then Aurora MySQL must use additional space in the volume to expand these tables before storing them on the Aurora MySQL cluster volume\. Because of this additional space requirement, you should ensure that none of the MyISAM and compressed tables being migrated from your MySQL DB instance exceeds 3 TB in size\.
 
 ### Reducing the Amount of Space Required to Migrate Data into Amazon Aurora MySQL<a name="CHAP_MySQL2Aurora.RDSMySQL.Snapshot.PreImport"></a>
 
 You might want to modify your database schema prior to migrating it into Amazon Aurora MySQL\. Such modification can be helpful in the following cases: 
-
 + You want to speed up the migration process\.
-
 + You are unsure of how much space you need to provision\.
-
 + You have attempted to migrate your data and the migration has failed due to a lack of provisioned space\.
 
 You can make the following changes to improve the process of migrating a database into Amazon Aurora MySQL\.
@@ -145,41 +140,28 @@ You can also choose for your new Aurora MySQL DB cluster to be encrypted "at res
 ![\[Migrate a snapshot into Amazon Aurora MySQL\]](http://docs.aws.amazon.com/dms/latest/sbs/images/AuroraMigrate02.png)
 
 1. Set the following values on the **Migrate Database** page:
-
    + **DB Instance Class**: Select a DB instance class that has the required storage and capacity for your database, for example `db.r3.large`\. Aurora MySQL cluster volumes automatically grow as the amount of data in your database increases, up to a maximum size of 64 terabytes \(TB\)\. So you only need to select a DB instance class that meets your current storage requirements\.
-
    + **DB Instance Identifier**: Type a name for the DB cluster that is unique for your account in the region you selected\. This identifier is used in the endpoint addresses for the instances in your DB cluster\. You might choose to add some intelligence to the name, such as including the region and DB engine you selected, for example **aurora\-cluster1**\.
 
      The DB instance identifier has the following constraints:
-
      + It must contain from 1 to 63 alphanumeric characters or hyphens\.
-
      + Its first character must be a letter\.
-
      + It cannot end with a hyphen or contain two consecutive hyphens\.
-
      + It must be unique for all DB instances per AWS account, per AWS Region\.
-
    + ****VPC**:** If you have an existing VPC, then you can use that VPC with your Amazon Aurora MySQL DB cluster by selecting your VPC identifier, for example `vpc-a464d1c1`\. For information on using an existing VPC, see the [Amazon RDS documentation](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.CreateVPC.html)\.
 
      Otherwise, you can choose to have Amazon RDS create a VPC for you by selecting **Create a new VPC**\. 
-
    + ****Subnet Group**:** If you have an existing subnet group, then you can use that subnet group with your Amazon Aurora MySQL DB cluster by selecting your subnet group identifier, for example `gs-subnet-group1`\.
 
      Otherwise, you can choose to have Amazon RDS create a subnet group for you by selecting **Create a new subnet group**\. 
-
    + ****Publicly Accessible**:** Select **No** to specify that instances in your DB cluster can only be accessed by resources inside of your VPC\. Select **Yes** to specify that instances in your DB cluster can be accessed by resources on the public network\. The default is **Yes**\.
 **Note**  
 Your production DB cluster might not need to be in a public subnet, because only your application servers will require access to your DB cluster\. If your DB cluster doesn't need to be in a public subnet, set **Publicly Accessible** to **No**\.
-
    + ****Availability Zone**:** Select the Availability Zone to host the primary instance for your Aurora MySQL DB cluster\. To have Amazon RDS select an Availability Zone for you, select **No Preference**\.
-
    + ****Database Port**:** Type the default port to be used when connecting to instances in the DB cluster\. The default is `3306`\.
 **Note**  
 You might be behind a corporate firewall that doesn't allow access to default ports such as the MySQL default port, 3306\. In this case, provide a port value that your corporate firewall allows\. Remember that port value later when you connect to the Aurora MySQL DB cluster\.
-
    + ****Enable Encryption**:** Choose **Yes** for your new Aurora MySQL DB cluster to be encrypted "at rest\." If you choose **Yes**, you will be required to choose an AWS KMS encryption key as the **Master Key** value\.
-
    + ****Auto Minor Version Upgrade**:** Select **Yes** if you want to enable your Aurora MySQL DB cluster to receive minor MySQL DB engine version upgrades automatically when they become available\.
 
      The **Auto Minor Version Upgrade** option only applies to upgrades to MySQL minor engine versions for your Amazon Aurora MySQL DB cluster\. It doesn't apply to regular patches applied to maintain system stability\.  

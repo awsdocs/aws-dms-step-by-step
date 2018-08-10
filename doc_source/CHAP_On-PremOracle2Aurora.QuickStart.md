@@ -5,9 +5,7 @@ To migrate your data from Oracle to Aurora MySQL using AWS DMS, you take the fol
 ## Step 1: Prepare Your Oracle Source Database<a name="CHAP_On-PremOracle2Aurora.QuickStart.StepOne"></a>
 
 To use AWS DMS to migrate data from an Oracle source database requires some preparation and we also recommend a few additional steps as best practices\.
-
 + AWS DMS account – It’s a good practice to create a separate account for the specific purpose of migrating your data\. This account should have the minimal set of privileges required to migrate your data\. Specific details regarding those privileges are outlined below\. If you are simply interested in testing AWS DMS on a non\-production database, any DBA account will be sufficient\.
-
 + Supplemental logging – To capture changes, you must enable supplemental logging in order to use DMS\. To enable supplemental logging at the database level issue the following command\.
 
   ```
@@ -19,15 +17,12 @@ To use AWS DMS to migrate data from an Oracle source database requires some prep
   ```
   addSupplementalLogging=Y
   ```
-
 + Source database – To migrate your data, the AWS DMS replication server needs access to your source database\. Make sure that your firewall rules give the AWS DMS replication server ingress\.
 
 ## Step 2: Launch and Prepare Your Aurora MySQL Target Database<a name="CHAP_On-PremOracle2Aurora.QuickStart.StepTwo"></a>
 
 Following are some things to consider when launching your Aurora MySQL instance:
-
 + For best results, we recommend that you locate your Aurora MySQL instance and your replication instance in the same VPC and, if possible, the same Availability Zone\.  
-
 + We recommend that you create a separate account with minimal privileges for migrating your data\. The AWS DMS account needs the following privileges on all databases to which data is being migrated\. 
 
   ```
@@ -43,21 +38,15 @@ Following are some things to consider when launching your Aurora MySQL instance:
 ## Step 3: Launch a Replication Instance<a name="CHAP_On-PremOracle2Aurora.QuickStart.StepThree"></a>
 
 The AWS DMS service connects to your source and target databases from a replication instance\. Here are some things to consider when launching your replication instance:
-
 + For best results, we recommend that you locate your replication instance in the same VPC and Availability Zone as your target database, in this case Aurora MySQL\.
-
 + If either your source or target database is outside of the VPC where you launch your replication server, the replication server must be publicly accessible\.
-
 + AWS DMS can consume a fair bit of memory and CPU\. However, it’s easy enough to scale up if necessary\. If you anticipate running several tasks on a single replication server or 
-
 + The default storage is usually enough for most migrations\.
 
 ## Step 4: Create a Source Endpoint<a name="CHAP_On-PremOracle2Aurora.QuickStart.StepFour"></a>
 
 For AWS DMS to access your Oracle source database you’ll need to create a source endpoint\. The source endpoint defines all the information required for AWS DMS to connect to your source database from the replication server\. Following are some requirements for the source endpoint\.
-
 + Your source endpoint needs to be accessible from the replication server\. To allow this, you will likely need to modify your firewall rules to whitelist the replication server\. You can find the IP address of your replication server in the AWS DMS Management Console\.
-
 + For AWS DMS to capture changes, Oracle requires supplemental logging be enabled\. If you want AWS DMS to enable supplemental logging for you, add the following to the extra connection attributes for your Oracle source endpoint\.
 
   ```
@@ -67,9 +56,7 @@ For AWS DMS to access your Oracle source database you’ll need to create a sour
 ## Step 5: Create a Target Endpoint<a name="CHAP_On-PremOracle2Aurora.QuickStart.StepFive"></a>
 
 For AWS DMS to access your Aurora MySQL target database you’ll need to create a target endpoint\. The target endpoint defines all the information required for DMS to connect to your Aurora MySQL database\.
-
 + Your target endpoint needs to be accessible from the replication server\. You might need to modify your security groups to make the target endpoint accessible\.
-
 + If you’ve pre\-created the database on your target, it’s a good idea to disable foreign key checks during the full load\. To do so, add the following to your extra connection attributes\.
 
   ```

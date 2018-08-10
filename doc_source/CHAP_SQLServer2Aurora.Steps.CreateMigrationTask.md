@@ -8,7 +8,7 @@ Using an AWS DMS task, you can specify what schema to migrate and the type of mi
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/dms/latest/sbs/CHAP_SQLServer2Aurora.Steps.CreateMigrationTask.html)
 
    The page should look similar to the following:  
-![\[ Create task page\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsqlserver2aurora-dmstask.png)
+![\[Create task page\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsqlserver2aurora-dmstask.png)
 
 1. Under **Task settings**, specify the settings\. The following table describes the settings\.    
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/dms/latest/sbs/CHAP_SQLServer2Aurora.Steps.CreateMigrationTask.html)
@@ -23,8 +23,7 @@ Using an AWS DMS task, you can specify what schema to migrate and the type of mi
 
 The **Tasks** section shows you the status of the migration task\.
 
-![\[ Tasks section showing the source, target, type, and completion status
-                        for a task\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsqlserver2aurora-dmsmonitor.png)
+![\[Tasks section showing the source, target, type, and completion status for a task\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsqlserver2aurora-dmsmonitor.png)
 
 If you chose **Enable logging** during setup, you can monitor your task\. You can then view the Amazon CloudWatch metrics\.
 
@@ -45,15 +44,10 @@ If you chose **Enable logging** during setup, you can monitor your task\. You ca
 1. If you chose to use AWS DMS to replicate changes, in the AWS DMS console, start the AWS DMS task by choosing **Start/Resume** for the task\.
 
    Important replication instance metrics to monitor include the following:
-
    + CPU
-
    + FreeableMemory
-
    + DiskQueueDepth
-
    + CDCLatencySource
-
    + CDCLatencyTarget
 
    The AWS DMS task keeps the target Aurora MySQL database up to date with source database changes\. AWS DMS keeps all the tables in the task up to date until it's time to implement the application migration\. The latency is zero, or close to zero, when the target has caught up to the source\. 

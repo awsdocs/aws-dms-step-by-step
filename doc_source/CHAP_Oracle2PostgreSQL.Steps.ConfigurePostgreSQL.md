@@ -17,5 +17,5 @@
    GRANT CONNECT ON DATABASE database_name TO postgresql_sct_user;
    GRANT USAGE ON SCHEMA schema_name TO postgresql_sct_user;
    GRANT SELECT ON ALL TABLES IN SCHEMA schema_name TO postgresql_sct_user;
-   GRANT ALL ON SEQUENCIES IN SCHEMA schema_name TO postgresql_sct_user;
+   GRANT ALL ON SEQUENCES IN SCHEMA schema_name TO postgresql_sct_user;
    ```

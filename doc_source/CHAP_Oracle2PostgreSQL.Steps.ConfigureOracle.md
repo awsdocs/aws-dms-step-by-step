@@ -66,13 +66,11 @@ To capture change data, AWS DMS requires supplemental logging to be enabled on y
    If your Oracle source is an AWS RDS database, it will be placed in ARCHIVELOG MODE if, and only if, you enable backups\.
 
 1. Run the following command to enable supplemental logging at the database level, which AWS DMS requires:
-
    + In Oracle SQL:
 
      ```
      ALTER DATABASE ADD SUPPLEMENTAL LOG DATA;
      ```
-
    + In RDS:
 
      ```
@@ -80,13 +78,11 @@ To capture change data, AWS DMS requires supplemental logging to be enabled on y
      ```
 
 1. Use the following command to enable identification key supplemental logging at the database level\. AWS DMS requires supplemental key logging at the database level\. The exception is if you allow AWS DMS to automatically add supplemental logging as needed or enable key\-level supplemental logging at the table level:
-
    + In Oracle SQL:
 
      ```
      ALTER DATABASE ADD SUPPLEMENTAL LOG DATA (PRIMARY KEY) COLUMNS;
      ```
-
    + In RDS:
 
      ```
@@ -102,9 +98,7 @@ To capture change data, AWS DMS requires supplemental logging to be enabled on y
    ```
 
    If a table does not have a primary key, then you have two options\.
-
    + You can add supplemental logging on all columns involved in the first unique index on the table \(sorted by index name\)\. 
-
    + You can add supplemental logging on all columns of the table\. 
 
    To add supplemental logging on a subset of columns in a table, such as those involved in a unique index, run the following command\.

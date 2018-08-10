@@ -1,9 +1,7 @@
 # Document History<a name="doc-history"></a>
 
 The following table describes the important changes to the documentation since the last release of AWS Database Migration Service Step\-by\-Step Migration Guide\.
-
 + **API version:** 20160101
-
 + **Latest documentation update:** August 30, 2017
 
 

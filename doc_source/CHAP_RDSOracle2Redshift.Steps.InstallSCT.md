@@ -19,12 +19,12 @@ This walkthrough assumes you will use the SQL Workbench/J client to connect to t
    1. From the list of drivers, choose **Oracle**\.
 
    1. Choose the **Open** icon, then choose the **ojdbc\.jar** file that you downloaded in the previous step\. Choose **OK**\.  
-![\[ AWS Database Migration Service driver management \]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2redshift7.png)
+![\[AWS Database Migration Service driver management\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2redshift7.png)
 
    1. From the list of drivers, choose **Redshift**\.
 
    1. Choose the **Open** icon, then choose the Amazon Redshift JDBC driver that you downloaded in the previous step\. Choose **OK**\.  
-![\[ AWS Database Migration Service driver management\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2redshift8.png)
+![\[AWS Database Migration Service driver management\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2redshift8.png)
 
 Next, install AWS SCT and the required JDBC drivers\.
 

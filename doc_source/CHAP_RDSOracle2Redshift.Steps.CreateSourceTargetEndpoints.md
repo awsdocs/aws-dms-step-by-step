@@ -11,7 +11,7 @@ While your replication instance is being created, you can specify the source and
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/dms/latest/sbs/CHAP_RDSOracle2Redshift.Steps.CreateSourceTargetEndpoints.html)
 
    The completed page should look like the following\.  
-![\[ Advanced section\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2redshift19.5.png)
+![\[Advanced section\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2redshift19.5.png)
 
 1. Wait for the status to say **Replication instance created successfully\.**\.
 

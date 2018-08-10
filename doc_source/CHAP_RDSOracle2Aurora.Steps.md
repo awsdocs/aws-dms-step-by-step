@@ -2,7 +2,7 @@
 
 In the following sections, you can find step\-by\-step instructions for migrating an Amazon Relational Database Service \(Amazon RDS\) Oracle database to Amazon Aurora MySQL\. These steps assume that you have already prepared your source database as described in preceding sections\. 
 
-
+**Topics**
 + [Step 1: Launch the RDS Instances in a VPC by Using the CloudFormation Template](CHAP_RDSOracle2Aurora.Steps.LaunchRDSwCloudFormation.md)
 + [Step 2: Install the SQL Tools and AWS Schema Conversion Tool on Your Local Computer](CHAP_RDSOracle2Aurora.Steps.InstallSCT.md)
 + [Step 3: Test Connectivity to the Oracle DB Instance and Create the Sample Schema](CHAP_RDSOracle2Aurora.Steps.ConnectOracle.md)

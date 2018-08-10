@@ -33,9 +33,7 @@ Perform the following steps to move connections from your Oracle database to you
 1. \(Optional\) Set up a rollback\.
 
    You can optionally set up a rollback task, in case you run into a show stopping issue, by creating a task going in the opposite direction\. Because all tables should be in sync between both databases, you only need to set up a CDC task\. Therefore, you do not have to disable any foreign key constraints\. Now that the source and target databases are reversed, you must follow the instructions in the following sections:
-
    + [Using a PostgreSQL Database as a Source for AWS Database Migration Service](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.PostgreSQL.html)
-
    + [Using an Oracle Database as a Target for AWS Database Migration Service](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Oracle.html)
 
    1. Disable triggers on the source Oracle database\.

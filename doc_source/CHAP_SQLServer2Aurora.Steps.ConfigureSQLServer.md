@@ -3,15 +3,12 @@
 After installing the SQL drivers and AWS Schema Conversion Tool, you can configure your Microsoft SQL Server source database using one of several options, depending on how you plan to migrate your data\. 
 
 **To configure your SQL Server source database**
-
 + When configuring your source database, you can choose to migrate existing data only, migrate existing data and replicate ongoing changes, or migrate existing data and use change data capture \(CDC\) to replicate ongoing changes\. For more information about these options, see [Prerequisites](CHAP_SQLServer2Aurora.Prerequisites.html)\.
-
   + Migrating existing data only
 
     No configuration steps are necessary for the SQL Server database\. You can move on to [Step 3: Configure Your Aurora MySQL Target Database](CHAP_SQLServer2Aurora.Steps.ConfigureAurora.md)\.
 **Note**  
 If the SQL Server database is an Amazon RDS database, replication is not supported, and you must use the option for migrating existing data only\.
-
   + Migrating existing data and replicating ongoing changes
 **Note**  
 Replication requires a primary key for all tables that are being replicated\. If your tables don't have primary keys defined, consider using CDC instead\.
@@ -25,7 +22,6 @@ Replication requires a primary key for all tables that are being replicated\. If
        For more information, see the [ Microsoft documentation](https://docs.microsoft.com/en-us/sql/relational-databases/replication/enable-a-database-for-replication-sql-server-management-studio)\.
 
        When the configuration is complete, your server is enabled for replication\. Either a distribution database is in place, or you have configured your server to use a remote distribution database\.
-
   + Migrating existing data and using change data capture \(CDC\) to replicate ongoing changes
 
     To configure MS\-CDC, complete the following steps:

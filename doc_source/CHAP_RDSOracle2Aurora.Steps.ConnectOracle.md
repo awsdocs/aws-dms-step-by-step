@@ -21,7 +21,7 @@ If your connection is unsuccessful, ensure that the IP address you assigned when
    1. Choose **SQL**, then choose **Execute All**\.
 
       When you run the script, you will get an error message indicating that user HR does not exists\. You can ignore this error and run the script\. The script drops the user before creating it,which generates the error\.  
-![\[ AWS Database Migration Service SQL script to install the demo schema\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora9.5.png)
+![\[AWS Database Migration Service SQL script to install the demo schema\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora9.5.png)
 
 1. Verify the object types and count in HR Schema were created successfully by running the following SQL query\. You can also compare the results from the following queries with the results listed in the spreadsheet provided by AWS [at this site](https://dms-sbs.s3.amazonaws.com/AWSDMSDemoStats.xlsx)\. 
 
@@ -40,7 +40,7 @@ If your connection is unsuccessful, ensure that the IP address you assigned when
    	TABLE	7			
    	VIEW	1
    ```  
-![\[ AWS Database Migration Service SQL script to install the demo schema\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora9.7.png)
+![\[AWS Database Migration Service SQL script to install the demo schema\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora9.7.png)
 
 1. Verify the number of constraints in HR schema by running the following SQL query:
 

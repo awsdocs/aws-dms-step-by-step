@@ -8,19 +8,19 @@ Using an AWS DMS task, you can specify what schema to migrate and the type of mi
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/dms/latest/sbs/CHAP_RDSOracle2Redshift.Steps.CreateMigrationTask.html)
 
    The page should look like the following\.  
-![\[ Create task page\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2redshift23.png)
+![\[Create task page\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2redshift23.png)
 
 1. On the **Task Settings** section, specify the settings as shown in the following table\.    
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/dms/latest/sbs/CHAP_RDSOracle2Redshift.Steps.CreateMigrationTask.html)
 
    The section should look like the following\.  
-![\[ Create task page\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2redshift23.5.png)
+![\[Create task page\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2redshift23.5.png)
 
 1. In the **Selection rules** section, specify the settings as shown in the following table\.    
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/dms/latest/sbs/CHAP_RDSOracle2Redshift.Steps.CreateMigrationTask.html)
 
    The section should look like the following:  
-![\[ Add selection rule page\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2redshift24.png)
+![\[Add selection rule page\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2redshift24.png)
 
 1. Choose **Add selection rule**\.
 

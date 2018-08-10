@@ -19,7 +19,7 @@ If your connection is unsuccessful, ensure that the IP address you assigned when
    1. In SQL Workbench/J, paste the SQL script in the Default\.wksp window showing **Statement 1**\.
 
    1. Choose **SQL**, then choose **Execute All**\.  
-![\[ AWS Database Migration Service SQL script to install the demo schema\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2redshift9.5.png)
+![\[AWS Database Migration Service SQL script to install the demo schema\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2redshift9.5.png)
 
 1. Verify the object types and count in SH Schema were created successfully by running the following SQL query\.
 

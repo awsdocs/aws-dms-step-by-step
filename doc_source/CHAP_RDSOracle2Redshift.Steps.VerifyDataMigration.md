@@ -9,7 +9,7 @@ When the migration task completes, you can compare your task results with the ex
 1. Choose your migration task \(**migrateSHschema**\)\.
 
 1. Choose the **Table statistics** tab, shown following\.  
-![\[ Table statistics tab\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2redshift26.png)
+![\[Table statistics tab\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2redshift26.png)
 
 1. Connect to the Amazon Redshift instance by using SQL Workbench/J, and then check whether the database tables were successfully migrated from Oracle to Amazon Redshift by running the SQL script shown following\.
 

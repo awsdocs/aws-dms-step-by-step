@@ -6,7 +6,7 @@ Using this walkthrough, you can learn how to migrate an Oracle database to a Pos
 
 AWS DMS doesn't migrate your secondary indexes, sequences, default values, stored procedures, triggers, synonyms, views, and other schema objects not specifically related to data migration\. To migrate these objects to your PostgreSQL target, use AWS SCT\.
 
-
+**Topics**
 + [Prerequisites](CHAP_RDSOracle2PostgreSQL.Prerequisites.md)
 + [Step\-by\-Step Migration](CHAP_RDSOracle2PostgreSQL.Steps.md)
 + [Rolling Back the Migration](CHAP_Oracle2PostgreSQL.Rollback.md)

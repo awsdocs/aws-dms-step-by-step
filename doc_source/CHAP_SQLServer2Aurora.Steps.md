@@ -2,7 +2,7 @@
 
 The following steps provide instructions for migrating a Microsoft SQL Server database to an Amazon Aurora MySQL database\. These steps assume that you have already prepared your source database as described in [Prerequisites](CHAP_SQLServer2Aurora.Prerequisites.md)\. 
 
-
+**Topics**
 + [Step 1: Install the SQL Drivers and AWS Schema Conversion Tool on Your Local Computer](CHAP_SQLServer2Aurora.Steps.InstallSCT.md)
 + [Step 2: Configure Your Microsoft SQL Server Source Database](CHAP_SQLServer2Aurora.Steps.ConfigureSQLServer.md)
 + [Step 3: Configure Your Aurora MySQL Target Database](CHAP_SQLServer2Aurora.Steps.ConfigureAurora.md)

@@ -2,7 +2,7 @@
 
 The following steps provide instructions for migrating an Oracle database to a PostgreSQL database\. These steps assume that you have already prepared your source database as described in [Prerequisites](CHAP_RDSOracle2PostgreSQL.Prerequisites.md)\. 
 
-
+**Topics**
 + [Step 1: Install the SQL Drivers and AWS Schema Conversion Tool on Your Local Computer](CHAP_RDSOracle2PostgreSQL.Steps.InstallSCT.md)
 + [Step 2: Configure Your Oracle Source Database](CHAP_Oracle2PostgreSQL.Steps.ConfigureOracle.md)
 + [Step 3: Configure Your PostgreSQL Target Database](CHAP_Oracle2PostgreSQL.Steps.ConfigurePostgreSQL.md)

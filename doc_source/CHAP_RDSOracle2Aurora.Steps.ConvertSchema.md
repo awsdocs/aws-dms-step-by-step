@@ -6,31 +6,28 @@ Before you migrate data to Aurora MySQL, you convert the Oracle schema to an Aur
 
 1. Launch the AWS Schema Conversion Tool \(AWS SCT\)\. In the AWS SCT, choose **File**, then choose **New Project**\. Create a new project called **DMSDemoProject**\. Enter the following information in the New Project window and then choose **OK**\.    
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/dms/latest/sbs/CHAP_RDSOracle2Aurora.Steps.ConvertSchema.html)  
-![\[ Creating a new project in the AWS Schema Conversion
-                                    Tool\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora10.9.png)
+![\[Creating a new project in the AWS Schema Conversion Tool\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora10.9.png)
 
 1. Choose **Connect to Oracle**\. In the **Connect to Oracle** dialog box, enter the following information, and then choose **Test Connection**\.    
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/dms/latest/sbs/CHAP_RDSOracle2Aurora.Steps.ConvertSchema.html)  
-![\[ Creating a new project in the AWS Schema Conversion
-                                    Tool\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora11.png)
+![\[Creating a new project in the AWS Schema Conversion Tool\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora11.png)
 
 1. Choose **OK** to close the alert box, then choose OK to close the dialog box and to start the connection to the Oracle DB instance\. The database structure on the Oracle DB instance is shown\. Select only the HR schema\.  
-![\[ Testing a connection\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora12.png)
+![\[Testing a connection\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora12.png)
 
 1. Choose **Connect to Amazon Aurora**\. In the **Connect to Amazon Aurora** dialog box, enter the following information and then choose **Test Connection**\.    
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/dms/latest/sbs/CHAP_RDSOracle2Aurora.Steps.ConvertSchema.html)  
-![\[ Creating a new project in the AWS Schema Conversion
-                                    Tool\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora12.5.png)
+![\[Creating a new project in the AWS Schema Conversion Tool\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora12.5.png)
 
    AWS SCT analyses the HR schema and creates a database migration assessment report for the conversion to Amazon Aurora MySQL\. 
 
 1. Choose **OK** to close the alert box, then choose **OK** to close the dialog box to start the connection to the Amazon Aurora MySQL DB instance\.
 
 1. Right\-click the HR schema and select **Create Report**\.  
-![\[ Database migration report in AWS SCT\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora12.7.png)
+![\[Database migration report in AWS SCT\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora12.7.png)
 
 1.  Check the report and the action items it suggests\. The report discusses the type of objects that can be converted by using AWS SCT, along with potential migration issues and actions to resolve these issues\. For this walkthrough, you should see something like the following\.  
-![\[ Database migration report in AWS SCT\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora13.png)
+![\[Database migration report in AWS SCT\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora13.png)
 
 1. Save the report as \.csv or \.pdf format for detailed analysis, and then choose the **Action Items** tab\. In the action items, you will see two issues: 1\. MySQL does not support Check constraints and 2\. MySQL does not support Sequences\.
 
@@ -39,9 +36,7 @@ Before you migrate data to Aurora MySQL, you convert the Oracle schema to an Aur
    Regarding action item \#2, there are three sequence objects in the source database that are used to generate primary keys for the EMPLOYEES \(EMPLOYEE\_ID\), DEPARTMENTS \(DEPARTMENT\_ID\), LOCATIONS \(LOCATION\_ID\) tables\. As mentioned earlier in this walkthrough, one alternative to using sequences for Surrogate keys in Aurora MySQL is using the auto\_increment feature\. To enable the auto\_increment feature, you must change the settings for SCT\. For brevity, the following substeps show enabling auto\_increment for EMPLOYEE\_ID column in the EMPLOYEES table only\. The same procedure can be repeated for the other sequence objects\.
 
    Before starting, please note enabling the auto\_increment option requires some additional steps via SCT due to the below reasons:
-
    + SCT by default converts all NUMBER \(Oracle\) data types into DECIMAL in Aurora MySQL \([http://docs\.aws\.amazon\.com/dms/latest/userguide/SchemaConversionTool/latest/userguide/CHAP\_SchemaConversionTool\.Reference\.ConversionSupport\.Oracle\.html\#d0e50104](http://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_SchemaConversionTool.Reference.ConversionSupport.Oracle.html#d0e50104)\)\.
-
    + Aurora MySQL doesn’t support auto\_increment for the DECIMAL data type\. Therefore, the data type of the primary key column and corresponding foreign key columns needs to be changed to one of the INTEGER data types such as INT, SMALLINT, MEDIUMINT or BIGINT as part of the schema conversion\.
 
    The good news is that the latest release of SCT provides a **Mapping Rules** feature that can be used to achieve the above transformation using the following steps:
@@ -89,20 +84,20 @@ Before you migrate data to Aurora MySQL, you convert the Oracle schema to an Aur
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/dms/latest/sbs/CHAP_RDSOracle2Aurora.Steps.ConvertSchema.html)
 
       Note that in a real\-world scenario you would choose the data type based on your requirements\.  
-![\[Choosing Convert schema in AWS SCT \]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora15a.png)
+![\[Choosing Convert schema in AWS SCT\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora15a.png)
 
    1. Choose **Yes** for “Would you like to save Mapping Rule settings?”
 
 1. Right\-click the HR schema, and then choose **Convert schema**\.  
-![\[Choosing Convert schema in AWS SCT \]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora16.png)
+![\[Choosing Convert schema in AWS SCT\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora16.png)
 
 1. Choose **Yes** for the confirmation message\. AWS SCT then converts your schema to the target database format\.  
-![\[ AWS SCT schema conversion\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora17.png)
+![\[AWS SCT schema conversion\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora17.png)
 
 1. Choose the HR schema, and then choose **Apply to database** to apply the schema scripts to the target Aurora MySQL instance, as shown following\.  
-![\[ Applying AWS SCT schema scripts\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora18.png)
+![\[Applying AWS SCT schema scripts\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora18.png)
 
 1. Choose the HR schema, and then choose **Refresh from Database** to refresh from the target database, as shown following\.  
-![\[ Refreshing from the target database\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora19.png)
+![\[Refreshing from the target database\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora19.png)
 
 The database schema has now been converted and imported from source to target\.

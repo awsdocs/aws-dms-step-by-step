@@ -3,11 +3,8 @@
 Next, you need to install a SQL client and the AWS Schema Conversion Tool \(AWS SCT\) on your local computer\. 
 
 This walkthrough assumes you will use the SQL Workbench/J client to connect to the RDS instances for migration validation\. A few other software tools you might want to consider are the following:
-
 + [JACK DB](http://www.jackdb.com), an online web interface to work with RDS databases \(Oracle and Aurora MySQL\) over JDBC
-
 + [DBVisualizer](https://www.dbvis.com/download/)
-
 + [Oracle SQL Developer](https://www.oracle.com/technetwork/developer-tools/sql-developer/overview/index-097090.html)
 
 **To install the SQL client software**
@@ -25,12 +22,12 @@ This walkthrough assumes you will use the SQL Workbench/J client to connect to t
    1. From the list of drivers, choose **Oracle**\.
 
    1. Choose the Open icon, then choose the **ojdbc\.jar** file that you downloaded in the previous step\. Choose **OK**\.  
-![\[ AWS Database Migration Service driver management \]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora7.png)
+![\[AWS Database Migration Service driver management\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora7.png)
 
    1. From the list of drivers, choose MySQL\.
 
    1. Choose the Open icon, then choose the MySQL JDBC driver that you downloaded in the previous step\. Choose **OK**\.  
-![\[ AWS Database Migration Service driver management\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora8.png)
+![\[AWS Database Migration Service driver management\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora8.png)
 
 Next, install the AWS Schema Migration Tool and the required JDBC drivers\.
 

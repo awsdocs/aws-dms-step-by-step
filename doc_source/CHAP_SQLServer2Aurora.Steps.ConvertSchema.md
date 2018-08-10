@@ -8,8 +8,7 @@ Before you migrate data to Amazon Aurora MySQL, convert the Microsoft SQL Server
 
 1. In the **New Project** dialog box, enter the following information, and then choose **OK**\.    
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/dms/latest/sbs/CHAP_SQLServer2Aurora.Steps.ConvertSchema.html)  
-![\[ Creating a new project in the AWS Schema Conversion
-                                Tool\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsqlserver2aurora-newsctproj.png)
+![\[Creating a new project in the AWS Schema Conversion Tool\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsqlserver2aurora-newsctproj.png)
 
 1. Choose **Connect to Microsoft SQL Server**\. In the **Connect to Microsoft SQL Server** dialog box, enter the following information, and then choose **Test Connection**\.    
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/dms/latest/sbs/CHAP_SQLServer2Aurora.Steps.ConvertSchema.html)  
@@ -24,17 +23,17 @@ Before you migrate data to Amazon Aurora MySQL, convert the Microsoft SQL Server
 1. Choose **OK** to close the alert box\. Then choose **OK** to close the dialog box and start the connection to the Aurora MySQL DB instance\.
 
 1. Open the context \(right\-click\) menu for the schema to migrate, and then choose **Convert schema**\.  
-![\[Choosing Convert schema in AWS SCT \]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsqlserver2aurora-sctconvert.png)
+![\[Choosing Convert schema in AWS SCT\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsqlserver2aurora-sctconvert.png)
 
 1. Choose **Yes** for the confirmation message\. AWS SCT then converts your schemas to the target database format\.  
-![\[ AWS SCT schema conversion\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsqlserver2aurora-sctconverted.png)
+![\[AWS SCT schema conversion\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsqlserver2aurora-sctconverted.png)
 
    AWS SCT analyzes the schema and creates a database migration assessment report for the conversion to Aurora MySQL\.
 
 1. Choose **Assessment Report View** from **View** to check the report\.
 
    The report breaks down by each object type and by how much manual change is needed to convert it successfully\.  
-![\[ Database migration report in AWS SCT\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsqlserver2aurora-sctreport.png)
+![\[Database migration report in AWS SCT\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsqlserver2aurora-sctreport.png)
 
    Generally, packages, procedures, and functions are more likely to have some issues to resolve because they contain the most custom PL/SQL code\. AWS SCT also provides hints about how to fix these objects\.
 
@@ -44,7 +43,6 @@ Before you migrate data to Amazon Aurora MySQL, convert the Microsoft SQL Server
    The **Action Items** tab shows each issue for each object that requires attention\.
 
    For each conversion issue, you can complete one of the following actions:
-
    + Modify the objects on the source SQL Server database so that AWS SCT can convert the objects to the target Aurora MySQL database\.
 
      1. Modify the objects on the source SQL Server database\.
@@ -55,7 +53,6 @@ Before you migrate data to Amazon Aurora MySQL, convert the Microsoft SQL Server
 
      1. Choose **Main View** from **View**\. Open the context \(right\-click\) menu for the target Aurora MySQL schema, and choose **Apply to database** to apply the schema changes to the Aurora MySQL database, and confirm that you want to apply the schema changes\.  
 ![\[Apply Schema changes to the database\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsqlserver2aurora-sctapply.png)
-
    + Instead of modifying the source schema, modify scripts that AWS SCT generates before applying the scripts on the target Aurora MySQL database\.
 
      1. Choose **Main View** from **View**\. Open the context \(right\-click\) menu for the target Aurora MySQL schema name, and choose **Save as SQL**\. Next, choose a name and destination for the script\.
