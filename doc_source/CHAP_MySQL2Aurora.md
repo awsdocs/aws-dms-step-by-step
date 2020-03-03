@@ -6,7 +6,7 @@ If your database supports the InnoDB or MyISAM tablespaces, you have these optio
 
 ## Migrating Data from an External MySQL Database to an Amazon Aurora MySQL Using Amazon S3<a name="CHAP_MySQL2Aurora.S3"></a>
 
-You can copy the source files from your source MySQL version 5\.5 or 5\.6 database to an S3 bucket, and then restore an Amazon Aurora MySQL DB cluster from those files\.
+You can copy the source files from your source MySQL version 5\.5, 5\.6 or 5\.7 database to an S3 bucket, and then restore an Amazon Aurora MySQL DB cluster from those files\.
 
 This option can be considerably faster than migrating data using `mysqldump`, because using `mysqldump` replays all of the commands to recreate the schema and data from your source database in your new Amazon Aurora MySQL DB cluster\. By copying your source MySQL data files, Amazon Aurora MySQL can immediately use those files as the data for DB cluster\.
 
