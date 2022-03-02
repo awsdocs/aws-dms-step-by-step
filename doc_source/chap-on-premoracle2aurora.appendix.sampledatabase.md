@@ -1,6 +1,6 @@
 # Working with the Sample Database for Migration<a name="chap-on-premoracle2aurora.appendix.sampledatabase"></a>
 
-We recommend working through the preceding outline and guide by using the sample Oracle database provided by Amazon\. This database mimics a simple sporting event ticketing system\. The scripts to generate the sample database can be found at [https://github\.com/aws\-samples/aws\-database\-migration\-samples/tree/master/mysql/sampledb/v1](https://github.com/aws-samples/aws-database-migration-samples/tree/master/mysql/sampledb/v1)\.
+We recommend working through the preceding outline and guide by using the sample Oracle database provided by Amazon\. This database mimics a simple sporting event ticketing system\. The scripts to generate the sample database can be found at [https://github\.com/aws\-samples/aws\-database\-migration\-samples/tree/master/oracle/sampledb/v1](https://github.com/aws-samples/aws-database-migration-samples/tree/master/oracle/sampledb/v1)\.
 
 To build the sample database, go to the oracle/sampledb/v1 folder and follow the instructions in the README\.md file\.
 

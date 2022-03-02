@@ -4,7 +4,7 @@ The following prerequisites are also required to complete this walkthrough:
 + Familiarity with Amazon RDS, Amazon Redshift, the applicable database technologies, and SQL\.
 + The custom scripts that include creating the tables to be migrated and SQL queries for confirming the migration, as listed following:
   +  `Oracle_Redshift_For_DMSDemo.template`\-\-an AWS CloudFormation template
-  +  `Oraclesalesstarschema.sql`\-\-SQL statements to build the SH schema
+  +  `Oraclesalesstarschema.sql`\-\-SQL statements to build the **SH** schema
 
     These scripts are available at the following link: ` [dms\-sbs\-RDSOracle2Redshift\.zip](http://docs.aws.amazon.com/dms/latest/sbs/samples/dms-sbs-RDSOracle2Redshift.zip) ` 
 

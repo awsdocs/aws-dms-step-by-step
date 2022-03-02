@@ -1,11 +1,11 @@
-# Migrating an Amazon RDS Oracle Database to Amazon Aurora MySQL<a name="chap-rdsoracle2aurora"></a>
+# Migrating an Amazon RDS for Oracle Database to Amazon Aurora MySQL<a name="chap-rdsoracle2aurora"></a>
 
-This walkthrough gets you started with heterogeneous database migration from Amazon RDS Oracle to Amazon Aurora MySQL\-Compatible Edition using AWS Database Migration Service and the AWS Schema Conversion Tool\. This is an introductory exercise so does not cover all scenarios but will provide you with a good understanding of the steps involved in executing such a migration\.
+This walkthrough gets you started with heterogeneous database migration from Amazon RDS for Oracle to Amazon Aurora MySQL\-Compatible Edition using AWS Database Migration Service \(AWS DMS\) and the AWS Schema Conversion Tool \(AWS SCT\)\. This is an introductory exercise so does not cover all scenarios but will provide you with a good understanding of the steps involved in executing such a migration\.
 
 It is important to understand that AWS DMS and AWS SCT are two different tools and serve different needs\. They don’t interact with each other in the migration process\. At a high level, the steps involved in this migration are:
 
 1. Using the AWS SCT to:
-   + Run the conversion report for Oracle to Aurora MySQL to identify the issues, limitations, and actions required for the schema conversion\.
+   + Run the conversion report for Oracle to Amazon Aurora MySQL to identify the issues, limitations, and actions required for the schema conversion\.
    + Generate the schema scripts and apply them on the target before performing the data load via AWS DMS\. AWS SCT will perform the necessary code conversion for objects like procedures and views\.
 
 1. Identify and implement solutions to the issues reported by AWS SCT\. For example, an object type like Oracle Sequence that is not supported in the Amazon Aurora MySQL can be handled using the auto\_increment option to populate surrogate keys or develop logic for sequences at the application layer\.
@@ -33,20 +33,20 @@ For this walkthrough, you provision Amazon Relational Database Service \(Amazon 
 
 Although you’ll need only a minimum of resources for this walkthrough, some of these resources are not eligible for AWS Free Tier\. At the end of this walkthrough, you’ll find a section in which you delete the resources to avoid additional charges\. Delete the resources as soon as you complete the walkthrough\.
 
-To estimate what it will cost to run this walkthrough on AWS, you can use the AWS Simple Monthly Calculator\. However, the AWS DMS service is not incorporated into the calculator yet\. The following table shows both AWS DMS and Amazon RDS Oracle Standard Edition Two pricing\.
+To estimate what it will cost to run this walkthrough on AWS, you can use the AWS Simple Monthly Calculator\. However, the AWS DMS service is not incorporated into the calculator yet\. The following table shows both AWS DMS and Amazon RDS for Oracle Standard Edition Two pricing\.
 
 
 | AWS Service | Instance Type | Storage and I/O | 
 | --- | --- | --- | 
-|  Amazon RDS Oracle DB instance, License Included \(Standard Edition Two\), Single AZ  |  db\.m3\.medium  |  Single AZ, 10 GB storage, GP2  | 
-|  Amazon Aurora MySQL DB instance  |  db\.r3\.large  |  Single AZ, 10 GB storage, 1 million I/O  | 
+|   Amazon RDS for Oracle DB instance, License Included \(Standard Edition Two\), Single AZ  |  db\.m3\.medium  |  Single AZ, 10 GB storage, GP2  | 
+|   Amazon Aurora MySQL DB instance  |  db\.r3\.large  |  Single AZ, 10 GB storage, 1 million I/O  | 
 |  AWS DMS replication instance  |  t2\.small  |  50 GB of storage for keeping replication logs included  | 
 |  AWS DMS data transfer  |  Free—​data transfer between AWS DMS and databases in RDS instances in the same Availability Zone is free  |  | 
 |  Data transfer out  |  First 1 GB per month free  |  | 
 
 Assuming you run this walkthrough for two hours, we estimate the following pricing for AWS resources:
-+ Amazon Aurora MySQL \+ 10 GB storage pricing estimated by using the link to the Simple Monthly Calculator that you can access from the [pricing site](https://aws.amazon.com/dms/pricing/) is $1\.78\.
-+ Amazon RDS Oracle SE2 \(license included\) \+ 10 GB GP2 storage cost, estimated as per the aws\.amazon\.comaws\.amazon\.com at \($0\.226\) \* 2 hours \+ \($0\.115\) \* 10 GB, is $1\.602\.
++  Amazon Aurora MySQL \+ 10 GB storage pricing estimated by using the link to the Simple Monthly Calculator that you can access from the [pricing site](https://aws.amazon.com/dms/pricing/) is $1\.78\.
++  Amazon RDS for Oracle SE2 \(license included\) \+ 10 GB GP2 storage cost, estimated as per the aws\.amazon\.comaws\.amazon\.com at \($0\.226\) \* 2 hours \+ \($0\.115\) \* 10 GB, is $1\.602\.
 + AWS DMS service cost for the t2\.small instance with 50 GB GP2 storage, estimated as per the [pricing site](https://aws.amazon.com/dms/pricing/) at \($0\.036\) \* 2 hours, is $0\.072\.
 
 Total estimated cost to run this project = $1\.78 \+ $1\.602 \+ $0\.072 = $3\.454—​approximately $5\.00\.

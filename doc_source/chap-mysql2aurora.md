@@ -199,31 +199,40 @@ You can restore your backup files from your Amazon S3 bucket to a create new Ama
 
 1. In the RDS Dashboard, choose **Restore Aurora MySQL DB Cluster from S3**\.
 
-1. In the **Specify Source Backup Details**, specify the following:    
+1. In the **Create database by restoring from S3** page, specify the following settings in the following sections:
+
+   1. In the **S3 Destination** section, specify the following:    
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/dms/latest/sbs/chap-mysql2aurora.html)
 
-1. Choose **Next Step**\.
-
-1. On the **Specify DB Details** page, specify your DB cluster information\. The following table shows settings for a DB instance\.    
+   1. In the **Engine Options** section, specify the following:    
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/dms/latest/sbs/chap-mysql2aurora.html)
 
-   A typical **Specify DB Details** page looks like the following\.  
-![\[Amazon Aurora MySQL Launch DB Instance Wizard DB Instance Details\]](http://docs.aws.amazon.com/dms/latest/sbs/images/AuroraLaunch02.png)
-
-1. Confirm your master password, and then choose **Next**\.
-
-1. On the **Configure Advanced Settings** page, you can customize additional settings for your Aurora MySQL DB cluster\. The following table shows the advanced settings for a DB cluster\.    
+   1. In the **IAM role** section, specify the following:    
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/dms/latest/sbs/chap-mysql2aurora.html)
 
-   A typical **Configure Advanced Settings** page looks like the following\.  
-![\[Amazon Aurora MySQL Launch DB Instance Wizard Configure Advanced Settings\]](http://docs.aws.amazon.com/dms/latest/sbs/images/AuroraLaunch03.png)
+   1. In the **Settings** section, specify the following:    
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/dms/latest/sbs/chap-mysql2aurora.html)
+
+   1. In the **DB Instance Class** section, specify the following:    
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/dms/latest/sbs/chap-mysql2aurora.html)
+
+   1. In the **Availability & durability** section, specify the following:    
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/dms/latest/sbs/chap-mysql2aurora.html)
+
+   1. In the **Connectivity** section, specify the following:    
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/dms/latest/sbs/chap-mysql2aurora.html)
+
+   1. In the **Database authentication** section, specify the following:    
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/dms/latest/sbs/chap-mysql2aurora.html)
+
+   1. In the **Additional configuration** section, specify the following:    
+[\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/dms/latest/sbs/chap-mysql2aurora.html)
 
 1. Choose **Launch DB Instance** to launch your Aurora MySQL DB instance, and then choose **Close** to close the wizard\.
 
    On the Amazon RDS console, the new DB instance appears in the list of DB instances\. The DB instance has a status of **creating** until the DB instance is created and ready for use\. When the state changes to **available**, you can connect to the primary instance for your DB cluster\. Depending on the DB instance class and store allocated, it can take several minutes for the new instance to be available\.
 
-   To view the newly created cluster, choose the **Clusters** view in the Amazon RDS console\. For more information, see the [Amazon RDS documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.Viewing.html)\.  
-![\[Amazon Aurora MySQL DB Instances List\]](http://docs.aws.amazon.com/dms/latest/sbs/images/AuroraLaunch04.png)
+   To view the newly created cluster, choose the **Clusters** view in the Amazon RDS console\. For more information, see the [Amazon RDS documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.Viewing.html)\.
 
    Note the port and the endpoint of the cluster\. Use the endpoint and port of the cluster in your JDBC and ODBC connection strings for any application that performs write or read operations\.
 

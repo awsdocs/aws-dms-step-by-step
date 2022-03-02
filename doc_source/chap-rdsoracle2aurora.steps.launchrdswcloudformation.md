@@ -12,23 +12,23 @@ Now you need to provision the necessary AWS resources for this walkthrough\. Do 
 
 1. Sign in to the AWS Management Console and open the AWS CloudFormation console at [https://console\.aws\.amazon\.com/cloudformation](https://console.aws.amazon.com/cloudformation/)\.
 
-1. Choose **Create stack**\.
+1. Choose **Create stack** and then choose **With new reources \(standard\)**\.
 
-1. On the **Select Template **page, choose **Upload a template to Amazon S3**\.
+1. On the **Specify template** section of the **Create stack** page, choose **Upload a template file**\.
 
-1. Click **Choose File**, and then choose the `Oracle_Aurora_For_DMSDemo.template` file that you extracted from the `dms-sbs-RDSOracle2Aurora.zip` archive\.
+1. Click **Choose file**, and then choose the `Oracle_Aurora_For_DMSDemo.template` file that you extracted from the `dms-sbs-RDSOracle2Aurora.zip` archive\.
 
 1. Choose **Next**\. On the **Specify Details** page, provide parameter values as shown following\.    
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/dms/latest/sbs/chap-rdsoracle2aurora.steps.launchrdswcloudformation.html)  
 ![\[AWS Database Migration Service Specify Details page\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora3.png)
 
-1. Choose **Next**\. On the **Options** page, shown following, choose **Next**\.  
+1. Choose **Next**\. On the **Configure stack options** page, shown following, choose **Next**\.  
 ![\[AWS Database Migration Service Options page\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora4.png)
 
-1. On the **Review** page, review the details, and if they are correct choose **Create Stack**\. You can get the estimated cost of running this CloudFormation template by choosing **Cost**\.  
+1. On the **Review** page, review the details, and if they are correct, scroll down and choose **Create stack**\. You can get the estimated cost of running this CloudFormation template by choosing **Estimate cost** at the **Template** section on top of the page\.  
 ![\[AWS Database Migration Service replication instance\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora5.png)
 
-1. AWS can take about 20 minutes or more to create the stack with Amazon RDS Oracle and Amazon Aurora MySQL instances\.  
+1. AWS can take about 20 minutes or more to create the stack with Amazon RDS for Oracle and Amazon Aurora MySQL instances\.  
 ![\[AWS Database Migration Service Create Stack page\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora6.png)
 
 1. After the stack is created, choose **Stack**, select the DMSdemo stack, and then choose **Outputs**\. Record the JDBC connection strings, **OracleJDBCConnectionString** and **AuroraJDBCConnectionString**, for use later in this walkthrough to connect to the Oracle and Aurora MySQL DB instances\.  

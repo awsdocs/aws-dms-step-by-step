@@ -160,7 +160,7 @@ Your production DB cluster might not need to be in a public subnet, because only
    +  ** **Database Port**:** Type the default port to be used when connecting to instances in the DB cluster\. The default is `3306`\.
 **Note**  
 You might be behind a corporate firewall that doesn’t allow access to default ports such as the MySQL default port, 3306\. In this case, provide a port value that your corporate firewall allows\. Remember that port value later when you connect to the Aurora MySQL DB cluster\.
-   +  ** **Enable Encryption**:** Choose **Yes** for your new Aurora MySQL DB cluster to be encrypted "at rest\." If you choose **Yes**, you will be required to choose an AWS KMS encryption key as the **Master Key** value\.
+   +  ** **Enable Encryption**:** Choose **Yes** for your new Aurora MySQL DB cluster to be encrypted "at rest\." If you choose **Yes**, you will be required to choose an AWS KMS encryption key as the KMS key value\.
    +  ** **Auto Minor Version Upgrade**:** Select **Yes** if you want to enable your Aurora MySQL DB cluster to receive minor MySQL DB engine version upgrades automatically when they become available\.
 
      The **Auto Minor Version Upgrade** option only applies to upgrades to MySQL minor engine versions for your Amazon Aurora MySQL DB cluster\. It doesn’t apply to regular patches applied to maintain system stability\.  

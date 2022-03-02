@@ -1,6 +1,6 @@
 # Step 3: Test Connectivity to the Oracle DB Instance and Create the Sample Schema<a name="chap-rdsoracle2aurora.steps.connectoracle"></a>
 
-After the CloudFormation stack has been created, test the connection to the Oracle DB instance by using SQL Workbench/J and then create the HR sample schema\.
+After the CloudFormation stack has been created, test the connection to the Oracle DB instance by using SQL Workbench/J and then create the **HR** sample schema\.
 
 To test the connection to your Oracle DB instance and create the sample schema, do the following:
 
@@ -26,9 +26,9 @@ If your connection is unsuccessful, ensure that the IP address you assigned when
 
 1. Choose **SQL**, then choose **Execute All**\.
 
-   When you run the script, you will get an error message indicating that user HR does not exist\. You can ignore this error and run the script\. The script drops the user before creating it,which generates the error\.
+   When you run the script, you will get an error message indicating that user **HR** does not exist\. You can ignore this error and run the script\. The script drops the user before creating it,which generates the error\.
 
-1. Verify the object types and count in HR Schema were created successfully by running the following SQL query\.
+1. Verify the object types and count in **HR** Schema were created successfully by running the following SQL query\.
 
    ```
    Select OBJECT_TYPE, COUNT(*) from dba_OBJECTS where owner='HR'
@@ -46,7 +46,7 @@ If your connection is unsuccessful, ensure that the IP address you assigned when
    VIEW           1
    ```
 
-1. Verify the number of constraints in HR schema by running the following SQL query:
+1. Verify the number of constraints in the **HR** schema by running the following SQL query:
 
    ```
    Select CONSTRAINT_TYPE,COUNT(*) from dba_constraints  where owner='HR'
@@ -63,7 +63,7 @@ If your connection is unsuccessful, ensure that the IP address you assigned when
    	C	          1
    ```
 
-1. Analyze the HR schema by running the following:
+1. Analyze the **HR** schema by running the following:
 
    ```
    BEGIN

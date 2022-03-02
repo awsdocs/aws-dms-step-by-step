@@ -4,7 +4,7 @@ To validate the schema conversion, you compare the objects found in the Oracle a
 
 1. In SQL Workbench/J, choose **File**, then choose **Connect window**\. Choose the **RedshiftConnection** you created in an earlier step\. Choose **OK**\.
 
-1. Run the following script to verify the number of object types and count in SH schema in the target Amazon Redshift database\. These values should match the number of objects in the source Oracle database\.
+1. Run the following script to verify the number of object types and count in **SH** schema in the target Amazon Redshift database\. These values should match the number of objects in the source Oracle database\.
 
    ```
    SELECT 'TABLE' AS OBJECT_TYPE,

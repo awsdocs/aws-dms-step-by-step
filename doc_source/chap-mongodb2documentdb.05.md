@@ -2,26 +2,29 @@
 
 You are now ready to launch an AWS DMS migration task, to migrate the `zips` data from MongoDB to Amazon DocumentDB\.
 
-1. Open the AWS DMS console at [https://console\.aws\.amazon\.com/dms/](https://console.aws.amazon.com/dms/)\.
+1. Open the AWS DMS console at [https://console\.aws\.amazon\.com/dms/v2/](https://console.aws.amazon.com/dms/v2/)\.
 
-1. In the navigation pane, choose **Tasks**\.
+1. In the navigation pane, choose **Database migration tasks**\.
 
 1. Choose **Create task** and enter the following information:
-   + For **Task name**, enter a name that’s easy to remember, for example `my-dms-task`\.
-   + For **Replication instance**, choose the replication instance that you created in [Create an AWS DMS replication instance](chap-mongodb2documentdb.03.md)\.
-   + For **Source endpoint**, choose the source endpoint that you created in [Create source and target endpoints](chap-mongodb2documentdb.04.md)\.
-   + For **Target endpoint**, choose the target endpoint that you created in [Create source and target endpoints](chap-mongodb2documentdb.04.md)\.
-   + For **Migration type**, choose **Migrate existing data**\.
-   + For **Start task on create**, enable this option\.
-
-     In the **Task Settings** section, keep all of the options at their default values\.
-
-     In the **Table mappings** section, choose the **Guided** tab, and then enter the following information:
-   + For **Schema name is**, choose **Enter a schema**\.
-   + For **Schema name is like**, keep this at its default setting \(`%`\)\.
-   + For **Table name is like**, keep this at its default setting \(`%`\)\.
-
-   Choose **Add selection rule** to confirm that the information is correct\.
+   + For **Task configuration**, choose the following settings:
+     +  **Task identifier** — enter a name that’s easy to remember, for example `my-dms-task`\.
+     +  **Replication instance** — choose the replication instance that you created in [Create an AWS DMS replication instance](chap-mongodb2documentdb.03.md)\.
+     +  **Source database endpoint** — choose the source endpoint that you created in [Create source and target endpoints](chap-mongodb2documentdb.04.md)\.
+     +  **Target database endpoint** — choose the target endpoint that you created in [Create source and target endpoints](chap-mongodb2documentdb.04.md)\.
+     +  **Migration type** — choose **Migrate existing data**\.
+   + For **Task settings**, choose the following settings:
+     +  **Target table preparation mode** — Do nothing
+     +  **Include LOB columns in replication** — Limited LOB mode
+     +  **Maximum LOB size \(KB\)** — 32
+     +  **Enable validation** 
+     +  **Enable CloudWatch logs** 
+**Note**  
+CloudWatch logs usage will be charged at standard rates\. See [here](https://aws.amazon.com/cloudwatch/pricing/) for more details\.
+   + For **Advanced task settings**, keep all of the options at their default values\.
+   + For **Premigration assessment**, keep the option at its default value\.
+   + For **Start migration task** in **Migration task startup configuration**, choose **Automatically on create**\.
+   + For **Tags**, keep all of the options at their default values\.
 
 When the settings are as you want them, choose **Create task**\.
 

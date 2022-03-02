@@ -6,7 +6,7 @@ After validating the schema structure between source and target databases, conti
 
 An AWS DMS replication instance performs the actual data migration between source and target\. The replication instance also caches the transaction logs during the migration\. How much CPU and memory capacity a replication instance has influences the overall time required for the migration\.
 
-1. Sign in to the AWS Management Console, and select AWS DMS at [https://console\.aws\.amazon\.com/dms/](https://console.aws.amazon.com/dms/)\. Next, choose **Create Migration**\. If you are signed in as an AWS Identity and Access Management \(IAM\) user, then you must have the appropriate permissions to access AWS DMS\. For more information on the permissions required, see [IAM Permissions Needed to Use AWS DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.IAMPermissions.html)\.
+1. Sign in to the AWS Management Console, and select AWS DMS at [https://console\.aws\.amazon\.com/dms/v2/](https://console.aws.amazon.com/dms/v2/)\. Next, choose **Create Migration**\. If you are signed in as an AWS Identity and Access Management \(IAM\) user, then you must have the appropriate permissions to access AWS DMS\. For more information on the permissions required, see [IAM Permissions Needed to Use AWS DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.IAMPermissions.html)\.
 
 1. Choose **Next** to start a database migration from the console’s Welcome page\.
 
@@ -16,6 +16,6 @@ An AWS DMS replication instance performs the actual data migration between sourc
 1. For the **Advanced** section, specify the following information\.    
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/dms/latest/sbs/chap-rdsoracle2postgresql.steps.createreplicationinstance.html)
 
-   For information about the KMS master key, see [Setting an Encryption Key and Specifying KMS Permissions](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.EncryptionKey.html)\.
+   For information about the KMS key, see [Setting an Encryption Key and Specifying KMS Permissions](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.EncryptionKey.html)\.
 
 1. Click **Next**\.

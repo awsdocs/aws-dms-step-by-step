@@ -36,4 +36,4 @@ When the migration task completes, you can compare your task results with the ex
    Shipping             45
    ```
 
-Now you have successfully completed a database migration from an Amazon RDS Oracle DB instance to Amazon Aurora MySQL\.
+Now you have successfully completed a database migration from an Amazon RDS for Oracle database instance to Amazon Aurora MySQL\.

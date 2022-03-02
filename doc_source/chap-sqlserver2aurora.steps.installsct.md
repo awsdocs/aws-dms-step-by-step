@@ -2,13 +2,13 @@
 
 First, install the SQL drivers and the AWS Schema Conversion Tool \(AWS SCT\) on your local computer\. Do the following:
 
-1. Download the [JDBC driver for Microsoft SQL Server](https://www.microsoft.com/en-us/download/details.aspx?displaylang=en&id=11774)\.
+1. Download the JDBC driver for Microsoft SQL Server [mssql\-jdbc\-7\.2\.2\.jre11\.jar](https://docs.microsoft.com/en-us/sql/connect/jdbc/release-notes-for-the-jdbc-driver?view=sql-server-ver15#72)\.
 
 1. Download the [JDBC driver for Aurora MySQL](https://dev.mysql.com/downloads/connector/j/)\. Amazon Aurora MySQL uses the MySQL driver\.
 
 1. Install AWS SCT and the required JDBC drivers\.
 
-   1. See [Installing and Updating the AWS Schema Conversion Tool](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_SchemaConversionTool.Installing.html) in the *AWS Schema Conversion Tool User Guide*, and choose the appropriate link to download the AWS SCT\.
+   1. See [Installing and Updating the AWS Schema Conversion Tool](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_Installing.html) in the *AWS Schema Conversion Tool User Guide*, and choose the appropriate link to download the AWS SCT\.
 
    1. Start AWS SCT, and choose **Settings**, **Global Settings**\.
 

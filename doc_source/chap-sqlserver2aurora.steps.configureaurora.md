@@ -9,7 +9,7 @@ AWS DMS migrates the data from the SQL Server source into an Amazon Aurora MySQL
    ```
    CREATE USER 'aurora_dms_user' IDENTIFIED BY 'password';
    
-   GRANT ALTER, CREATE, DROP, INDEX, INSERT, UPDATE, DELETE,
+   GRANT ALTER, CREATE, CREATE TEMPORARY TABLES, DROP, INDEX, INSERT, UPDATE, DELETE,
    SELECT ON target_database.* TO 'aurora_dms_user';
    ```
 

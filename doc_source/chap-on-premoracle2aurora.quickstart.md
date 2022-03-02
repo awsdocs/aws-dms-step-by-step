@@ -40,7 +40,7 @@ Following are some things to consider when launching your Aurora MySQL instance:
 The AWS DMS service connects to your source and target databases from a replication instance\. Here are some things to consider when launching your replication instance:
 + For best results, we recommend that you locate your replication instance in the same VPC and Availability Zone as your target database, in this case Aurora MySQL\.
 + If either your source or target database is outside of the VPC where you launch your replication server, the replication server must be publicly accessible\.
-+ AWS DMS can consume a fair bit of memory and CPU\. However, it’s easy enough to scale up if necessary\. If you anticipate running several tasks on a single replication server or
++ AWS DMS can consume a fair bit of memory and CPU\. However, it’s easy enough to scale up if necessary\. If you anticipate running several tasks on a single replication server or if your migration involves a large number of tables, consider using one of the larger instances\.
 + The default storage is usually enough for most migrations\.
 
 ## Step 4: Create a Source Endpoint<a name="chap-on-premoracle2aurora.quickstart.stepfour"></a>

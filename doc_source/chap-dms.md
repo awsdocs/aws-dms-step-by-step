@@ -1,6 +1,4 @@
-# Migrating Databases to Amazon Web Services \(AWS\)<a name="chap-introduction"></a>
-
-## AWS Migration Tools<a name="chap-introduction.awstools"></a>
+# Migrating Databases to the AWS Cloud Using AWS DMS<a name="chap-dms"></a>
 
 You can use several AWS tools and services to migrate data from an external database to AWS\. Depending on the type of database migration you are doing, you may find that the native migration tools for your database engine are also effective\.
 
@@ -19,18 +17,14 @@ It is important to understand that DMS and SCT are two different tools and serve
 
 The size and type of Oracle database migration you want to do greatly determines the tools you should use\. For example, a heterogeneous migration, where you are migrating from an Oracle database to a different database engine on AWS, is best accomplished using AWS DMS\. A homogeneous migration, where you are migrating from an Oracle database to an Oracle database on AWS, is best accomplished using native Oracle tools\.
 
-## Walkthroughs in this Guide<a name="chap-introduction.walkthroughs"></a>
-
- [Migrating an On\-Premises Oracle Database to Amazon Aurora MySQL](chap-on-premoracle2aurora.md) 
-
- [Migrating an Amazon RDS Oracle Database to Amazon Aurora MySQL](chap-rdsoracle2aurora.md) 
-
- [Migrating a SQL Server Database to Amazon Aurora MySQL](chap-sqlserver2aurora.md) 
-
- [Migrating an Oracle Database to PostgreSQL](chap-rdsoracle2postgresql.md) 
-
- [Migrating an Amazon RDS for Oracle Database to Amazon Redshift](chap-rdsoracle2redshift.md) 
-
- [Migrating MySQL\-Compatible Databases to AWS](chap-mysql.md) 
-
- [Migrating a MySQL\-Compatible Database to Amazon Aurora MySQL](chap-mysql2aurora.md) 
+**Topics**
++ [Migrating an On\-Premises Oracle Database to Amazon Aurora MySQL](chap-on-premoracle2aurora.md)
++ [Migrating an Amazon RDS for Oracle Database to Amazon Aurora MySQL](chap-rdsoracle2aurora.md)
++ [Migrating a SQL Server Database to Amazon Aurora MySQL](chap-sqlserver2aurora.md)
++ [Migrating an Amazon RDS for SQL Server Database to an Amazon S3 Data Lake](chap-rdssqlserver2s3datalake.md)
++ [Migrating an Oracle Database to PostgreSQL](chap-rdsoracle2postgresql.md)
++ [Migrating an Amazon RDS for Oracle Database to Amazon Redshift](chap-rdsoracle2redshift.md)
++ [Migrating MySQL\-Compatible Databases to AWS](chap-mysql.md)
++ [Migrating a MySQL\-Compatible Database to Amazon Aurora MySQL](chap-mysql2aurora.md)
++ [Migrating a MariaDB Database to Amazon RDS for MySQL or Amazon Aurora MySQL](chap-mariadb2auroramysql.md)
++ [Migrating from MongoDB to Amazon DocumentDB](chap-mongodb2documentdb.md)

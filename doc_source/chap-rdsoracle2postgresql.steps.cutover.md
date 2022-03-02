@@ -7,7 +7,7 @@ To move connections from your Oracle database to your PostgreSQL database, do th
    The following query should return no results:
 
    ```
-   SELECT MACHINE, COUNT FROM V$SESSION GROUP BY MACHINE;
+   SELECT MACHINE, COUNT(*) FROM V$SESSION GROUP BY MACHINE;
    ```
 
 1. List any remaining sessions, and kill them\.
@@ -19,6 +19,18 @@ To move connections from your Oracle database to your PostgreSQL database, do th
    ```
 
 1. Shut down all listeners on the Oracle database\.
+
+1. \(Optional\) Turn off automated jobs on the Oracle database\. For your production database, check that this operation doesn’t influence the business logic\.
+
+   ```
+   ALTER SYSTEM SET JOB_QUEUE_PROCESSES=0
+   ```
+
+1. \(Optional\) Turn off time monitoring on queue messages on the Oracle database\. For your production database, check that this operation doesn’t influence the business logic\.
+
+   ```
+   ALTER SYSTEM SET AQ_TM_PROCESSES=0
+   ```
 
 1. Let the AWS DMS task apply the final changes from the Oracle database on the PostgreSQL database\.
 

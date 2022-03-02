@@ -10,7 +10,7 @@ For information about best practices for using AWS DMS, see [AWS Database Migrat
 
 To create an AWS DMS replication instance, do the following:
 
-1. Sign in to the AWS Management Console, and open the AWS DMS console at [https://console\.aws\.amazon\.com/dms/](https://console.aws.amazon.com/dms/)\.
+1. Sign in to the AWS Management Console, and open the AWS DMS console at [https://console\.aws\.amazon\.com/dms/v2/](https://console.aws.amazon.com/dms/v2/)\.
 
 1. In the console, choose **Create migration**\. If you are signed in as an AWS Identity and Access Management \(IAM\) user, you must have the appropriate permissions to access AWS DMS\. For more information about the permissions required, see [IAM Permissions Needed to Use AWS DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.IAMPermissions.html)\.
 
@@ -22,6 +22,6 @@ To create an AWS DMS replication instance, do the following:
 1. For the **Advanced** section, specify the following information\.    
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/dms/latest/sbs/chap-sqlserver2aurora.steps.createreplicationinstance.html)
 
-   For information about the KMS master key, see [Setting an Encryption Key and Specifying KMS Permissions](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.EncryptionKey.html)\.
+   For information about the KMS key, see [Setting an Encryption Key and Specifying KMS Permissions](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.EncryptionKey.html)\.
 
 1. Click **Next**\.

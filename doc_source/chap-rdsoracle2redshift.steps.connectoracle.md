@@ -10,7 +10,7 @@ After the CloudFormation stack has been created, test the connection to the Orac
 **Note**  
 If your connection is unsuccessful, ensure that the IP address you assigned when creating the CloudFormation template is the one you are attempting to connect from\. This issue is the most common one when trying to connect to an instance\.
 
-1. Create the SH schema you will use for migration using a custom SQL script \(Oraclesalesstarschema\.sql\)\. To obtain this script, do the following:
+1. Create the **SH** schema you will use for migration using a custom SQL script \(Oraclesalesstarschema\.sql\)\. To obtain this script, do the following:
    + Download the following archive to your computer: ` [http://docs\.aws\.amazon\.com/dms/latest/sbs/samples/dms\-sbs\-RDSOracle2Redshift\.zip](http://docs.aws.amazon.com/dms/latest/sbs/samples/dms-sbs-RDSOracle2Redshift.zip) ` 
    + Extract the SQL script\(`Oraclesalesstarschema.sql`\) from the archive\.
    + Copy and paste the `Oraclesalesstarschema.sql` file into your current directory\.
@@ -22,7 +22,7 @@ If your connection is unsuccessful, ensure that the IP address you assigned when
      1. Choose **SQL**, then choose **Execute All**\.  
 ![\[AWS Database Migration Service SQL script to install the demo schema\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2redshift9.5.png)
 
-1. Verify the object types and count in SH Schema were created successfully by running the following SQL query\.
+1. Verify the object types and count in **SH** Schema were created successfully by running the following SQL query\.
 
    ```
    Select OBJECT_TYPE, COUNT(*) from dba_OBJECTS where owner='SH'

@@ -30,7 +30,7 @@ This walkthrough assumes you will use the SQL Workbench/J client to connect to t
 
 Next, install AWS SCT and the required JDBC drivers\.
 
-1. Download AWS SCT from [Installing and Updating the AWS Schema Conversion Tool](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_SchemaConversionTool.Installing.html) in the *AWS Schema Conversion Tool User Guide\.* 
+1. Download AWS SCT from [Installing and Updating the AWS Schema Conversion Tool](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_Installing.html) in the *AWS Schema Conversion Tool User Guide\.* 
 
 1. Follow the instructions to install AWS SCT\. By default, the tool is installed in the `C:\Program Files\AWS Schema Conversion Tool\AWS` directory\.
 

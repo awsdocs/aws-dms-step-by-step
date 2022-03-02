@@ -2,7 +2,7 @@
 
 The source endpoint is the endpoint for your MongoDB installation running on your Amazon EC2 instance\.
 
-1. Open the AWS DMS console at [https://console\.aws\.amazon\.com/dms/](https://console.aws.amazon.com/dms/)\.
+1. Open the AWS DMS console at [https://console\.aws\.amazon\.com/dms/v2/](https://console.aws.amazon.com/dms/v2/)\.
 
 1. In the navigation pane, choose **Endpoints**\.
 

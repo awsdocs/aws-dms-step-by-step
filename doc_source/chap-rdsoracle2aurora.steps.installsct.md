@@ -31,7 +31,7 @@ To install the SQL client software, do the following:
 
 To install the AWS Schema Migration Tool and the required JDBC drivers, do the following:
 
-1. Download the AWS Schema Conversion Tool from [Installing and Updating the AWS Schema Conversion Tool](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_SchemaConversionTool.Installing.html) in the *AWS Schema Conversion Tool User Guide\.* By default, the tool is installed in the "C:\\Program Files\\AWS Schema Conversion Tool\\AWS directory\.
+1. Download the AWS Schema Conversion Tool from [Installing and Updating the AWS Schema Conversion Tool](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_Installing.html) in the *AWS Schema Conversion Tool User Guide\.* By default, the tool is installed in the "C:\\Program Files\\AWS Schema Conversion Tool\\AWS directory\.
 
 1. Launch the AWS Schema Conversion Tool\.
 
