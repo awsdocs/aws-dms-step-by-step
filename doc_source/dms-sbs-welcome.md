@@ -16,6 +16,7 @@ In this guide, you can find step\-by\-step walkthroughs that go through the proc
 +  [Migrating a MySQL Database to Amazon RDS for MySQL or Amazon Aurora MySQL](chap-manageddatabases.mysql2rds.md) 
 +  [Migrating a SQL Server Always On Database to AWS](chap-manageddatabases.sqlserveralwayson.md) 
 +  [Migrating from Amazon RDS for Oracle to Amazon RDS for PostgreSQL and Aurora PostgreSQL](chap-oracle-postgresql.md) 
++  [Migrating from SAP ASE to Amazon Aurora MySQL](chap-sap-ase-aurora-mysql.md) 
 
 In the DMS User Guide, you can find additional resources:
 +  [Migrating Large Data Stores Using AWS Database Migration Service and AWS Snowball Edge](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_LargeDBs.html) 

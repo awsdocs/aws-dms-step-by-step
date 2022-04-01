@@ -1,4 +1,4 @@
-# Step 4: Use the AWS Schema Conversion Tool \(AWS SCT\) to Convert the Oracle Schema to PostgreSQL<a name="chap-rdsoracle2postgresql.steps.convertschema"></a>
+# Step 4: Use the AWS SCT to Convert the Oracle Schema to PostgreSQL<a name="chap-rdsoracle2postgresql.steps.convertschema"></a>
 
 Before you migrate data to PostgreSQL, you convert the Oracle schema to a PostgreSQL schema\. [This video covers all the steps of this process](https://youtu.be/ibtNkChGFkw)\.
 

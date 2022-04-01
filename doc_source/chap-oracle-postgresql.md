@@ -1,4 +1,4 @@
-# Migrating from \[\.shared\]`RDS` for Oracle to \[\.shared\]`RDS` for PostgreSQL and \[\.shared\]`AUR` PostgreSQL<a name="chap-oracle-postgresql"></a>
+# Migrating from Amazon RDS for Oracle to Amazon RDS for PostgreSQL and Aurora PostgreSQL<a name="chap-oracle-postgresql"></a>
 
  Amazon Relational Database Service \(Amazon RDS\) for PostgreSQL and Amazon Aurora PostgreSQL\-Compatible Edition have evolved as a strong and cost\-effective alternatives to Oracle without the need for a software license or a server to manage\. The journey from Amazon RDS for Oracle to Amazon RDS for PostgreSQL and Aurora PostgreSQL has never been easier\. This guide provides a quick overview of the process and considerations to be made when moving existing workloads to Amazon RDS for PostgreSQL or Aurora PostgreSQL and some of the tools that can assist in the process\. It complements a large body of detailed online reference guidance on every aspects of a migration, and serves to provide a birds eye view of the process\.
 
@@ -39,7 +39,7 @@ Re\-platforming and re\-architecting a database application ranges from modifyin
 
 ## The 12 Step Migration Process<a name="chap-oracle-postgresql.migration-process"></a>
 
-You may have an Oracle database in RDS for both production or non\-production purposes, and it may just be convenience and familiarity that steered you to Oracle even though there is a licensing cost to this choice\. It is certainly easier to continue with the database you know than something new, but sometimes there are few remaining reasons do so\.
+You may have an Oracle database in Amazon RDS for both production or non\-production purposes, and it may just be convenience and familiarity that steered you to Oracle even though there is a licensing cost to this choice\. It is certainly easier to continue with the database you know than something new, but sometimes there are few remaining reasons do so\.
 
 Everyone’s Oracle application is special, and nobody has the same setup and needs for the future\. To provide a single framework for migration, this guide organizes the work in 12 topics in order to cover what is in scope for most applications\. These topics will be used in sequence for multiple purposes and should not be seen as a strictly linear process, but rather an overall arch of a migration project where individual topics and activities can be overlapped or swapped to fit specific project conditions\. The following image shows the 12 steps with an approximate share of effort in a typical project\.
 

@@ -12,7 +12,7 @@ For the remainder of this document, ETL will also refer to ELT patterns\.
 
 ETL can be implemented in the database itself, in external scripts or in third\-party tools such as Informatica, Talend, and so on\. If the ETL is done using Oracle stored procedure, the freely available AWS Schema Conversion Tool \(AWS SCT\) is capable of converting the ETL code to AWS Glue\. For more information, see [Automation](chap-oracle-postgresql.md#chap-oracle-postgresql.automation)\.
 
-## Process for Conversion to \[\.shared\]`GLU`<a name="chap-oracle-postgresql.migration-process.script-conversion.process"></a>
+## Process for Conversion to AWS Glue<a name="chap-oracle-postgresql.migration-process.script-conversion.process"></a>
 
 If Python/Glue is a desired future state architecture for ETL code, and the ETL is implemented in the database, the conversion process works like this:
 

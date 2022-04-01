@@ -2,7 +2,7 @@
 
 Always On availability groups provide high availability, disaster recovery, and read\-scale balancing\. These availability groups require a cluster manager\. The Always On availability groups feature provides an enterprise\-level alternative to database mirroring\. Introduced in SQL Server 2012 \(11\.x\), Always On availability groups maximizes the availability of a set of user databases for an enterprise\. An availability group supports a fail\-over environment for a discrete set of user databases, known as availability databases, that fail over together\. An availability group supports a set of read\-write primary databases and sets of corresponding secondary databases\. Optionally, secondary databases can be made available for read\-only access and/or some backup operations\.
 
-## \[\.shared\]`DMS` Use Case<a name="chap-manageddatabases.sqlserveralwayson.ag.usecase"></a>
+## AWS DMS Use Case<a name="chap-manageddatabases.sqlserveralwayson.ag.usecase"></a>
 
 A customer used AWS DMS to migrate data from a SQL Server 2017 source database\. This database was clustered in a 4\-node Always On Availability Group \(AAG\) configuration\. The customer configured the AWS DMS source endpoint to connect directly to the IP address of the primary node of the AAG by using an IP address\. With this setup, the customer used the AAG HA/DR functionality for internal applications\. In this case, AWS DMS can’t use the secondary database if a failover happens\. The customer used the target endpoint to populate an Operational Data Store \(ODS\) of the Amazon RDS for SQL Server database and an Amazon Simple Storage Service \(Amazon S3\) data lake\.
 
@@ -18,7 +18,7 @@ Activity and transactions continue to occur on the failover database as shown in
 
 At the start of the task, AWS DMS polls all the nodes in Always On cluster for transaction backups\. The AWS DMS task can also fail if transaction backup happens from any other node than the primary\.
 
-## The Solution Recommended by \[\.shared\]`DMS`<a name="chap-manageddatabases.sqlserveralwayson.ag.solutions"></a>
+## The Solution Recommended by AWS DMS<a name="chap-manageddatabases.sqlserveralwayson.ag.solutions"></a>
 
 To address connectivity design deficiencies, AWS DMS recommended to configure the AWS DMS source endpoint to connect to the AAG listener IP address or a canonical name record instead of connecting directly to the IP address of the primary node\. In case of a failover, AWS DMS will interact with the secondary databases, like any other application\. Without using the AAG listener IP address, AWS DMS will not be aware of the secondary replica to connect in case of a failover\.
 

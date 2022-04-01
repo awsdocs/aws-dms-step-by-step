@@ -13,7 +13,7 @@ Using an AWS DMS task, you can specify what schema to migrate and the type of mi
 
 1. Leave the Advanced settings at their default values\.
 
-1. If you created and exported mapping rules with AWS SCT in the last step in [Step 4: Use the AWS Schema Conversion Tool \(AWS SCT\) to Convert the SQL Server Schema to Aurora MySQL](chap-sqlserver2aurora.steps.convertschema.md), choose **Table mappings**, and select the **JSON** tab\. Then select **Enable JSON editing**, and enter the table mappings you saved\.
+1. If you created and exported mapping rules with AWS SCT in the last step in [Step 4: Use the AWS SCT to Convert the SQL Server Schema to Aurora MySQL](chap-sqlserver2aurora.steps.convertschema.md), choose **Table mappings**, and select the **JSON** tab\. Then select **Enable JSON editing**, and enter the table mappings you saved\.
 
    If you did not create mapping rules, then proceed to the next step\.
 

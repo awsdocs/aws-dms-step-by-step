@@ -1,8 +1,8 @@
-# Step 5: Use the AWS Schema Conversion Tool \(AWS SCT\) to Convert the Oracle Schema to Amazon Redshift<a name="chap-rdsoracle2redshift.steps.convertschema"></a>
+# Step 5: Use the AWS SCT to Convert the Oracle Schema to Amazon Redshift<a name="chap-rdsoracle2redshift.steps.convertschema"></a>
 
 Before you migrate data to Amazon Redshift, you convert the Oracle schema to an Amazon Redshift schema\. [This video covers all the steps of this process](https://youtu.be/ZK7J74VJT04)\.
 
-To convert an Oracle schema to an Amazon Redshigt schema using AWS Schema Conversion Tool \(AWS SCT\), do the following:
+To convert an Oracle schema to an Amazon Redshift schema using AWS Schema Conversion Tool \(AWS SCT\), do the following:
 
 1. Launch the AWS SCT\. In the AWS SCT, choose **File**, then choose **New Project**\. Create a new project named `DWSchemaMigrationDemoProject`, specify the **Location** of the project folder, and then choose **OK**\.
 

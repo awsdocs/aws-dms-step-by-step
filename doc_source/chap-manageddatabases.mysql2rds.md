@@ -1,4 +1,4 @@
-# Migrating a MySQL Database to \[\.shared\]`RDSlongMySQL` or \[\.shared\]`AURlongMySQL`<a name="chap-manageddatabases.mysql2rds"></a>
+# Migrating a MySQL Database to Amazon RDS for MySQL or Amazon Aurora MySQL<a name="chap-manageddatabases.mysql2rds"></a>
 
 You can use these two main approaches for migrating a self\-managed MySQL database to an Amazon RDS for MySQL or Amazon Aurora MySQL database\.
 + Use a native or third\-party database migration tool such as mysqldump to perform the full load and MySQL replication to perform ongoing replication\. Typically this is the simplest option\.
@@ -17,5 +17,5 @@ The hybrid option delivers the simplicity of the native or third\-party tools al
 **Topics**
 + [Full load](chap-manageddatabases.mysql2rds.fullload.md)
 + [Performance Comparison](chap-manageddatabases.mysql2rds.performance.md)
-+ [\[\.shared\]`DMS` Ongoing Replication](chap-manageddatabases.mysql2rds.replication.md)
++ [AWS DMS Ongoing Replication](chap-manageddatabases.mysql2rds.replication.md)
 + [Resources](chap-manageddatabases.mysql2rds.resources.md)

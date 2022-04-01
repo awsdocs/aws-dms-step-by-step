@@ -50,6 +50,6 @@ Rollback is usually the scenario when you don’t have an ongoing replication me
 
 ## Migrate Back<a name="chap-oracle-postgresql.migration-process.testing.migrate-back"></a>
 
-In some rare cases, you may decide to include the option of migrating production from the new system back to the old system after having cut over\. If you include this scenario, it must be tested\.
+In some rare cases, you may decide to include the option of migrating production from the new system back to the old system after having the cutover\. If you include this scenario, it must be tested\.
 
 For more information, see [Testing Amazon Aurora PostgreSQL by using fault injection queries](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Managing.FaultInjectionQueries.html), [Automate benchmark tests for Amazon Aurora PostgreSQL](https://aws.amazon.com/blogs/database/automate-benchmark-tests-for-amazon-aurora-postgresql/), [Validating database objects after migration using AWS SCT and AWS DMS](https://aws.amazon.com/blogs/database/validating-database-objects-after-migration-using-aws-sct-and-aws-dms/), and [Validate database objects after migrating from Oracle to Amazon Aurora PostgreSQL](https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/validate-database-objects-after-migrating-from-oracle-to-amazon-aurora-postgresql.html)\.
