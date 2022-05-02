@@ -4,7 +4,7 @@ This section discusses some of the differences between Oracle and PostgreSQL to 
 
 ## Range and List Partitions<a name="chap-oracle-postgresql.platform-differences.range"></a>
 
-Along with possible performance difference, architecturally partitions on Oracle and PostgreSQL act quite differently\. On Oracle you can define a Range, for example each month or year being a partition, or a list, where every occurrence of say the letter “N” or “Y” in a char field is partitioned at the table definition level and PostgreSQL handles these operations differently\. PostgreSQL operates with a “parent” table that holds no data and a “child” table that defines the partitions themselves and holds the data\. The parent table is created first, the child tables is then defined with corresponding constraints to create the partition\. You must supply a trigger to insert into the parent table and have the data be routed to the correct partition\. For more information, see [Strategy for Migrating Partitioned Tables from Oracle to Amazon RDS for PostgreSQL and Amazon Aurora with PostgreSQL Compatibility](https://aws.amazon.com/blogs/database/strategy-for-migrating-partitioned-tables-from-oracle-to-amazon-rds-postgresql-and-amazon-aurora-postgresql/) on the *AWS Database Blog*\.
+Along with possible performance difference, architecturally partitions on Oracle and PostgreSQL act quite differently\. On Oracle you can define a Range, for example each month or year being a partition, or a list, where every occurrence of say the letter “N” or “Y” in a char field is partitioned at the table definition level and PostgreSQL handles these operations differently\. PostgreSQL operates with a “parent” table that holds no data and a “child” table that defines the partitions themselves and holds the data\. The parent table is created first, the child tables is then defined with corresponding constraints to create the partition\. You must supply a trigger to insert into the parent table and have the data be routed to the correct partition\. For more information, see [Strategy for Migrating Partitioned Tables from Oracle to Amazon RDS for PostgreSQL and Amazon Aurora with PostgreSQL Compatibility](https://aws.amazon.com/blogs/database/strategy-for-migrating-partitioned-tables-from-oracle-to-amazon-rds-postgresql-and-amazon-aurora-postgresql/)\.
 
 ## Data Types<a name="chap-oracle-postgresql.platform-differences.data-types"></a>
 
@@ -14,7 +14,7 @@ However, there are some important differences to note\. The Numeric field in Pos
 
 The PostgreSQL Timestamp with time zone field is slightly different from and corresponds to the Oracle Timestamp with local time zone\. These small differences can cause either performance issues or subtle application bugs that require thorough testing\.
 
-For more information, see [Migration tips for developers converting Oracle and SQL Server code to PostgreSQL](https://aws.amazon.com/blogs/database/code-conversion-challenges-while-migrating-from-oracle-or-microsoft-sql-server-to-postgresql/) on the *AWS Database Blog*\.
+For more information, see [Migration tips for developers converting Oracle and SQL Server code to PostgreSQL](https://aws.amazon.com/blogs/database/code-conversion-challenges-while-migrating-from-oracle-or-microsoft-sql-server-to-postgresql/)\.
 
 ## Transaction Control and Exception Handling<a name="chap-oracle-postgresql.platform-differences.transaction-control"></a>
 

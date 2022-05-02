@@ -24,7 +24,7 @@ Explore your largest and busiest tables to find out their size and rate of chang
 
 You can parallelize the load on the table level with one task to save time by using parallel load feature\. For more information, see [Using parallel load for selected tables, views, and collections](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TableMapping.SelectionTransformation.Tablesettings.html#CHAP_Tasks.CustomizingTasks.TableMapping.SelectionTransformation.Tablesettings.ParallelLoad)\.
 
-In SAP ASE, you can run only one replication thread for each database\. Because of that, you can start one AWS DMS task at one time for each database\. You can’t run multiple tasks, which is common when you migrate from other database engines\. For more information, see [Limitations on using SAP ASE as a source for AWS DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.SAP.html#CHAP_Source.SAP.Limitations)\.
+In SAP ASE, you can run only one replication thread for each database\. Because of that, you can start one AWS DMS task at one time for each database\. You can’t run multiple tasks, which is common when you migrate from other database engines\. For more information, see [Limitations on using SAP ASE as a source](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.SAP.html#CHAP_Source.SAP.Limitations)\.
 
 For SAP ASE version 15 and later, query `sysobjects` to list the top 10 in row count and space used\. Use the following query:
 
@@ -71,7 +71,7 @@ After you run the preceding queries, compare the results and choose the top one\
 
 For example, we found the largest LOB column in our SAP ASE database is 51 KB\. We used this number as input in our task settings with limited LOB mode\.
 
-The speed of the full load is improved with the limited LOB mode compared to the full LOB mode\. For performance reasons, AWS DMS recommends to use limited LOB mode and increase the maximum LOB size to cover the actual size you find from your query\. For more information, see [How can I improve the speed of an AWS DMS task that has LOB data?](https://aws.amazon.com/premiumsupport/knowledge-center/dms-improve-speed-lob-data/)\.
+The speed of the full load is improved with the limited LOB mode compared to the full LOB mode\. For performance reasons, AWS DMS recommends to use limited LOB mode and increase the maximum LOB size to cover the actual size you find from your query\. For more information, see [How can I improve the speed of a migration task that has LOB data?](https://aws.amazon.com/premiumsupport/knowledge-center/dms-improve-speed-lob-data/)\.
 
 ## Document Integrations with Other Databases or Applications<a name="chap-sap-ase-aurora-mysql.assessment.integrations"></a>
 

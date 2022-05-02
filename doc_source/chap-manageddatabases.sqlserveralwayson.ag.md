@@ -30,4 +30,4 @@ The following diagram displays the proposed architecture\.
 
 Also, AWS DMS recommended to set the extra connection attribute `alwaysOnSharedSynchedBackupIsEnabled=false` to poll all the nodes in Always On cluster for transaction backups\.
 
-For more information on extra connection attributes for SQL Server as source, see [Extra connection attributes when using SQL Server as a source for AWS DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.SQLServer.html#CHAP_Source.SQLServer.ConnectionAttrib)\.
+For more information on extra connection attributes for SQL Server as source, see [Extra connection attributes when using SQL Server as a source](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.SQLServer.html#CHAP_Source.SQLServer.ConnectionAttrib)\.

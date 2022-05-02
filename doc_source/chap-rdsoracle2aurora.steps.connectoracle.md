@@ -1,6 +1,6 @@
 # Step 3: Test Connectivity to the Oracle DB Instance and Create the Sample Schema<a name="chap-rdsoracle2aurora.steps.connectoracle"></a>
 
-After the CloudFormation stack has been created, test the connection to the Oracle DB instance by using SQL Workbench/J and then create the **HR** sample schema\.
+After the AWS CloudFormation stack has been created, test the connection to the Oracle DB instance by using SQL Workbench/J and then create the **HR** sample schema\.
 
 To test the connection to your Oracle DB instance and create the sample schema, do the following:
 
@@ -8,9 +8,9 @@ To test the connection to your Oracle DB instance and create the sample schema, 
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/dms/latest/sbs/chap-rdsoracle2aurora.steps.connectoracle.html)
 
 1. Test the connection by choosing **Test**\. Choose **OK** to close the dialog box, then choose OK to create the connection profile\.  
-![\[Connecting to the Oracle DB instance for AWS Database Migration Service\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora9.png)
+![\[Connecting to the Oracle DB instance\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora9.png)
 **Note**  
-If your connection is unsuccessful, ensure that the IP address you assigned when creating the CloudFormation template is the one you are attempting to connect from\. This is the most common issue when trying to connect to an instance\.
+If your connection is unsuccessful, ensure that the IP address you assigned when creating the AWS CloudFormation template is the one you are attempting to connect from\. This is the most common issue when trying to connect to an instance\.
 
 1. Create the HR schema you will use for migration using a custom SQL script \(Oracle\-HR\-Schema\-Build\.sql\)\. To obtain this script, do the following:
 

@@ -3,7 +3,7 @@
 In the following sections, you can find step\-by\-step instructions for migrating an Amazon RDS for Oracle database to Amazon Redshift\. These steps assume that you have already prepared your source database as described in preceding sections\.
 
 **Topics**
-+ [Step 1: Launch the RDS Instances in a VPC by Using the CloudFormation Template](chap-rdsoracle2redshift.steps.launchrdswcloudformation.md)
++ [Step 1: Launch the RDS Instances in a VPC by Using the AWS CloudFormation Template](chap-rdsoracle2redshift.steps.launchrdswcloudformation.md)
 + [Step 2: Install the SQL Tools and AWS Schema Conversion Tool on Your Local Computer](chap-rdsoracle2redshift.steps.installsct.md)
 + [Step 3: Test Connectivity to the Oracle DB Instance and Create the Sample Schema](chap-rdsoracle2redshift.steps.connectoracle.md)
 + [Step 4: Test the Connectivity to the Amazon Redshift Database](chap-rdsoracle2redshift.steps.connectredshift.md)

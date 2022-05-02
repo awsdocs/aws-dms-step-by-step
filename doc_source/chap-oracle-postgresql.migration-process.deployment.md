@@ -16,7 +16,7 @@ Infrastructure automation is a code layer that wraps API calls to a cloud provid
 
  [Terraform](https://www.terraform.io/) represents a cross cloud incarnation of this idea\. The downside of Terraform is that its cross\-cloud and open source nature makes it slower to adopt new features and provide detailed provisioning, often months after a new feature or configuration is released\.
 
- [AWS CloudFormation](https://aws.amazon.com/cloudformation/) is a native AWS language in json or YAML format\. Use AWS CloudFormation to write infrastructure code more specifically to specific features because it doesn’t have to work with other clouds\.
+ [https://aws\.amazon\.com/cloudformation/](https://aws.amazon.com/cloudformation/) `CFNLong`\] is a native AWS language in json or YAML format\. Use AWS CloudFormation to write infrastructure code more specifically to specific features because it doesn’t have to work with other clouds\.
 
 ## Configuration Management<a name="chap-oracle-postgresql.migration-process.deployment.configuration"></a>
 

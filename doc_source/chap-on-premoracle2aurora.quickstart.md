@@ -5,7 +5,7 @@ To migrate your data from Oracle to Aurora MySQL using AWS DMS, you take the fol
 ## Step 1: Prepare Your Oracle Source Database<a name="chap-on-premoracle2aurora.quickstart.stepone"></a>
 
 To use AWS DMS to migrate data from an Oracle source database requires some preparation and we also recommend a few additional steps as best practices\.
-+ AWS DMS account – It’s a good practice to create a separate account for the specific purpose of migrating your data\. This account should have the minimal set of privileges required to migrate your data\. Specific details regarding those privileges are outlined below\. If you are simply interested in testing AWS DMS on a non\-production database, any DBA account will be sufficient\.
++  AWS DMS account – It’s a good practice to create a separate account for the specific purpose of migrating your data\. This account should have the minimal set of privileges required to migrate your data\. Specific details regarding those privileges are outlined below\. If you are simply interested in testing AWS DMS on a non\-production database, any DBA account will be sufficient\.
 + Supplemental logging – To capture changes, you must enable supplemental logging in order to use DMS\. To enable supplemental logging at the database level issue the following command\.
 
   ```
@@ -40,7 +40,7 @@ Following are some things to consider when launching your Aurora MySQL instance:
 The AWS DMS service connects to your source and target databases from a replication instance\. Here are some things to consider when launching your replication instance:
 + For best results, we recommend that you locate your replication instance in the same VPC and Availability Zone as your target database, in this case Aurora MySQL\.
 + If either your source or target database is outside of the VPC where you launch your replication server, the replication server must be publicly accessible\.
-+ AWS DMS can consume a fair bit of memory and CPU\. However, it’s easy enough to scale up if necessary\. If you anticipate running several tasks on a single replication server or if your migration involves a large number of tables, consider using one of the larger instances\.
++  AWS DMS can consume a fair bit of memory and CPU\. However, it’s easy enough to scale up if necessary\. If you anticipate running several tasks on a single replication server or if your migration involves a large number of tables, consider using one of the larger instances\.
 + The default storage is usually enough for most migrations\.
 
 ## Step 4: Create a Source Endpoint<a name="chap-on-premoracle2aurora.quickstart.stepfour"></a>
@@ -71,13 +71,13 @@ A migration task tells AWS DMS where and how you want your data migrated\. When 
 
  **Migration type** — In most cases you’ll want to choose **migrate existing data and replication ongoing changes**\. With this option, AWS DMS loads your source data while capturing changes to that data\. When the data is fully loaded, AWS DMS applies any outstanding changes and keeps the source and target databases in sync until the task is stopped\.
 
- **Target table preparation mode \* — If you’re having AWS DMS create your tables, **choose drop tables on target**\. If you’re using some other method to create your target tables such as the AWS Schema Conversion Tool, choose \*truncate\.** 
+ **Target table preparation mode** — If you’re having AWS DMS create your tables, **choose drop tables on target**\. If you’re using some other method to create your target tables such as the AWS Schema Conversion Tool, choose **truncate\.** 
 
- **LOB parameters \* — If you’re just trying AWS DMS, choose **include LOB columns in replication**, **Limited LOB mode**, and set your \*max LOB size to 16** \(which is 16k\.\) For more information regarding LOBs, read the details in the step\-by\-step guide\.
+ **LOB parameters** — If you’re just trying AWS DMS, choose **include LOB columns in replication**, **Limited LOB mode**, and set your **max LOB size to 16** \(which is 16k\.\) For more information regarding LOBs, read the details in the step\-by\-step guide\.
 
-\*Enable logging \* — To help with debugging migration issues, always enable logging\.
+ **Enable logging** — To help with debugging migration issues, always enable logging\.
 
-\*Table mappings \* — When migrating from Oracle to Aurora MySQL, we recommend that you convert your schema, table, and column names to lowercase\. To do so, create a custom table mapping\. The following example migrates the schema DMS\_SAMPLE and converts schema, table and column names to lower case\.
+ **Table mappings** — When migrating from Oracle to Aurora MySQL, we recommend that you convert your schema, table, and column names to lowercase\. To do so, create a custom table mapping\. The following example migrates the schema DMS\_SAMPLE and converts schema, table and column names to lower case\.
 
 ```
 {

@@ -33,7 +33,7 @@ Amazon Aurora MySQL can restore a DB cluster from files that were created using 
 
 To migrate your MySQL data to an Amazon Aurora MySQL DB cluster, several permissions are required:
 + The user that is requesting that Amazon RDS create a new cluster from an Amazon S3 bucket must have permission to list the buckets for your AWS account\. You grant the user this permission using an AWS Identity and Access Management \(IAM\) policy\.
-+ Amazon RDS requires permission to act on your behalf to access the Amazon S3 bucket where you store the files used to create your Amazon Aurora MySQL DB cluster\. You grant Amazon RDS the required permissions using an IAM service role\.
++  Amazon RDS requires permission to act on your behalf to access the Amazon S3 bucket where you store the files used to create your Amazon Aurora MySQL DB cluster\. You grant Amazon RDS the required permissions using an IAM service role\.
 + The user making the request must also have permission to list the IAM roles for your AWS account\.
 + If the user making the request will create the IAM service role, or will request that Amazon RDS create the IAM service role \(by using the console\), then the user must have permission to create an IAM role for your AWS account\.
 
@@ -79,7 +79,7 @@ For example, the following IAM policy allows a user to associate the role named 
 
 #### Creating the IAM Service Role<a name="chap-mysql2aurora.creates3role"></a>
 
-You can have the Amazon RDS Management Console create a role for you by choosing the **Create a New Role** option \(shown later in this topic\)\. If you select this option and specify a name for the new role, then Amazon RDS will create the IAM service role required for Amazon RDS to access your S3 bucket with the name that you supply\.
+You can have the Amazon RDS Management Console create a role for you by choosing the **Create a New Role** option \(shown later in this topic\)\. If you select this option and specify a name for the new role, then Amazon RDS will create the IAM service role required for Amazon RDS to access your Amazon S3 bucket with the name that you supply\.
 
 As an alternative, you can manually create the role using the following procedure\.
 
@@ -89,7 +89,7 @@ As an alternative, you can manually create the role using the following procedur
 
 1. Choose **Create New Role**, specify a value for **Role Name** for the new role, and then choose **Next Step**\.
 
-1. Under **AWS Service Roles**, find **Amazon RDS** and choose **Select**\.
+1. Under ** AWS Service Roles**, find ** Amazon RDS ** and choose **Select**\.
 
 1. Do not select a policy to attach in the **Attach Policy** step\. Instead, choose **Next Step**\.
 

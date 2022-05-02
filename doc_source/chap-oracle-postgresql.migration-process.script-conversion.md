@@ -18,7 +18,7 @@ If Python/Glue is a desired future state architecture for ETL code, and the ETL 
 
 1. Perform the database conversion\. This is necessary because the PL/SQL conversion needs to know the schema of the database\. For more information, see [Database Schema Conversion](chap-oracle-postgresql.migration-process.database-schema-conversion.md)\.
 
-1. Run AWS SCT, select the code involved in ETL and automatically convert the ETL code to AWS Glue\. For more information, see [Converting ETL processes to AWS Glue](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP-converting-aws-glue.html)\.
+1. Run AWS SCT, select the code involved in ETL and automatically convert the ETL code to AWS Glue\. For more information, see [Converting ETL processes](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP-converting-aws-glue.html)\.
 
 1. Fix any warnings and errors in the ETL code conversion\.
 

@@ -61,7 +61,7 @@ To add supplemental logging for all columns of a table, run the following comman
 alter table table_name add supplemental log data (ALL) columns;
 ```
 
- **4\. Create or configure a database account to be used by AWS DMS** 
+ **4\. Create or configure a database account to be used by AWS DMS ** 
 
 We recommend that you use an account with the minimal privileges required by AWS DMS for your AWS DMS connection\. AWS DMS requires the following privileges\.
 
@@ -102,7 +102,7 @@ EXECUTE on DBMS_LOGMNR
 SELECT on V_$LOGMNR_LOGS
 SELECT on V_$LOGMNR_CONTENTS
 LOGMINING /* For Oracle 12c and higher. */
-* ALTER for any table being replicated (if you want DMS to add supplemental logging)
+* ALTER for any table being replicated (if you want to add supplemental logging)
 ```
 
 For Oracle versions before 11\.2\.0\.3, you need the following privileges\. If views are exposed, you need the following privileges\.

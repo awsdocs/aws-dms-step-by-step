@@ -8,7 +8,7 @@ To install the SQL drivers and the AWS Schema Conversion Tool \(AWS SCT\) on you
 
 1. Install AWS SCT and the required JDBC drivers\.
 
-   1. Download AWS SCT from [Installing, verifying, and updating AWS SCT](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_Installing.html) in the *AWS Schema Conversion Tool User Guide*\.
+   1. Download AWS SCT from [https://docs\.aws\.amazon\.com/SchemaConversionTool/latest/userguide/CHAP\_Installing\.html](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_Installing.html)\.
 
    1. Launch AWS SCT\.
 
@@ -17,6 +17,6 @@ To install the SQL drivers and the AWS Schema Conversion Tool \(AWS SCT\) on you
    1. In **Global Settings**, choose **Driver**, and then choose **Browse** for **Oracle Driver Path**\. Locate the JDBC Oracle driver and choose **OK**\.
 
    1. Choose **Browse** for **PostgreSQL Driver Path**\. Locate the JDBC PostgreSQL driver and choose **OK**\.  
-![\[AWS SCT Drivers\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2postgressql.5.png)
+![\[Drivers\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2postgressql.5.png)
 
    1. Choose **OK** to close the dialog box\.

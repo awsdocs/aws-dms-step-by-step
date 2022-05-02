@@ -18,7 +18,7 @@ Next, you must delete your AWS CloudFormation stack, `DMSdemo`\. Do the followin
 
    If you are signed in as an IAM user, you must have the appropriate permissions to access AWS CloudFormation\.
 
-1. Choose your CloudFormation stack, `OracletoRedshiftDWusingDMS`\.
+1. Choose your AWS CloudFormation stack, `OracletoRedshiftDWusingDMS`\.
 
 1. For **Actions**, choose **Delete stack**\.
 

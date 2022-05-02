@@ -22,20 +22,20 @@ To install the SQL client software, do the following:
    1. From the list of drivers, choose **Oracle**\.
 
    1. Choose the Open icon, then choose the `0jar` file for the Oracle JDBC driver that you downloaded in the previous step\. Choose **OK**\.  
-![\[AWS Database Migration Service driver management\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora7.png)
+![\[Driver management\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora7.png)
 
    1. From the list of drivers, choose MySQL\.
 
    1. Choose the Open icon, then choose the MySQL JDBC driver that you downloaded in the previous step\. Choose **OK**\.  
-![\[AWS Database Migration Service driver management\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora8.png)
+![\[Driver management\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora8.png)
 
-To install the AWS Schema Migration Tool and the required JDBC drivers, do the following:
+To install the AWS Schema Conversion Tool and the required JDBC drivers, do the following:
 
-1. Download the AWS Schema Conversion Tool from [Installing and Updating the AWS Schema Conversion Tool](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_Installing.html) in the *AWS Schema Conversion Tool User Guide\.* By default, the tool is installed in the "C:\\Program Files\\AWS Schema Conversion Tool\\AWS directory\.
+1. Download the AWS Schema Conversion Tool from [https://docs\.aws\.amazon\.com/SchemaConversionTool/latest/userguide/CHAP\_Installing\.html](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_Installing.html)\.
 
 1. Launch the AWS Schema Conversion Tool\.
 
 1. In the AWS Schema Conversion Tool, choose **Global Settings** from **Settings**\.
 
 1. In **Global Settings**, choose **Driver**, and then choose **Browse** for **Oracle Driver Path**\. Locate the JDBC Oracle driver and choose **OK**\. Next, choose **Browse** for **MySql Driver Path**\. Locate the JDBC MySQL driver and choose **OK**\. Choose **OK** to close the dialog box\.  
-![\[Connecting to the Oracle DB instance for AWS Database Migration Service\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora8.5.png)
+![\[Connecting to the Oracle DB instance\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora8.5.png)

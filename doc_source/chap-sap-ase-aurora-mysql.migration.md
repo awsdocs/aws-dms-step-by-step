@@ -6,13 +6,13 @@ This section covers two major database migration tasks: code conversion and data
 
 To convert your database schema and code objects from SAP ASE to Amazon Aurora MySQL, follow these steps\.
 
-1. Download and install AWS Schema Conversion Tool \(AWS SCT\) with the required SAP ASW and MySQL JDBC drivers\. For more information, see [Installing, verifying, and updating AWS SCT](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_Installing.html)\.
+1. Download and install AWS Schema Conversion Tool \(AWS SCT\) with the required SAP ASW and MySQL JDBC drivers\. For more information, see [https://docs\.aws\.amazon\.com/SchemaConversionTool/latest/userguide/CHAP\_Installing\.html](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_Installing.html)\.
 
-1. Create a new AWS SCT project, add your source and target databases, and add a mapping rule\. For more information, see [Creating an AWS SCT project](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_UserInterface.html#CHAP_UserInterface.Project), [Adding database servers to an AWS SCT project](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_UserInterface.html#CHAP_UserInterface.AddServers), and [Creating mapping rules in AWS SCT](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_Mapping.html)\.
+1. Create a new AWS SCT project, add your source and target databases, and add a mapping rule\. For more information, see [Creating a new project](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_UserInterface.html#CHAP_UserInterface.Project), [Adding database servers](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_UserInterface.html#CHAP_UserInterface.AddServers), and [Creating mapping rules](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_Mapping.html)\.
 
-1. Convert your database schema\. For more information, see [Converting database schemas using the AWS SCT](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_Converting.html)\.
+1. Convert your database schema\. For more information, see [Converting database schemas](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_Converting.html)\.
 
-1. Save the converted SQL scripts\. For more information, see [Saving and applying your converted schema in the AWS SCT](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_Converting.html#CHAP_Converting.SaveAndApply)\.
+1. Save the converted SQL scripts\. For more information, see [Saving and applying your converted schema](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_Converting.html#CHAP_Converting.SaveAndApply)\.
 
 1. Run these scripts against your target MySQL database\. First, create tables with primary keys only\. Then add the foreign keys and secondary indexes after you complete the full load\.
 
@@ -35,7 +35,7 @@ Create a source endpoint for SAP ASE and test the connection using the preceding
 + Choose **Create endpoint**\.
 + For **Endpoint type**, select **Source endpoint**\.
 + Enter your desired endpoint configuration\.  
-![\[AWS DMS source endpoint configuration\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sap-ase-to-aurora-mysql-endpoint-configuration.png)
+![\[Source endpoint configuration\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sap-ase-to-aurora-mysql-endpoint-configuration.png)
 
   You can use your own on\-premises name server and a hostname instead of the IP address\. For more information, see [Using your own on\-premises name server](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_BestPractices.html#CHAP_BestPractices.Rte53DNSResolver)\.
 + Select the endpoint that you created, and choose **Test connection** from the **Actions** drop\-down menu\.
@@ -55,7 +55,7 @@ Create a target endpoint for your Amazon Aurora MySQL database\.
 + Choose **Create endpoint**\.
 + For **Endpoint type**, select **Target endpoint**\.
 + Enter your desired endpoint configuration\.  
-![\[AWS DMS target endpoint configuration\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sap-ase-to-aurora-mysql-target-endpoint-configuration.png)
+![\[Target endpoint configuration\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sap-ase-to-aurora-mysql-target-endpoint-configuration.png)
 + Test the connection using the preceding replication instance\.
 
 To establish the connection, make sure that you edit the security group for your Amazon Aurora DB instance\. Also, open the 3306 port on your MySQL database to the private IP or IP range of the the replication instance\.
@@ -70,7 +70,7 @@ To establish the connection, make sure that you edit the security group for your
 
 Create a migration task using the source and target endpoints that you created on the preceding step\. For more information, see [Creating a task](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.Creating.html)\. After you create your task, AWS DMS sets its status to **Ready**\. When you start or resume the task, AWS DMS changes the status to **Starting** or **Running**\.
 
-To monitor the process, choose **Task Monitoring**, **Table Statistics**, **Logs**\. For more information, see [Monitoring Database Migration Service metrics](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Monitoring.html#CHAP_Monitoring.Metrics) and [How can I enable monitoring for an AWS DMS task?](https://aws.amazon.com/premiumsupport/knowledge-center/dms-monitor-task/)\.
+To monitor the process, choose **Task Monitoring**, **Table Statistics**, **Logs**\. For more information, see [Monitoring Database Migration Service metrics](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Monitoring.html#CHAP_Monitoring.Metrics) and [How can I enable monitoring for an database migration task?](https://aws.amazon.com/premiumsupport/knowledge-center/dms-monitor-task/)\.
 
 ### Cutover Procedures<a name="chap-sap-ase-aurora-mysql.migration.data.cutover"></a>
 
@@ -89,7 +89,7 @@ To perform the cutover, do the following:
 
 ## Troubleshooting<a name="chap-sap-ase-aurora-mysql.migration.troubleshooting"></a>
 
-For more information about troubleshooting issues with AWS DMS, see [Troubleshooting migration tasks in AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Troubleshooting.html)\.
+For more information about troubleshooting issues with AWS DMS, see [Troubleshooting migration tasks in Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Troubleshooting.html)\.
 
 For more information about troubleshooting issues specific to using AWS DMS with SAP ASE databases, see [Troubleshooting issues with SAP ASE](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Troubleshooting.html#CHAP_Troubleshooting.SAP)\.
 

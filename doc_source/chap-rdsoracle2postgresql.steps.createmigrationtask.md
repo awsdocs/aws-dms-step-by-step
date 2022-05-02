@@ -17,7 +17,7 @@ Using an AWS DMS task, you can specify which schema to migrate and the type of m
 
 1. Leave the Advanced settings at their default values\.
 
-1. Choose **Table mappings**, and select the **JSON** tab\. Next, select **Enable JSON editing**, and enter the table mappings you saved in the last step in [Step 4: Use the AWS SCT to Convert the Oracle Schema to PostgreSQL](chap-rdsoracle2postgresql.steps.convertschema.md)\.
+1. Choose **Table mappings**, and select the **JSON** tab\. Next, select **Enable JSON editing**, and enter the table mappings you saved in the last step in [Step 4: Convert the Oracle Schema to PostgreSQL](chap-rdsoracle2postgresql.steps.convertschema.md)\.
 
    The following is an example of mappings that convert schema names and table names to lowercase\.
 

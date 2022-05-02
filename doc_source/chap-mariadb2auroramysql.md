@@ -1,6 +1,6 @@
 # Migrating a MariaDB Database to Amazon RDS for MySQL or Amazon Aurora MySQL<a name="chap-mariadb2auroramysql"></a>
 
-You can migrate data from existing on\-premises MariaDB or [Amazon RDS for MariaDB](https://aws.amazon.com/rds/mariadb/?nc=sn&loc=3&dn=4) to [Amazon Aurora](https://aws.amazon.com/rds/aurora/) MySQL using [AWS Database Migration Service \(DMS\)](https://aws.amazon.com/dms/)\. Amazon Aurora is a MySQL and PostgreSQL\-compatible relational database built for the cloud\. Amazon Aurora features a distributed, fault\-tolerant, self\-healing storage system that auto\-scales up to 64 TB per database instance\. It delivers high performance and availability with up to 15 low\-latency read replicas, point\-in\-time recovery, and continuous backup to Amazon S3, and replication across three Availability Zones \(AZs\)\.
+You can migrate data from existing on\-premises MariaDB or [Amazon RDS for MariaDB](https://aws.amazon.com/rds/mariadb/?nc=sn&loc=3&dn=4) to [Amazon Aurora](https://aws.amazon.com/rds/aurora/) MySQL using [Database Migration Service](https://aws.amazon.com/dms/)\. Amazon Aurora is a MySQL and PostgreSQL\-compatible relational database built for the cloud\. Amazon Aurora features a distributed, fault\-tolerant, self\-healing storage system that auto\-scales up to 64 TB per database instance\. It delivers high performance and availability with up to 15 low\-latency read replicas, point\-in\-time recovery, and continuous backup to Amazon S3, and replication across three Availability Zones \(AZs\)\.
 
 Some key features offered by Aurora MySQL are the following:
 + High throughput with low latency
@@ -15,7 +15,7 @@ In the following sections, we demonstrate migration from MariaDB as a source dat
 + Provision DMS replication instance and create DMS endpoints
 + Create DMS task, migrate data and perform validation
 
-For the purpose of this section, we are using the CloudFormation templates for creating Amazon RDS for MariaDB, Aurora MySQL database and AWS DMS replication instance with their source and endpoints\. We will be loading sample tables and data in MariaDB located on [GitHub](https://github.com/aws-samples/aws-database-migration-samples)\.
+For the purpose of this section, we are using the AWS CloudFormation templates for creating Amazon RDS for MariaDB, Aurora MySQL database and AWS DMS replication instance with their source and endpoints\. We will be loading sample tables and data in MariaDB located on [GitHub](https://github.com/aws-samples/aws-database-migration-samples)\.
 
 **Topics**
 + [Set up MariaDB as a source database](chap-mariadb2auroramysql.provisioningmariadb.md)

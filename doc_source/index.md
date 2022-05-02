@@ -1,4 +1,4 @@
-# AWS Database Migration Service Step-by-Step Migration Guide
+# Database Migration Guide Step-by-Step Walkthroughs
 
 -----
 *****Copyright &copy; Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
@@ -8,8 +8,8 @@ Amazon's trademarks and trade dress may not be used in connection with any produ
 
 -----
 ## Contents
-+ [AWS Database Migration Service Step-by-Step Walkthroughs](dms-sbs-welcome.md)
-+ [Migrating Databases to AWS Managed Databases](chap-manageddatabases.md)
++ [Database Migration Step-by-Step Walkthroughs](dms-sbs-welcome.md)
++ [Migrating Databases to Amazon Web Services Managed Databases](chap-manageddatabases.md)
    + [Migrating a MySQL Database to Amazon RDS for MySQL or Amazon Aurora MySQL](chap-manageddatabases.mysql2rds.md)
       + [Full load](chap-manageddatabases.mysql2rds.fullload.md)
       + [Performance Comparison](chap-manageddatabases.mysql2rds.performance.md)
@@ -38,7 +38,7 @@ Amazon's trademarks and trade dress may not be used in connection with any produ
       + [Preparation and Assessment](chap-sap-ase-aurora-mysql.assessment.md)
       + [Database Migration](chap-sap-ase-aurora-mysql.migration.md)
       + [Best Practices](chap-sap-ase-aurora-mysql.bestpractices.md)
-+ [Migrating Databases to the AWS Cloud Using AWS DMS](chap-dms.md)
++ [Migrating Databases to the Amazon Web Services Cloud Using the Database Migration Service](chap-dms.md)
    + [Migrating an On-Premises Oracle Database to Amazon Aurora MySQL](chap-on-premoracle2aurora.md)
       + [Migration High-Level Outline](chap-on-premoracle2aurora.quickstart.md)
       + [Migration Step-by-Step Guide](chap-on-premoracle2aurora.steps.md)
@@ -55,13 +55,13 @@ Amazon's trademarks and trade dress may not be used in connection with any produ
       + [Prerequisites](chap-rdsoracle2aurora.prerequisites.md)
       + [Migration Architecture](chap-rdsoracle2aurora.architecture.md)
       + [Step-by-Step Migration](chap-rdsoracle2aurora.steps.md)
-         + [Step 1: Launch the RDS Instances in a VPC by Using the CloudFormation Template](chap-rdsoracle2aurora.steps.launchrdswcloudformation.md)
+         + [Step 1: Launch the RDS Instances in a VPC by Using the AWS CloudFormation Template](chap-rdsoracle2aurora.steps.launchrdswcloudformation.md)
          + [Step 2: Install the SQL Tools and AWS Schema Conversion Tool on Your Local Computer](chap-rdsoracle2aurora.steps.installsct.md)
          + [Step 3: Test Connectivity to the Oracle DB Instance and Create the Sample Schema](chap-rdsoracle2aurora.steps.connectoracle.md)
          + [Step 4: Test the Connectivity to the Aurora MySQL DB Instance](chap-rdsoracle2aurora.steps.connectaurora.md)
          + [Step 5: Use the AWS Schema Conversion Tool to Convert the Oracle Schema to Aurora MySQL](chap-rdsoracle2aurora.steps.convertschema.md)
          + [Step 6: Validate the Schema Conversion](chap-rdsoracle2aurora.steps.validateschemaconversion.md)
-         + [Step 7: Create a AWS DMS Replication Instance](chap-rdsoracle2aurora.steps.createreplicationinstance.md)
+         + [Step 7: Create an AWS DMS Replication Instance](chap-rdsoracle2aurora.steps.createreplicationinstance.md)
          + [Step 8: Create AWS DMS Source and Target Endpoints](chap-rdsoracle2aurora.steps.createsourcetargetendpoints.md)
          + [Step 9: Create and Run Your AWS DMS Migration Task](chap-rdsoracle2aurora.steps.createmigrationtask.md)
          + [Step 10: Verify That Your Data Migration Completed Successfully](chap-rdsoracle2aurora.steps.verifydatamigration.md)
@@ -107,7 +107,7 @@ Amazon's trademarks and trade dress may not be used in connection with any produ
       + [Prerequisites](chap-rdsoracle2redshift.prerequisites.md)
       + [Migration Architecture](chap-rdsoracle2redshift.architecture.md)
       + [Step-by-Step Migration](chap-rdsoracle2redshift.steps.md)
-         + [Step 1: Launch the RDS Instances in a VPC by Using the CloudFormation Template](chap-rdsoracle2redshift.steps.launchrdswcloudformation.md)
+         + [Step 1: Launch the RDS Instances in a VPC by Using the AWS CloudFormation Template](chap-rdsoracle2redshift.steps.launchrdswcloudformation.md)
          + [Step 2: Install the SQL Tools and AWS Schema Conversion Tool on Your Local Computer](chap-rdsoracle2redshift.steps.installsct.md)
          + [Step 3: Test Connectivity to the Oracle DB Instance and Create the Sample Schema](chap-rdsoracle2redshift.steps.connectoracle.md)
          + [Step 4: Test the Connectivity to the Amazon Redshift Database](chap-rdsoracle2redshift.steps.connectredshift.md)

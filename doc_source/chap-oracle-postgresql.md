@@ -25,7 +25,7 @@ This document focuses on migrating custom applications where you control the sou
 
 ## Migration Strategies<a name="chap-oracle-postgresql.migration-strategies"></a>
 
-The options for dealing with a legacy application have often been described as the 6 R’s\. For more information, see [6 Strategies for Migrating Applications to the Cloud](https://aws.amazon.com/blogs/enterprise-strategy/6-strategies-for-migrating-applications-to-the-cloud/) on the *AWS Cloud Enterprise Strategy Blog*\.
+The options for dealing with a legacy application have often been described as the 6 R’s\. For more information, see [6 Strategies for Migrating Applications to the Cloud](https://aws.amazon.com/blogs/enterprise-strategy/6-strategies-for-migrating-applications-to-the-cloud/)\.
 + Re\-host
 + Re\-platform
 + Repurchase
@@ -97,4 +97,4 @@ Each step will be described at a high level in order to allow the reader to skip
 
 ## Automation<a name="chap-oracle-postgresql.automation"></a>
 
-This document references the freely available AWS Schema Conversion Tool \(AWS SCT\) for code conversion and the AWS Database Migration Service for data migration\. For more information, see [Installing, verifying, and updating AWS SCT](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_Installing.html) and [AWS Database Migration Service](https://aws.amazon.com/dms/)\.
+This document references the freely available AWS Schema Conversion Tool \(AWS SCT\) for code conversion and the AWS Database Migration Service for data migration\. For more information, see [https://docs\.aws\.amazon\.com/SchemaConversionTool/latest/userguide/CHAP\_Installing\.html](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_Installing.html) and [https://aws\.amazon\.com/dms/](https://aws.amazon.com/dms/)\.

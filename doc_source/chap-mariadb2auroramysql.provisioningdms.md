@@ -15,21 +15,21 @@ To provision an AWS DMS replication instance, download [the DMS\_CF\.yaml templa
 1. Choose **Next**\.
 
 1. On the **Specify Stack Details** page, edit the predefined values as needed, and then choose **Next**:
-   +  **Stack name** – Enter a name for the stack\.
-   +  **AllocatedStorageSize** – Enter the storage size in GB\. The default is 200 GB\.
-   +  **DMSReplicationSubnetGroup** – Enter the subnet group for DMS replication\.
-   +  **DMSSecurityGroup** – Enter the security group for DMS replication\.
-   +  **InstanceType** – Enter the instance type\.
-   +  **SourceDBPort** – Enter the source database port\.
-   +  **SourceDatabaseName** – Enter the source database name\.
-   +  **SourceServerName** – Enter the IP address of the source database server\.
-   +  **SourceUsername** – Enter the source database user name\.
-   +  **SourcePassword** – Enter the source database password\.
-   +  **TargetDBPort** – Enter the target database port\.
-   +  **TargetDatabaseName** – Enter the target database name\.
-   +  **TargetServerName** – Enter the IP address of the target database server\.
-   +  **TargetUsername** – Enter the target database user name\.
-   +  **TargetPassword** – Enter the target database password\.
+   +  **Stack name** — Enter a name for the stack\.
+   +  **AllocatedStorageSize** — Enter the storage size in GB\. The default is 200 GB\.
+   +  **DMSReplicationSubnetGroup** — Enter the subnet group for DMS replication\.
+   +  **DMSSecurityGroup** — Enter the security group for DMS replication\.
+   +  **InstanceType** — Enter the instance type\.
+   +  **SourceDBPort** — Enter the source database port\.
+   +  **SourceDatabaseName** — Enter the source database name\.
+   +  **SourceServerName** — Enter the IP address of the source database server\.
+   +  **SourceUsername** — Enter the source database user name\.
+   +  **SourcePassword** — Enter the source database password\.
+   +  **TargetDBPort** — Enter the target database port\.
+   +  **TargetDatabaseName** — Enter the target database name\.
+   +  **TargetServerName** — Enter the IP address of the target database server\.
+   +  **TargetUsername** — Enter the target database user name\.
+   +  **TargetPassword** — Enter the target database password\.
 
 1. On the **Configure stack options** page, for **Tags**, specify any optional tags, and then choose **Next**\.
 

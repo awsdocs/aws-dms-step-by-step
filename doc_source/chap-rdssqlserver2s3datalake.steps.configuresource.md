@@ -83,7 +83,7 @@ exec sp_cdc_start_job 'capture'
 exec sys.sp_cdc_help_jobs
 ```
 
-Set the polling interval on your secondary database to 86399 seconds too\. For most use cases these settings should be enough\. For databases that have a large number of transactions, you need to make additional configuration changes to make sure that the transaction log has optimal retention\. For more information, see [Optional settings when using Amazon RDS for SQL Server as a source for AWS DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.SQLServer.html#CHAP_Source.SQLServer.OptionalSettings) in the *AWS DMS user guide*\.
+Set the polling interval on your secondary database to 86399 seconds too\. For most use cases these settings should be enough\. For databases that have a large number of transactions, you need to make additional configuration changes to make sure that the transaction log has optimal retention\. For more information, see [Optional settings when using Amazon RDS for SQL Server as a source](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.SQLServer.html#CHAP_Source.SQLServer.OptionalSettings)\.
 
 For more information about ongoing replication, see [Setting up ongoing replication on a Cloud SQL Server DB instance](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.SQLServer.html#CHAP_Source.SQLServer.Configuration)\.
 

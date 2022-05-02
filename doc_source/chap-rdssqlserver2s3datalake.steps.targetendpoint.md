@@ -6,7 +6,7 @@ When using AWS DMS to migrate data to an Amazon Simple Storage Service \(Amazon 
 
 ## Choose File Format<a name="chap-rdssqlserver2s3datalake.steps.targetendpoint.fileformat"></a>
 
-AWS DMS supports data replication through comma\-separated values \(CSV\) or Apache Parquet file formats\. Each file format has its own benefits\. Choose the right file format depending on your consumption pattern\.
+ AWS DMS supports data replication through comma\-separated values \(CSV\) or Apache Parquet file formats\. Each file format has its own benefits\. Choose the right file format depending on your consumption pattern\.
 
 Apache Parquet is a columnar format, which is built to support efficient compression and encoding schemes providing storage space savings and performance benefits\. With Parquet, you can specify compression schemes for each column to improve query performance when using avg\(\), max\(\), or other column level aggregation operations\. That is why Parquet is popular for data lake and analytics use cases\.
 

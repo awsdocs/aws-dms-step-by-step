@@ -10,4 +10,4 @@ During this time, defects are tracked and triaged for possibly triggering the ro
 
 Beyond acceptance migration criteria, the application may have well defined KPIs defined already which can be observed when in production on the new system and compared to historical KPIs\.
 
-For more information, see [How to Migrate Your Oracle Database to PostgreSQL](https://aws.amazon.com/blogs/database/how-to-migrate-your-oracle-database-to-postgresql/) on the *AWS Database Blog*\.
+For more information, see [How to Migrate Your Oracle Database to PostgreSQL](https://aws.amazon.com/blogs/database/how-to-migrate-your-oracle-database-to-postgresql/)\.

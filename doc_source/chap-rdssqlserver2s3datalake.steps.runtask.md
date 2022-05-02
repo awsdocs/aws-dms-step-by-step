@@ -32,6 +32,6 @@ You can see the following warning in the task logs:
 
 This log message indicates MS\-Replication\. However, for Amazon RDS for SQL Server you can use MS\-CDC\. This error occurs when you have not turned on MS\-CDC for the table\. For more information, see [Step 2: Configure a Source Amazon RDS for SQL Server Database](chap-rdssqlserver2s3datalake.steps.configuresource.md)\.
 
-In this walkthrough, we covered most prerequisites that help avoid configuration related errors\. If you observe issues when running the task, see [Troubleshooting migration tasks in AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Troubleshooting.html), [Best practices for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_BestPractices.html), or reach out to AWS Support for further assistance\.
+In this walkthrough, we covered most prerequisites that help avoid configuration related errors\. If you observe issues when running the task, see [Troubleshooting migration tasks](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Troubleshooting.html), [Best practices](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_BestPractices.html), or reach out to AWS Support for further assistance\.
 
 After you completed the migration, validate that your data migrated successfully and delete the cloud resources that you created\.

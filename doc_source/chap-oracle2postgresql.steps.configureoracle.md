@@ -45,7 +45,7 @@ To capture change data, AWS DMS requires supplemental logging to be enabled on y
    SELECT on V_$LOGMNR_LOGS
    SELECT on V_$LOGMNR_CONTENTS
    LOGMINING /* For Oracle 12c and higher. */
-   * ALTER for any table being replicated (if you want AWS DMS to add supplemental logging)
+   * ALTER for any table being replicated (if you want to add supplemental logging)
    ```
 
    For Oracle versions before 11\.2\.0\.3, you need the following privileges\.
@@ -55,13 +55,13 @@ To capture change data, AWS DMS requires supplemental logging to be enabled on y
    SELECT on ALL_VIEWS (required if views are exposed)
    ```
 
-1. If your Oracle database is an AWS RDS database, then connect to it as an administrative user, and run the following command to ensure that archive logs are retained on your RDS source for 24 hours:
+1. If your Oracle database is an Amazon RDS database, then connect to it as an administrative user, and run the following command to ensure that archive logs are retained on your RDS source for 24 hours:
 
    ```
    exec rdsadmin.rdsadmin_util.set_configuration('archivelog retention hours',24);
    ```
 
-   If your Oracle source is an AWS RDS database, it will be placed in ARCHIVELOG MODE if, and only if, you enable backups\.
+   If your Oracle source is an Amazon RDS database, it will be placed in ARCHIVELOG MODE if, and only if, you enable backups\.
 
 1. Run the following command to enable supplemental logging at the database level, which AWS DMS requires:
 

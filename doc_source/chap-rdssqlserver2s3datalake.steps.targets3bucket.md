@@ -15,6 +15,6 @@ To create the Amazon S3 bucket, do the following:
 
 1. For **Bucket name**, enter **adventure\-works\-datalake**\.
 
-1. For **AWS Region**, choose the region that hosts your AWS DMS replication instance\.
+1. For ** AWS Region **, choose the region that hosts your AWS DMS replication instance\.
 
 1. Leave the default values in the other fields and choose **Create bucket**\.

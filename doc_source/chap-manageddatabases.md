@@ -1,4 +1,4 @@
-# Migrating Databases to AWS Managed Databases<a name="chap-manageddatabases"></a>
+# Migrating Databases to Amazon Web Services Managed Databases<a name="chap-manageddatabases"></a>
 
 You can move from existing, self\-managed, open\-source, and commercial databases to fully managed AWS databases of the same engine\. The following walkthroughs show how to move your databases to Amazon Relational Database Service \(Amazon RDS\) and Amazon Aurora\.
 

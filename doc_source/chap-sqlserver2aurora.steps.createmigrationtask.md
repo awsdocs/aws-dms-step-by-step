@@ -13,7 +13,7 @@ Using an AWS DMS task, you can specify what schema to migrate and the type of mi
 
 1. Leave the Advanced settings at their default values\.
 
-1. If you created and exported mapping rules with AWS SCT in the last step in [Step 4: Use the AWS SCT to Convert the SQL Server Schema to Aurora MySQL](chap-sqlserver2aurora.steps.convertschema.md), choose **Table mappings**, and select the **JSON** tab\. Then select **Enable JSON editing**, and enter the table mappings you saved\.
+1. If you created and exported mapping rules with AWS SCT in the last step in [Step 4: Convert the SQL Server Schema to Aurora MySQL](chap-sqlserver2aurora.steps.convertschema.md), choose **Table mappings**, and select the **JSON** tab\. Then select **Enable JSON editing**, and enter the table mappings you saved\.
 
    If you did not create mapping rules, then proceed to the next step\.
 
@@ -48,4 +48,4 @@ If you chose **Enable logging** during setup, you can monitor your task\. You ca
 
    The AWS DMS task keeps the target Aurora MySQL database up to date with source database changes\. AWS DMS keeps all the tables in the task up to date until it’s time to implement the application migration\. The latency is zero, or close to zero, when the target has caught up to the source\.
 
-For more information, see [Monitoring AWS Database Migration Service Tasks](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Monitoring.html)\.
+For more information, see [https://docs\.aws\.amazon\.com/dms/latest/userguide/CHAP\_Monitoring\.html](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Monitoring.html)\.

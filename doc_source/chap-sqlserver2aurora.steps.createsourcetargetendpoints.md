@@ -17,7 +17,7 @@ While your replication instance is being created, you can specify the source and
    The following is an example of the completed page\.  
 ![\[Completed Replication Task Page showing Replication instance created successfully\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsqlserver2aurora-dmsconnect.png)
 
-   For information about extra connection attributes, see [Using Extra Connection Attributes with AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html)\.
+   For information about extra connection attributes, see [Using Extra Connection Attributes](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html)\.
 
 1. After the endpoints and replication instance are created, test the endpoint connections by choosing **Run test** for the source and target endpoints\.
 

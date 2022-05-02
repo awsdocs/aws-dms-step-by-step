@@ -12,7 +12,7 @@ It is important to understand that AWS DMS and AWS SCT are two different tools a
 
 1. Disable foreign keys or any other constraints which may impact the AWS DMS data load\.
 
-1. AWS DMS loads the data from source to target using the Full Load approach\. Although AWS DMS is capable of creating objects in the target as part of the load, it follows a minimalistic approach to efficiently migrate the data so it doesn’t copy the entire schema structure from source to target\.
+1.  AWS DMS loads the data from source to target using the Full Load approach\. Although AWS DMS is capable of creating objects in the target as part of the load, it follows a minimalistic approach to efficiently migrate the data so it doesn’t copy the entire schema structure from source to target\.
 
 1. Perform post\-migration activities such as creating additional indexes, enabling foreign keys, and making the necessary changes in the application to point to the new database\.
 
@@ -33,21 +33,21 @@ For this walkthrough, you provision Amazon Relational Database Service \(Amazon 
 
 Although you’ll need only a minimum of resources for this walkthrough, some of these resources are not eligible for AWS Free Tier\. At the end of this walkthrough, you’ll find a section in which you delete the resources to avoid additional charges\. Delete the resources as soon as you complete the walkthrough\.
 
-To estimate what it will cost to run this walkthrough on AWS, you can use the AWS Simple Monthly Calculator\. However, the AWS DMS service is not incorporated into the calculator yet\. The following table shows both AWS DMS and Amazon RDS for Oracle Standard Edition Two pricing\.
+To estimate what it will cost to run this walkthrough on AWS, you can use the AWS Simple Monthly Calculator\. However, AWS DMS is not incorporated into the calculator yet\. The following table shows both AWS DMS and Amazon RDS for Oracle Standard Edition Two pricing\.
 
 
-| AWS Service | Instance Type | Storage and I/O | 
+|  AWS service  | Instance Type | Storage and I/O | 
 | --- | --- | --- | 
 |   Amazon RDS for Oracle DB instance, License Included \(Standard Edition Two\), Single AZ  |  db\.m3\.medium  |  Single AZ, 10 GB storage, GP2  | 
 |   Amazon Aurora MySQL DB instance  |  db\.r3\.large  |  Single AZ, 10 GB storage, 1 million I/O  | 
-|  AWS DMS replication instance  |  t2\.small  |  50 GB of storage for keeping replication logs included  | 
-|  AWS DMS data transfer  |  Free—​data transfer between AWS DMS and databases in RDS instances in the same Availability Zone is free  |  | 
+|   AWS DMS replication instance  |  t2\.small  |  50 GB of storage for keeping replication logs included  | 
+|   AWS DMS data transfer  |  Free—​data transfer between AWS DMS and databases in RDS instances in the same Availability Zone is free  |  | 
 |  Data transfer out  |  First 1 GB per month free  |  | 
 
 Assuming you run this walkthrough for two hours, we estimate the following pricing for AWS resources:
 +  Amazon Aurora MySQL \+ 10 GB storage pricing estimated by using the link to the Simple Monthly Calculator that you can access from the [pricing site](https://aws.amazon.com/dms/pricing/) is $1\.78\.
 +  Amazon RDS for Oracle SE2 \(license included\) \+ 10 GB GP2 storage cost, estimated as per the aws\.amazon\.comaws\.amazon\.com at \($0\.226\) \* 2 hours \+ \($0\.115\) \* 10 GB, is $1\.602\.
-+ AWS DMS service cost for the t2\.small instance with 50 GB GP2 storage, estimated as per the [pricing site](https://aws.amazon.com/dms/pricing/) at \($0\.036\) \* 2 hours, is $0\.072\.
++  AWS DMS service cost for the t2\.small instance with 50 GB GP2 storage, estimated as per the [pricing site](https://aws.amazon.com/dms/pricing/) at \($0\.036\) \* 2 hours, is $0\.072\.
 
 Total estimated cost to run this project = $1\.78 \+ $1\.602 \+ $0\.072 = $3\.454—​approximately $5\.00\.
 

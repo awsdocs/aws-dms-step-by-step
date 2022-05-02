@@ -5,7 +5,7 @@ You can migrate \(copy\) data to an Amazon Aurora MySQL DB cluster from an Amazo
 **Note**  
 Because Amazon Aurora MySQL is compatible with MySQL, you can migrate data from your MySQL database by setting up replication between your MySQL database, and an Amazon Aurora MySQL DB cluster\. We recommend that your MySQL database run MySQL version 5\.5 or later\.
 
-## Migrating an RDS MySQL Snapshot to Aurora MySQL<a name="chap-mysql2aurora.rdsmysql.snapshot"></a>
+## Migrating an Amazon RDS for MySQL Snapshot to Aurora MySQL<a name="chap-mysql2aurora.rdsmysql.snapshot"></a>
 
 You can migrate a DB snapshot of an Amazon RDS MySQL DB instance to create an Aurora MySQL DB cluster\. The new DB cluster is populated with the data from the original Amazon RDS MySQL DB instance\. The DB snapshot must have been made from an Amazon RDS DB instance running MySQL 5\.6\.
 
@@ -22,7 +22,7 @@ The general steps you must take are as follows:
 1. Use the console to migrate the DB snapshot and create an Amazon Aurora MySQL DB cluster with the same databases as the original DB instance of MySQL 5\.6\.
 
 **Warning**  
-Amazon RDS limits each AWS account to one snapshot copy into each region at a time\.
+ Amazon RDS limits each AWS account to one snapshot copy into each region at a time\.
 
 ### How Much Space Do I Need?<a name="chap-mysql2aurora.rdsmysql.snapshot.space"></a>
 
@@ -121,7 +121,7 @@ The script produces output similar to the output in the following example\. The 
 
 ### Migrating a DB Snapshot by Using the Console<a name="chap-mysql2aurora.rdsmysql.snapshot.console"></a>
 
-You can migrate a DB snapshot of an Amazon RDS MySQL DB instance to create an Aurora MySQL DB cluster\. The new DB cluster will be populated with the data from the original Amazon RDS MySQL DB instance\. The DB snapshot must have been made from an Amazon RDS DB instance running MySQL 5\.6 and must not be encrypted\. For information about creating a DB snapshot, see the [Amazon RDS documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_CreateSnapshot.html)\.
+You can migrate a DB snapshot of an Amazon RDS for MySQL DB instance to create an Aurora MySQL DB cluster\. The new DB cluster will be populated with the data from the original Amazon RDS for MySQL DB instance\. The DB snapshot must have been made from an Amazon RDS DB instance running MySQL 5\.6 and must not be encrypted\. For information about creating a DB snapshot, see the [Amazon RDS documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_CreateSnapshot.html)\.
 
 If the DB snapshot is not in the AWS Region where you want to locate your data, use the Amazon RDS console to copy the DB snapshot to that region\. For information about copying a DB snapshot, see the [Amazon RDS documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_CopySnapshot.html)\.
 
@@ -146,7 +146,7 @@ You can also choose for your new Aurora MySQL DB cluster to be encrypted "at res
      + It must contain from 1 to 63 alphanumeric characters or hyphens\.
      + Its first character must be a letter\.
      + It cannot end with a hyphen or contain two consecutive hyphens\.
-     + It must be unique for all DB instances per AWS account, per AWS Region\.
+     + It must be unique for all DB instances per AWS account, for each AWS Region\.
    +  ** **VPC**:** If you have an existing VPC, then you can use that VPC with your Amazon Aurora MySQL DB cluster by selecting your VPC identifier, for example `vpc-a464d1c1`\. For information on using an existing VPC, see the [Amazon RDS documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.CreateVPC.html)\.
 
      Otherwise, you can choose to have Amazon RDS create a VPC for you by selecting **Create a new VPC**\.

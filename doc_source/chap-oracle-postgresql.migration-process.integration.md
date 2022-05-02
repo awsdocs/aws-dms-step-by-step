@@ -6,4 +6,4 @@ If these third\-party applications connect directly to the Oracle database, they
 
  AWS native tools such as [Amazon Simple Notification Service](https://aws.amazon.com/sns/), [Amazon RDS Performance Insights](https://aws.amazon.com/rds/performance-insights/), [Amazon CloudWatch](https://aws.amazon.com/cloudwatch/), and [Amazon Relational Database Service](http://aws.amazon.com/rds) are already integrated with the Amazon RDS and Aurora PostgreSQL database platform and are recommended for a full picture of the ongoing performance\.
 
-For more information, see [Engage with AWS Partners](https://partners.amazonaws.com/)\.
+For more information, see [Engage with Amazon Web Services Partners](https://partners.amazonaws.com/)\.

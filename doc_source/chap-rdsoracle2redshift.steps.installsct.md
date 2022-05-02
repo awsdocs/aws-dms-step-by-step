@@ -21,18 +21,18 @@ This walkthrough assumes you will use the SQL Workbench/J client to connect to t
    1. From the list of drivers, choose **Oracle**\.
 
    1. Choose the **Open** icon, then choose the `ojdbc.jar` file that you downloaded in the previous step\. Choose **OK**\.  
-![\[AWS Database Migration Service driver management\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2redshift7.png)
+![\[driver management\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2redshift7.png)
 
    1. From the list of drivers, choose **Redshift**\.
 
    1. Choose the **Open** icon, then choose the Amazon Redshift JDBC driver that you downloaded in the previous step\. Choose **OK**\.  
-![\[AWS Database Migration Service driver management\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2redshift8.png)
+![\[driver management\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2redshift8.png)
 
 Next, install AWS SCT and the required JDBC drivers\.
 
-1. Download AWS SCT from [Installing and Updating the AWS Schema Conversion Tool](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_Installing.html) in the *AWS Schema Conversion Tool User Guide\.* 
+1. Download AWS SCT from [https://docs\.aws\.amazon\.com/SchemaConversionTool/latest/userguide/CHAP\_Installing\.html](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_Installing.html)\.
 
-1. Follow the instructions to install AWS SCT\. By default, the tool is installed in the `C:\Program Files\AWS Schema Conversion Tool\AWS` directory\.
+1. Follow the instructions to install AWS SCT\.
 
 1. Launch AWS SCT\.
 
@@ -41,4 +41,4 @@ Next, install AWS SCT and the required JDBC drivers\.
 1. Choose **Settings**, **Global Settings**, then choose **Drivers**, and then choose **Browse** for **Oracle Driver Path**\. Locate the Oracle JDBC driver and choose **OK**\.
 
 1. Choose **Browse** for **Amazon Redshift Driver Path**\. Locate the Amazon Redshift JDBC driver and choose **OK**\. Choose **OK** to close the dialog box\.  
-![\[Connecting to the Oracle DB instance for AWS Database Migration Service\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2redshift8.5.png)
+![\[Connecting to the Oracle DB instance\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2redshift8.5.png)

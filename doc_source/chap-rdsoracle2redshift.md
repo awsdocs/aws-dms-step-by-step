@@ -12,7 +12,7 @@ It is important to understand that AWS DMS and AWS SCT are two different tools a
 
 1. Disable foreign keys or any other constraints that might impact the AWS DMS data load\.
 
-1. AWS DMS loads the data from source to target using the Full Load approach\. Although AWS DMS is capable of creating objects in the target as part of the load, it follows a minimalistic approach to efficiently migrate the data so that it doesn’t copy the entire schema structure from source to target\.
+1.  AWS DMS loads the data from source to target using the Full Load approach\. Although AWS DMS is capable of creating objects in the target as part of the load, it follows a minimalistic approach to efficiently migrate the data so that it doesn’t copy the entire schema structure from source to target\.
 
 1. Perform postmigration activities such as creating additional indexes, enabling foreign keys, and making the necessary changes in the application to point to the new database\.
 

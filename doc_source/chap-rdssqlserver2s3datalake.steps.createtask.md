@@ -33,7 +33,7 @@ Validate that the target Amazon S3 has the corresponding data types\. For more i
 After running the initial load test, validate that AWS DMS converted data as you expected\. You can also initiate a pre\-migration assessment to identify any unsupported data types in the migration scope\. For more information, see [Specifying individual assessments](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.AssessmentReport1.html#CHAP_Tasks.AssessmentReport1.Individual)\.
 
 **Note**  
-The preceding list is not complete\. For more information, see [Best practices for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_BestPractices.html)\.
+The preceding list is not complete\. For more information, see [Best practices](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_BestPractices.html)\.
 
 Combining the considerations from the preceding list, we start with a single task that migrates all 19 tables\. Based on the full load run time and resource utilization metrics on the source SQL Server database instance and replication instance, we can evaluate if we should parallelize the load further to improve performance\.
 
@@ -115,7 +115,7 @@ The size of the largest LOB is 1,000 bytes\. Because of that, we will leave the 
 
  **Other task settings** 
 
-Choose **Enable CloudWatch Logs** to upload the AWS DMS task execution log to AWS CloudWatch\. You can use these logs to troubleshoot issues because they include error and warning messages, start and end times of the run, configuration issues, and so on\. Changes to the task logging setting, such as enabling debug or trace can also be helpful to diagnose performance issues\.
+Choose **Enable CloudWatch Logs** to upload the AWS DMS task execution log to Amazon CloudWatch\. You can use these logs to troubleshoot issues because they include error and warning messages, start and end times of the run, configuration issues, and so on\. Changes to the task logging setting, such as enabling debug or trace can also be helpful to diagnose performance issues\.
 
 **Note**  
 CloudWatch log usage is charged at standard rates\. For more information, see [Amazon CloudWatch pricing](https://aws.amazon.com/cloudwatch/pricing/)\.

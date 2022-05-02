@@ -10,7 +10,7 @@ To convert an Oracle schema to an Aurora MySQL schema using AWS Schema Conversio
 
 1. Enter the following information, and then choose **Test Connection**\.    
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/dms/latest/sbs/chap-rdsoracle2aurora.steps.convertschema.html)  
-![\[Connecting to an Amazon RDS for Oracle DB instance in the AWS Schema Conversion Tool\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora11.png)
+![\[Connecting to an Amazon RDS for Oracle DB instance\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora11.png)
 
 1. Choose **OK** to close the alert box, then choose **Connect** to close the dialog box and to connect to the Oracle DB instance\.
 
@@ -27,7 +27,7 @@ To convert an Oracle schema to an Aurora MySQL schema using AWS Schema Conversio
 1. Choose **Main view**\. In the tree in the left panel, right\-click the **HR** schema and choose **Create report**\.
 
 1. Check the report and the action items it suggests\. The report discusses the type of objects that can be converted by using AWS SCT, along with potential migration issues and actions to resolve these issues\. For this walkthrough, you should see something like the following:  
-![\[Database migration report in AWS SCT\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora13.png)
+![\[Database migration report\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora13.png)
 
    You can optionally save the report as \.csv or \.pdf format for later analysis\.
 

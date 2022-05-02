@@ -4,17 +4,17 @@ Before you migrate data to PostgreSQL, you convert the Oracle schema to a Postgr
 
 To convert an Oracle schema to a PostrgeSQL schema using AWS Schema Conversion Tool \(AWS SCT\), do the following:
 
-1. Launch the AWS SCT\. In the AWS SCT, choose **File**, then choose **New Project**\. Create a new project named `AWS Schema Conversion Tool Oracle to PostgreSQL`, specify the **Location** of the project folder, and then choose **OK**\.
+1. Launch the AWS SCT\. In the AWS SCT, choose **File**, then choose **New Project**\. Create a new project named ` AWS Schema Conversion Tool Oracle to PostgreSQL`, specify the **Location** of the project folder, and then choose **OK**\.
 
 1. Choose **Add source** to add a source Oracle database to your project, then choose **Oracle**, and choose **Next**\.
 
 1. Enter the following information, and then choose **Test Connection**\.    
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/dms/latest/sbs/chap-rdsoracle2postgresql.steps.convertschema.html)  
-![\[Connecting to an Oracle DB instance in the AWS Schema Conversion Tool\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2postgresql11.png)
+![\[Connecting to an Oracle DB instance\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2postgresql11.png)
 
 1. Choose **OK** to close the alert box, then choose **Connect** to close the dialog box and to connect to the Oracle DB instance\.
 
-1. Choose **Add target** to add a target PostgreSQL database to your project, then choose **Amazon RDS for PostgreSQL**, and choose **Next**\.
+1. Choose **Add target** to add a target PostgreSQL database to your project, then choose ** Amazon RDS for PostgreSQL**, and choose **Next**\.
 
 1. Enter the following information and then choose **Test Connection**\.    
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/dms/latest/sbs/chap-rdsoracle2postgresql.steps.convertschema.html)
@@ -58,7 +58,7 @@ To convert an Oracle schema to a PostrgeSQL schema using AWS Schema Conversion T
 
       1. Run the script on the target Amazon RDS for PostgreSQL database\.
 
-   For more information, see [Converting Database Schema to Amazon RDS by Using the AWS Schema Conversion Tool](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_Converting.html) in the *AWS Schema Conversion Tool User Guide*\.
+   For more information, see [Converting Database Schema to Amazon RDS](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_Converting.html)\.
 
 1. \(Optional\) Use AWS SCT to create migration rules\.
 

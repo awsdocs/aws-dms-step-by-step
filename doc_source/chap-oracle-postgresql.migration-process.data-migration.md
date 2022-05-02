@@ -24,4 +24,4 @@ Normally you just fall back to the old system if a migration fails during smoke 
 
 ![\[Reverse Migration\]](http://docs.aws.amazon.com/dms/latest/sbs/images/oracle-postgresql-reverse-migration.png)
 
-For more information, see [What is AWS Database Migration Service?](https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html) and [Migrating Oracle databases with near\-zero downtime using AWS DMS](https://aws.amazon.com/blogs/database/migrating-oracle-databases-with-near-zero-downtime-using-aws-dms/)\.
+For more information, see [What is Database Migration Service?](https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html) and [Migrating Oracle databases with near\-zero downtime](https://aws.amazon.com/blogs/database/migrating-oracle-databases-with-near-zero-downtime-using-aws-dms/)\.

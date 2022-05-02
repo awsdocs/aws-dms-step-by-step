@@ -4,13 +4,13 @@ Before you migrate data to Amazon Aurora MySQL, convert the Microsoft SQL Server
 
 To convert a SQL Server schema to an Aurora MySQL schema, do the following:
 
-1. Launch the AWS SCT\. In the AWS SCT, choose **File**, then choose **New Project**\. Create a new project named `AWS Schema Conversion Tool SQL Server to Aurora MySQL`, specify the **Location** of the project folder, and then choose **OK**\.
+1. Launch the AWS SCT\. In the AWS SCT, choose **File**, then choose **New Project**\. Create a new project named ` AWS Schema Conversion Tool SQL Server to Aurora MySQL`, specify the **Location** of the project folder, and then choose **OK**\.
 
 1. Choose **Add source** to add a source Microsoft SQL Server database to your project, then choose **Microsoft SQL Server**, and choose **Next**\.
 
 1. Enter the following information, and then choose **Test connection**\.    
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/dms/latest/sbs/chap-sqlserver2aurora.steps.convertschema.html)  
-![\[Test Connection to SQL Server Database in AWS SCT\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsqlserver2aurora-sctconnectsqlserv.png)
+![\[Test Connection to SQL Server Database\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsqlserver2aurora-sctconnectsqlserv.png)
 
 1. Choose **OK** to close the alert box\. Then choose **Connect** to close the dialog box and connect to the Microsoft SQL Server database instance\. AWS SCT displays the structure of the Microsoft SQL Server database instance in the left panel\.
 
@@ -60,7 +60,7 @@ To convert a SQL Server schema to an Aurora MySQL schema, do the following:
 
       1. Run the script on the target Aurora MySQL database\.
 
-   For more information, see [Converting Database Schema to Amazon RDS by Using the AWS Schema Conversion Tool](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_Converting.html) in the *AWS Schema Conversion Tool User Guide*\.
+   For more information, see [Converting Database Schema to Amazon RDS](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_Converting.html)\.
 
 1. \(Optional\) Use AWS SCT to create migration rules\.
 

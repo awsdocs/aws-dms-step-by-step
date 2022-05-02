@@ -15,16 +15,16 @@ To provision MariaDB as a source database, download [the Mariadb\_CF\.yaml templ
 1. Choose **Next**\.
 
 1. On the **Specify Stack Details** page, edit the predefined values as needed, and then choose **Next**:
-   +  **Stack name** – Enter a name for the stack\.
-   +  **CIDR** – Enter the CIDR IP range to access the instance\.
-   +  **DBAllocated Storage** – Enter the database storage size in GB\. The default is 20 GB\.
-   +  **DBBackupRetentionPeriod** – The number of days to retain backups\.
-   +  **DBInstanceClass** – Enter the instance type of the database server\.
-   +  **DBMonitoringInterval** – Interval to publish database logs to Amazon CloudWatch\.
-   +  **DBSubnetGroup** – Enter the DB subnet group\.
-   +  **MariaDBEngine** – Enter the MariaDB engine version\.
-   +  **RDSDBName** – Enter the name of the database\.
-   +  **VPCID** – Enter the VPC to launch your DB instance\.
+   +  **Stack name** — Enter a name for the stack\.
+   +  **CIDR** — Enter the CIDR IP range to access the instance\.
+   +  **DBAllocated Storage** — Enter the database storage size in GB\. The default is 20 GB\.
+   +  **DBBackupRetentionPeriod** — The number of days to retain backups\.
+   +  **DBInstanceClass** — Enter the instance type of the database server\.
+   +  **DBMonitoringInterval** — Interval to publish database logs to Amazon CloudWatch\.
+   +  **DBSubnetGroup** — Enter the DB subnet group\.
+   +  **MariaDBEngine** — Enter the MariaDB engine version\.
+   +  **RDSDBName** — Enter the name of the database\.
+   +  **VPCID** — Enter the VPC to launch your DB instance\.
 
 1. On the **Configure stack options** page, for **Tags**, specify any optional tags, and then choose **Next**\.
 

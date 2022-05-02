@@ -10,7 +10,7 @@ In the **Create database migration task** page, follow these three steps to crea
 
 1. Under **Custom CDC start point**, paste the native start point you saved earlier\.
 
-For more information, see [Creating tasks for ongoing replication using AWS DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Task.CDC.html) and [Migrate from MySQL to Amazon RDS with AWS DMS](https://aws.amazon.com/getting-started/hands-on/move-to-managed/migrate-my-sql-to-amazon-rds/)\.
+For more information, see [Creating tasks for ongoing replication](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Task.CDC.html) and [Migrate from MySQL to Amazon RDS](https://aws.amazon.com/getting-started/hands-on/move-to-managed/migrate-my-sql-to-amazon-rds/)\.
 
 **Note**  
 The AWS DMS CDC replication uses plain SQL statements from binlog to apply data changes in the target database\. Therefore, it is slower and more resource\-intensive than the native Primary/Replica binary log replication in MySQL\. For more information, see [Replication with a MySQL or MariaDB instance running external to Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.External.Repl.html)\.
