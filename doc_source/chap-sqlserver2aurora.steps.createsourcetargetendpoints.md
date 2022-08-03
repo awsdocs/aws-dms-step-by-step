@@ -1,6 +1,6 @@
 # Step 6: Create AWS DMS Source and Target Endpoints<a name="chap-sqlserver2aurora.steps.createsourcetargetendpoints"></a>
 
-While your replication instance is being created, you can specify the source and target database endpoints using the AWS Management Console\. However, you can test connectivity only after the replication instance has been created, because the replication instance is used in the connection\.
+While your replication instance is being created, you can specify the source and target database endpoints using the [AWS Management Console](https://console.aws.amazon.com)\. However, you can test connectivity only after the replication instance has been created, because the replication instance is used in the connection\.
 
 1. In the AWS DMS console, specify your connection information for the source SQL Server database and the target Aurora MySQL database\. The following table describes the source settings\.    
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/dms/latest/sbs/chap-sqlserver2aurora.steps.createsourcetargetendpoints.html)

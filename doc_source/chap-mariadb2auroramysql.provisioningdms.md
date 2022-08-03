@@ -2,9 +2,9 @@
 
 To provision an AWS DMS replication instance, download [the DMS\_CF\.yaml template](https://aws-database-blog.s3.amazonaws.com/artifacts/mariadb-to-aurora-mysql-migration/DMS_CF.yaml)\.
 
-1. On the AWS Management Console, under **Services**, choose **CloudFormation**\.
+1. On the [AWS Management Console](https://console.aws.amazon.com), under **Services**, choose **CloudFormation**\.
 
-1. Choose **Create Stack**\.
+1. Choose **Create stack**\.
 
 1. For **Specify template**, choose **Upload a template file**\.
 

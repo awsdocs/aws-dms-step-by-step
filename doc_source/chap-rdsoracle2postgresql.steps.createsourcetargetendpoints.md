@@ -1,6 +1,8 @@
 # Step 6: Create AWS DMS Source and Target Endpoints<a name="chap-rdsoracle2postgresql.steps.createsourcetargetendpoints"></a>
 
-While your replication instance is being created, you can specify the source and target database endpoints using the AWS Management Console\. However, you can only test connectivity after the replication instance has been created, because the replication instance is used in the connection\.
+While your replication instance is being created, you can specify the source and target database endpoints using the [AWS Management Console](https://console.aws.amazon.com)\. However, you can only test connectivity after the replication instance has been created, because the replication instance is used in the connection\.
+
+1. Sign in to the AWS Management Console, open the [AWS DMS console](https://console.aws.amazon.com/dms/v2), and then choose **Endpoints**\.
 
 1. Specify your connection information for the source Oracle database and the target PostgreSQL database\. The following table describes the source settings\.    
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/dms/latest/sbs/chap-rdsoracle2postgresql.steps.createsourcetargetendpoints.html)

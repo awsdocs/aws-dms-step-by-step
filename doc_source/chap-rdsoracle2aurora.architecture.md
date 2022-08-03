@@ -20,7 +20,7 @@ We will provision the AWS resources that are required for this AWS Database Migr
 
 We have designed the AWS CloudFormation template to require few inputs from the user\. It provisions the necessary AWS resources with minimum recommended configurations\. However, if you want to change some of the configurations and parameters, such as the VPC CIDR block and Amazon RDS instance types, feel free to update the template\.
 
-We will use the AWS Management Console to provision the AWS DMS resources, such as the replication instance, endpoints, and tasks\. You will install client tools such as SQL Workbench/J and the AWS Schema Conversion Tool \(AWS SCT\) on your local computer to connect to the Amazon RDS instances\.
+We will use the [AWS Management Console](https://console.aws.amazon.com) to provision the AWS DMS resources, such as the replication instance, endpoints, and tasks\. You will install client tools such as SQL Workbench/J and the AWS Schema Conversion Tool \(AWS SCT\) on your local computer to connect to the Amazon RDS instances\.
 
 Following is an illustration of the migration architecture for this walkthrough\.
 

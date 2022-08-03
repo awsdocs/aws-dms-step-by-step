@@ -1,6 +1,6 @@
 # Step 4: Create Your Oracle Source Endpoint<a name="chap-on-premoracle2aurora.steps.createoracle"></a>
 
-While your replication instance is being created, you can specify the Oracle source endpoint using the AWS Management Console\. However, you can only test connectivity after the replication instance has been created, because the replication instance is used to test the connection\.
+While your replication instance is being created, you can specify the Oracle source endpoint using the [AWS Management Console](https://console.aws.amazon.com)\. However, you can only test connectivity after the replication instance has been created, because the replication instance is used to test the connection\.
 
 To specify source or target database endpoints, do the following:
 

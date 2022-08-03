@@ -26,7 +26,7 @@ The following diagram displays the proposed architecture\.
 
 ![\[Listener IP connection\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-aws-dms-listener-ip-connection.png)
 
- AWS DMS recommended to set the extra connection attribute `MultiSubnetFailover=True` in the customer’s AWS DMS endpoint\. This ODBC driver attribute helps AWS DMS connect to the new primary in case of an Availability Group failover\. This attribute is designed for situations when the connection is broken\. In these situations, AWS DMS attempts to connect to all IP addresses associated with the AAG listener\. For more information, see [Multi\-subnet failovers](https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover?view=sql-server-2017#SupportAgMultiSubnetFailover)\.
+ AWS DMS recommended to set the extra connection attribute `MultiSubnetFailover=Yes` in the customer’s AWS DMS endpoint\. This ODBC driver attribute helps AWS DMS connect to the new primary in case of an Availability Group failover\. This attribute is designed for situations when the connection is broken\. In these situations, AWS DMS attempts to connect to all IP addresses associated with the AAG listener\. For more information, see [Multi\-subnet failovers](https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover?view=sql-server-2017#SupportAgMultiSubnetFailover)\.
 
 Also, AWS DMS recommended to set the extra connection attribute `alwaysOnSharedSynchedBackupIsEnabled=false` to poll all the nodes in Always On cluster for transaction backups\.
 

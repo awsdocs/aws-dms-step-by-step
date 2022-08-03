@@ -14,6 +14,7 @@ In this guide, you can find step\-by\-step walkthroughs that go through the proc
 +  [Migrating a MariaDB Database to Amazon RDS for MySQL or Amazon Aurora MySQL](chap-mariadb2auroramysql.md) 
 +  [Migrating from MongoDB to Amazon DocumentDB](chap-mongodb2documentdb.md) 
 +  [Migrating a MySQL Database to Amazon RDS for MySQL or Amazon Aurora MySQL](chap-manageddatabases.mysql2rds.md) 
++  [Migrating an Oracle Database to Amazon RDS for Oracle](chap-manageddatabases.oracle2rds.md) 
 +  [Migrating a SQL Server Always On Database](chap-manageddatabases.sqlserveralwayson.md) 
 +  [Migrating from Amazon RDS for Oracle to Amazon RDS for PostgreSQL and Aurora PostgreSQL](chap-oracle-postgresql.md) 
 +  [Migrating from SAP ASE to Amazon Aurora MySQL](chap-sap-ase-aurora-mysql.md) 

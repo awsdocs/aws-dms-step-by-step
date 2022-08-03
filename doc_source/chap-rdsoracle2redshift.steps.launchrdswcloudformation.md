@@ -12,7 +12,7 @@ Now you need to provision the necessary AWS resources for this walkthrough\.
 
 1. Sign in to the AWS Management Console and open the AWS CloudFormation console at [https://console\.aws\.amazon\.com/cloudformation](https://console.aws.amazon.com/cloudformation/)\.
 
-1. Choose **Create Stack**\.
+1. Choose **Create stack**\.
 
 1. On the **Select Template **page, choose **Upload a template to Amazon S3**\.
 

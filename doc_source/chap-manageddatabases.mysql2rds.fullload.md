@@ -1,4 +1,4 @@
-# Full load<a name="chap-manageddatabases.mysql2rds.fullload"></a>
+# Full Load<a name="chap-manageddatabases.mysql2rds.fullload"></a>
 
 You can use one of these three tools to move data from your MySQL database to Amazon RDS for MySQL or Amazon Aurora MySQL\. Follow the steps described in this document to perform the full data load\.
 

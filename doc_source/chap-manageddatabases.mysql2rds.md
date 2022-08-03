@@ -15,7 +15,7 @@ You can use a hybrid strategy that combines native or third\-party tools for ful
 The hybrid option delivers the simplicity of the native or third\-party tools along with the additional services that AWS DMS provides\. For example, in AWS DMS, you can automatically validate your migrated data, row by row and column by column, to ensure the data quality in the target database\. Or, if you are only migrating a subset of the tables, it will be simpler to use AWS DMS to filter your tables than the equivalent configuration in the native or third\-party tools\.
 
 **Topics**
-+ [Full load](chap-manageddatabases.mysql2rds.fullload.md)
++ [Full Load](chap-manageddatabases.mysql2rds.fullload.md)
 + [Performance Comparison](chap-manageddatabases.mysql2rds.performance.md)
 + [AWS DMS Ongoing Replication](chap-manageddatabases.mysql2rds.replication.md)
 + [Resources](chap-manageddatabases.mysql2rds.resources.md)
