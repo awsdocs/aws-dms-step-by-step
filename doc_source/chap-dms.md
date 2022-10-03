@@ -24,6 +24,7 @@ The size and type of Oracle database migration you want to do greatly determines
 + [Migrating an Amazon RDS for SQL Server Database to an Amazon S3 Data Lake](chap-rdssqlserver2s3datalake.md)
 + [Migrating an Oracle Database to PostgreSQL](chap-rdsoracle2postgresql.md)
 + [Migrating an Amazon RDS for Oracle Database to Amazon Redshift](chap-rdsoracle2redshift.md)
++ [Migrating a BigQuery Project to Amazon Redshift](bigquery-redshift.md)
 + [Migrating MySQL\-Compatible Databases to AWS](chap-mysql.md)
 + [Migrating a MySQL\-Compatible Database to Amazon Aurora MySQL](chap-mysql2aurora.md)
 + [Migrating a MariaDB Database to Amazon RDS for MySQL or Amazon Aurora MySQL](chap-mariadb2auroramysql.md)

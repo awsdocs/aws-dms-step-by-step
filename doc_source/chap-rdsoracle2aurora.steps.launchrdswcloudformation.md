@@ -2,7 +2,7 @@
 
 Before you begin, you’ll need to download an AWS CloudFormation template\. Follow these instructions:
 
-1. Download the following archive to your computer: ` [http://docs\.aws\.amazon\.com/dms/latest/sbs/samples/dms\-sbs\-RDSOracle2Aurora\.zip](http://docs.aws.amazon.com/dms/latest/sbs/samples/dms-sbs-RDSOracle2Aurora.zip) ` 
+1. Download the following archive to your computer: ` [http://docs\.aws\.amazon\.com/dms/latest/sbs/samples/dms\-sbs\-RDSOracle2Aurora\.zip](http://docs.aws.amazon.com/dms/latest/sbs/samples/dms-sbs-RDSOracle2Aurora.zip) `\.
 
 1. Extract the AWS CloudFormation template \(`Oracle_Aurora_For_DMSDemo.template`\) from the archive\.
 

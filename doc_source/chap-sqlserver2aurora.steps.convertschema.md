@@ -1,10 +1,10 @@
-# Step 4: Use the AWS SCT to Convert the SQL Server Schema to Aurora MySQL<a name="chap-sqlserver2aurora.steps.convertschema"></a>
+# Step 4: Use AWS SCT to Convert the SQL Server Schema to Aurora MySQL<a name="chap-sqlserver2aurora.steps.convertschema"></a>
 
 Before you migrate data to Amazon Aurora MySQL, convert the Microsoft SQL Server schema to an Aurora MySQL schema using the AWS Schema Conversion Tool \(AWS SCT\)\. [This video covers all the steps of this process](https://youtu.be/1mwrggZe5UM)\.
 
 To convert a SQL Server schema to an Aurora MySQL schema, do the following:
 
-1. Launch the AWS SCT\. In the AWS SCT, choose **File**, then choose **New Project**\. Create a new project named ` AWS Schema Conversion Tool SQL Server to Aurora MySQL`, specify the **Location** of the project folder, and then choose **OK**\.
+1. Launch AWS SCT\. In AWS SCT, choose **File**, then choose **New Project**\. Create a new project named ` AWS Schema Conversion Tool SQL Server to Aurora MySQL`, specify the **Location** of the project folder, and then choose **OK**\.
 
 1. Choose **Add source** to add a source Microsoft SQL Server database to your project, then choose **Microsoft SQL Server**, and choose **Next**\.
 

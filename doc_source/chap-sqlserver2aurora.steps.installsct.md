@@ -8,7 +8,7 @@ First, install the SQL drivers and the AWS Schema Conversion Tool \(AWS SCT\) on
 
 1. Install AWS SCT and the required JDBC drivers\.
 
-   1. See [https://docs\.aws\.amazon\.com/SchemaConversionTool/latest/userguide/CHAP\_Installing\.html](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_Installing.html), and choose the appropriate link to download the AWS SCT\.
+   1. See [https://docs\.aws\.amazon\.com/SchemaConversionTool/latest/userguide/CHAP\_Installing\.html](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_Installing.html), and choose the appropriate link to download AWS SCT\.
 
    1. Start AWS SCT, and choose **Settings**, **Global Settings**\.
 

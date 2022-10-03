@@ -9,7 +9,7 @@ This document describes the third strategy — we call this the hybrid approach\
 
 ![\[Hybrid migration approach\]](http://docs.aws.amazon.com/dms/latest/sbs/images/oracle2rds-migration-approach.png)
 
-The hybrid approach may be appropriate in the following circumstances\.
+The hybrid approach provides the following advantages\.
 + To automate the creation of secondary database objects such as views, indexes, and constraints\.
 + To use AWS DMS data validation to ensure your target data matches with the source, row by row and column by column\.
 + To use some of the other capabilities that AWS DMS provides, for example data filtering or renaming tables and columns\.

@@ -14,7 +14,7 @@ If your connection is unsuccessful, ensure that the IP address you assigned when
 
 1. Create the HR schema you will use for migration using a custom SQL script \(Oracle\-HR\-Schema\-Build\.sql\)\. To obtain this script, do the following:
 
-   1. Download the following archive to your computer: ` [http://docs\.aws\.amazon\.com/dms/latest/sbs/samples/dms\-sbs\-RDSOracle2Aurora\.zip](http://docs.aws.amazon.com/dms/latest/sbs/samples/dms-sbs-RDSOracle2Aurora.zip) ` 
+   1. Download the following archive to your computer: ` [http://docs\.aws\.amazon\.com/dms/latest/sbs/samples/dms\-sbs\-RDSOracle2Aurora\.zip](http://docs.aws.amazon.com/dms/latest/sbs/samples/dms-sbs-RDSOracle2Aurora.zip) `\.
 
    1. Extract the SQL script\(`Oracle-HR-Schema-Build.sql`\) from the archive\.
 

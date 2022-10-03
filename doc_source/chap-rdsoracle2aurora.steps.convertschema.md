@@ -4,7 +4,7 @@ Before you migrate data to Aurora MySQL, you convert the Oracle schema to an Aur
 
 To convert an Oracle schema to an Aurora MySQL schema using AWS Schema Conversion Tool \(AWS SCT\), do the following:
 
-1. Launch the AWS SCT\. In the AWS SCT, choose **File**, then choose **New Project**\. Create a new project named `DMSDemoProject`, specify the **Location** of the project folder, and then choose **OK**\.
+1. Launch AWS SCT\. In AWS SCT, choose **File**, then choose **New Project**\. Create a new project named `DMSDemoProject`, specify the **Location** of the project folder, and then choose **OK**\.
 
 1. Choose **Add source** to add a source Oracle database to your project, then choose **Oracle**, and choose **Next**\.
 

@@ -58,7 +58,7 @@ Create a target endpoint for your Amazon Aurora MySQL database\.
 ![\[Target endpoint configuration\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sap-ase-to-aurora-mysql-target-endpoint-configuration.png)
 + Test the connection using the preceding replication instance\.
 
-To establish the connection, make sure that you edit the security group for your Amazon Aurora DB instance\. Also, open the 3306 port on your MySQL database to the private IP or IP range of the the replication instance\.
+To establish the connection, make sure that you edit the security group for your Amazon Aurora DB instance\. Also, open the 3306 port on your MySQL database to the private IP or IP range of the replication instance\.
 + On the Amazon Relational Database Service \(Amazon RDS\) console, choose your Amazon Aurora MySQL DB instance\.
 + On the **Connectivity & security** tab, locate your security group name under **Security**\.
 + Choose the security group link\. A new security group interface page opens\.

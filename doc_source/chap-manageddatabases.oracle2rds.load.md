@@ -48,12 +48,12 @@ select current_scn from v$database;
 Oracle Export/Import is a native database migration tool set that is provided as part of the database installation\. Oracle replaced Export/Import with Oracle Data Pump, but many DBAs are familiar with Export/Import because of its long history and usage\.
 
 Export/Import may be suitable for your use case if:
-+ You have a relatively small database size, which is less than 10 GB\.
-+ You need to migrate your database metadata, as well as table data\.
++ Your database size is less than 10 GB\.
++ You plan to migrate your database metadata, as well as table data\.
 + You have a relatively large number of tables to migrate\.
 
 Export/Import may not be suitable for your use case if:
-+ You have a relatively large database, which is more than 10 GB\.
++ Your database size is greater than 10 GB\.
 + You have LOBs or other binary data values\.
 
 One limitation of Export/Import is that it performs a serial migration\. If you have a large data volume and/or large objects like LOB or CLOB values, then using Export/Import may be slower than the other options\.
@@ -185,7 +185,7 @@ Using a database link may suit your use case if:
 + You have a relatively small number of tables to migrate\. For large number of tables you need to create a script to perform the migration\.
 
 Database link may not suit your use case if:
-+ You have a relatively large database, which is more than 10 GB\.
++ Your database size is greater than 10 GB\.
 + You need to migrate schema objects other than table\.
 
 ### Example<a name="chap-manageddatabases.oracle2rds.load.databaselink.example"></a>
@@ -225,12 +225,12 @@ Commit;
 Oracle SQL\*Loader or `sqlldr` is a native database utility\. Oracle provides this utility as part of the Oracle installation\. Oracle SQL\*Loader loads data from flat files into an Oracle database\.
 
 Oracle SQL\*Loader may be suitable for your use case if:
-+ You have a relatively small database size, which is less than 10 GB\.
++ Your database size is less than 10 GB\.
 + You need to migrate data only\.
 + You have a small number of tables to migrate, the tool requires data export and control file creation for each table\.
 
-Oracle SQL\*Loader may not be suitable for your use case if
-+ You have a relatively large database, which is more than 10 GB\.
+Oracle SQL\*Loader may not be suitable for your use case if:
++ Your database size is greater than 10 GB\.
 + You need to migrate database objects along with data\.
 
 ### Example<a name="chap-manageddatabases.oracle2rds.load.sqlloader.example"></a>

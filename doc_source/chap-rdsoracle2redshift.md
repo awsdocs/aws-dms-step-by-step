@@ -4,7 +4,7 @@ This walkthrough gets you started with heterogeneous database migration from Ama
 
 It is important to understand that AWS DMS and AWS SCT are two different tools and serve different needs\. They don’t interact with each other in the migration process\. At a high level, the steps involved in this migration are the following:
 
-1. Using the AWS SCT to do the following:
+1. Using AWS SCT to do the following:
    + Run the conversion report for Oracle to Amazon Redshift to identify the issues, limitations, and actions required for the schema conversion\.
    + Generate the schema scripts and apply them on the target before performing the data load by using AWS DMS\. AWS SCT performs the necessary code conversion for objects like procedures and views\.
 
