@@ -41,7 +41,7 @@ Re\-platforming and re\-architecting a database application ranges from modifyin
 
 You may have an Oracle database in Amazon RDS for both production or non\-production purposes, and it may just be convenience and familiarity that steered you to Oracle even though there is a licensing cost to this choice\. It is certainly easier to continue with the database you know than something new, but sometimes there are few remaining reasons do so\.
 
-Everyone’s Oracle application is special, and nobody has the same setup and needs for the future\. To provide a single framework for migration, this guide organizes the work in 12 topics in order to cover what is in scope for most applications\. These topics will be used in sequence for multiple purposes and should not be seen as a strictly linear process, but rather an overall arch of a migration project where individual topics and activities can be overlapped or swapped to fit specific project conditions\. The following image shows the 12 steps with an approximate share of effort in a typical project\.
+Everyone’s Oracle application is special, and nobody has the same setup and needs for the future\. To provide a single framework for database migrations, this guide organizes the work in 12 steps\. These steps cover what is in scope for most migrations\. You can use these steps in sequence for multiple purposes and you shouldn’t see them as a strictly linear process\. You can consider these steps as an overall arch of a migration project where individual steps and activities can be overlapped or swapped to fit specific project conditions\. The following image shows the 12 steps with an approximate share of effort in a typical project\.
 
 ![\[The 12 Step Migration Process\]](http://docs.aws.amazon.com/dms/latest/sbs/images/12-step-migration-process.png)
 
@@ -97,4 +97,4 @@ Each step will be described at a high level in order to allow the reader to skip
 
 ## Automation<a name="chap-oracle-postgresql.automation"></a>
 
-This document references the freely available AWS Schema Conversion Tool \(AWS SCT\) for code conversion and the AWS Database Migration Service for data migration\. For more information, see [https://docs\.aws\.amazon\.com/SchemaConversionTool/latest/userguide/CHAP\_Installing\.html](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_Installing.html) and [https://aws\.amazon\.com/dms/](https://aws.amazon.com/dms/)\.
+This document references the freely available AWS Schema Conversion Tool \(AWS SCT\) for code conversion and the AWS Database Migration Service for data migration\. For more information, see [Installing, verifying, and updating Schema Conversion Tool](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_Installing.html) and [Database Migration Service](https://aws.amazon.com/dms/)\.

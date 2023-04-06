@@ -19,7 +19,7 @@ To configure MS\-REPLICATION, complete the following steps:
 
 1. In the **Distributor** step, choose ** *db\_name* will act as its own distributor**\. SQL Server creates a distribution database and log\.
 
-   For more information, see the [Microsoft documentation](https://docs.microsoft.com/en-us/sql/relational-databases/replication/enable-a-database-for-replication-sql-server-management-studio)\.
+   For more information, see [Microsoft documentation](https://docs.microsoft.com/en-us/sql/relational-databases/replication/enable-a-database-for-replication-sql-server-management-studio)\.
 
    When the configuration is complete, your server is enabled for replication\. Either a distribution database is in place, or you have configured your server to use a remote distribution database\.
 
@@ -45,10 +45,10 @@ To configure MS\-CDC, complete the following steps:
    EXEC sys.sp_cdc_enable_table @source_schema = N'schema_name', @source_name = N'table_name', @role_name = NULL;
    ```
 
-   For more information, see the [Microsoft documentation](https://docs.microsoft.com/en-us/sql/relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server)\.
+   For more information, see [Microsoft documentation](https://docs.microsoft.com/en-us/sql/relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server)\.
 
 **Note**  
-If you are migrating databases that participate in an AlwaysOn Availability Group, it is best practice to use replication for migration\. To use this option, publishing must be enabled, and a distribution database must be configured for each node of the AlwaysOn Availability Group\. Additionally, ensure you are using the name of the availability group listener for the database rather than the name of the server currently hosting the availability group database for the target server name\. These requirement apply to each instance of SQL Server in the cluster and must not be configured using the availability group listener\.
+If you are migrating databases that participate in an Always On Availability Group, it is best practice to use replication for migration\. To use this option, publishing must be enabled, and a distribution database must be configured for each node of the Always On Availability Group\. Additionally, ensure you are using the name of the availability group listener for the database rather than the name of the server currently hosting the availability group database for the target server name\. These requirement apply to each instance of SQL Server in the cluster and must not be configured using the availability group listener\.
 If your database isn’t supported for MS\-REPLICATION or MS\-CDC \(for example, if you are running the Workgroup Edition of SQL Server\), some changes can still be captured, such as `INSERT` and `DELETE` statements, but other DML statements such as `UPDATE` and `TRUNCATE TABLE` will not be captured\. Therefore, a migration with continuing data replication is not recommended in this configuration, and a static one time migration \(or repeated one time full migrations\) should be considered instead\.
 
 For more information about using MS\-REPLICATION and MS\-CDC, see [Configuring a Microsoft SQL Server Database as a Replication Source](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.SQLServer.html#CHAP_Source.SQLServer.Configuration)\.

@@ -40,9 +40,9 @@ Now, you can start the data migration\.
 
 1. For **Migration mode**, choose **Extract, upload, and copy**\.
 
-1. Choose **Advanced**\. For **Google CS bucket folder**, enter the name for your Cloud Storage bucket that you created in the step 3\.
+1. Choose **Advanced**\. For **Google CS bucket folder**, enter the name for your Cloud Storage bucket that you created in [Step 3](bigquery-redshift-migration-step-3.md)\.
 
-1. Choose **Amazon S3 settings**\. For **Amazon S3 bucket folder**, enter the name of your Amazon S3 bucket that you created in the step 3\.
+1. Choose **Amazon S3 settings**\. For **Amazon S3 bucket folder**, enter the name of your Amazon S3 bucket that you created in [Step 3](bigquery-redshift-migration-step-3.md)\.
 
 1. Choose **Create** and then choose **Start**\.
 

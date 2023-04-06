@@ -42,6 +42,7 @@ To capture change data, AWS DMS requires supplemental logging to be enabled on y
 
    ```
    EXECUTE on DBMS_LOGMNR
+   EXECUTE on DBMS_LOGMNR_D
    SELECT on V_$LOGMNR_LOGS
    SELECT on V_$LOGMNR_CONTENTS
    LOGMINING /* For Oracle 12c and higher. */
@@ -63,65 +64,61 @@ To capture change data, AWS DMS requires supplemental logging to be enabled on y
 
    If your Oracle source is an Amazon RDS database, it will be placed in ARCHIVELOG MODE if, and only if, you enable backups\.
 
-1. Run the following command to enable supplemental logging at the database level, which AWS DMS requires:
+1. Run the following command to turn on supplemental logging at the database level, which AWS DMS requires:
+   + In Oracle SQL:
 
-   1. In Oracle SQL:
+     ```
+     ALTER DATABASE ADD SUPPLEMENTAL LOG DATA;
+     ```
+   + In RDS:
 
-      ```
-      ALTER DATABASE ADD SUPPLEMENTAL LOG DATA;
-      ```
-
-   1. In RDS:
-
-      ```
-      exec rdsadmin.rdsadmin_util.alter_supplemental_logging('ADD');
-      ```
+     ```
+     exec rdsadmin.rdsadmin_util.alter_supplemental_logging('ADD');
+     ```
 
 1. Use the following command to enable identification key supplemental logging at the database level\. AWS DMS requires supplemental key logging at the database level\. The exception is if you allow AWS DMS to automatically add supplemental logging as needed or enable key\-level supplemental logging at the table level:
+   + In Oracle SQL:
 
-   1. In Oracle SQL:
+     ```
+     ALTER DATABASE ADD SUPPLEMENTAL LOG DATA (PRIMARY KEY) COLUMNS;
+     ```
+   + In RDS:
 
-      ```
-      ALTER DATABASE ADD SUPPLEMENTAL LOG DATA (PRIMARY KEY) COLUMNS;
-      ```
+     ```
+     exec rdsadmin.rdsadmin_util.alter_supplemental_logging('ADD','PRIMARY KEY');
+     ```
 
-   1. In RDS:
+     Your source database incurs a small bit of overhead when key level supplemental logging is enabled\. Therefore, if you are migrating only a subset of your tables, then you might want to enable key level supplemental logging at the table level\.
 
-      ```
-      exec rdsadmin.rdsadmin_util.alter_supplemental_logging('ADD','PRIMARY KEY');
-      ```
+1. To turn on key level supplemental logging at the table level, use the following command\.
 
-      Your source database incurs a small bit of overhead when key level supplemental logging is enabled\. Therefore, if you are migrating only a subset of your tables, then you might want to enable key level supplemental logging at the table level\.
+   ```
+   ALTER TABLE table_name ADD SUPPLEMENTAL LOG DATA (PRIMARY KEY) COLUMNS;
+   ```
 
-1. To enable key level supplemental logging at the table level, use the following command\.
+   If a table doesn’t have a primary key, then you have two options\.
+   + You can add supplemental logging on all columns involved in the first unique index on the table \(sorted by index name\)\.
 
-```
-ALTER TABLE table_name ADD SUPPLEMENTAL LOG DATA (PRIMARY KEY) COLUMNS;
-```
+     To add supplemental logging on a subset of columns in a table, such as those involved in a unique index, run the following command\.
 
-If a table does not have a primary key, then you have two options\.
-+ You can add supplemental logging on all columns involved in the first unique index on the table \(sorted by index name\)\.
-+ You can add supplemental logging on all columns of the table\.
+     ```
+     ALTER TABLE table_name
+        ADD SUPPLEMENTAL LOG GROUP example_log_group (column_list) ALWAYS;
+     ```
+   + You can add supplemental logging on all columns of the table\.
 
-To add supplemental logging on a subset of columns in a table, such as those involved in a unique index, run the following command\.
+     To add supplemental logging on all columns of a table, run the following command\.
 
-```
-ALTER TABLE table_name
-   ADD SUPPLEMENTAL LOG GROUP example_log_group (column_list) ALWAYS;
-```
+     ```
+     ALTER TABLE table_name ADD SUPPLEMENTAL LOG DATA (ALL) COLUMNS;
+     ```
 
-To add supplemental logging for all columns of a table, run the following command\.
+1. Create a user for AWS SCT\.
 
-```
-ALTER TABLE table_name ADD SUPPLEMENTAL LOG DATA (ALL) COLUMNS;
-```
-
-6 Create a user for AWS SCT\.
-
-```
-CREATE USER oracle_sct_user IDENTIFIED BY password;
-
-GRANT CONNECT TO oracle_sct_user;
-GRANT SELECT_CATALOG_ROLE TO oracle_sct_user;
-GRANT SELECT ANY DICTIONARY TO oracle_sct_user;
-```
+   ```
+   CREATE USER oracle_sct_user IDENTIFIED BY password;
+   
+   GRANT CONNECT TO oracle_sct_user;
+   GRANT SELECT_CATALOG_ROLE TO oracle_sct_user;
+   GRANT SELECT ANY DICTIONARY TO oracle_sct_user;
+   ```

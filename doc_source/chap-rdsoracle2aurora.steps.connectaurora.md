@@ -2,7 +2,7 @@
 
 Next, test your connection to your Aurora MySQL DB instance\.
 
-1. In SQL Workbench/J, choose **File**, then choose **Connect window**\. Choose the Create a new connection profile icon\. using the following information: Connect to the Aurora MySQL DB instance in SQL Workbench/J by using the information as shown following    
+1. In SQL Workbench/J, choose **File**, then choose **Connect window**\. Choose the Create a new connection profile icon\. using the following information: Connect to the Aurora MySQL DB instance in SQL Workbench/J by using the information as shown following:    
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/dms/latest/sbs/chap-rdsoracle2aurora.steps.connectaurora.html)
 
 1. Test the connection by choosing **Test**\. Choose **OK** to close the dialog box, then choose OK to create the connection profile\.  

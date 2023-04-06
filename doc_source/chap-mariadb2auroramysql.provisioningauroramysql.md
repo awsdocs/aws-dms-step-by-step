@@ -17,7 +17,7 @@ To provision Aurora MySQL as a target database, download the [AuroraMysql\_CF\.y
 1. On the **Specify stack details** page, edit the predefined values as needed, and then choose **Next**:
    +  **Stack name** — Enter a name for the stack\.
    +  **CIDR** — Enter the CIDR IP range to access the instance\.
-   +  **DBBackupRetentionPeriod** — The numbrer of days for backup retention\.
+   +  **DBBackupRetentionPeriod** — The number of days for backup retention\.
    +  **DBInstanceClass** — Enter the instance type of the database server\.
    +  **DBMasterPassword** — Enter the master password for the DB instance\.
    +  **DBMasterUsername** — Enter the master user name for the DB instance\.

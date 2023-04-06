@@ -6,15 +6,15 @@ To quickly see if your workload qualifies as a migration candidate, please use t
 | Application Questions | Comments | 
 | --- | --- | 
 |  Are there Oracle dependent parts of the application that you can’t modify by yourself?  |  If you don’t control all of the code it can be difficult to change the underlying database\.  | 
-|  Is the application commercial off the shelf, and not available for PostgreSQL?  |  Unless the COTS application also supports Oracle, it will not be able to migrate\.  | 
+|  Is the application commercial off the shelf, and not available for PostgreSQL?  |  Unless the commercial off\-the shelf software \(COTS\) application also supports PostgreSQL, it will not be able to migrate\.  | 
 |  Does the application use specific methods to connect to an Oracle database such as Oracle Call Interface \(OCI\)?  |  Refactoring OCI calls to ODBC is not impossible, but typically an involved process\.  | 
-|  Does the application use Oracle specific libraries?  |  It could be challenging finding PostreSQL replacements for Oracle specific libraries\.  | 
+|  Does the application use Oracle specific libraries?  |  It could be challenging finding PostgreSQL replacements for Oracle specific libraries\.  | 
 
 
 | Database Questions | Comments | 
 | --- | --- | 
-|  Does the database use any third party packages?  |  It could be challenging finding PostreSQL replacements for Oracle specific packages\.  | 
-|  Does the database use any data cartridges?  |  It could be challenging finding PostreSQL replacements for Oracle specific cartridges\.  | 
+|  Does the database use any third party packages?  |  It could be challenging finding PostgreSQL replacements for Oracle specific packages\.  | 
+|  Does the database use any data cartridges?  |  It could be challenging finding PostgreSQL replacements for Oracle specific cartridges\.  | 
 |  Does the application use Oracle Forms or Application Express \(APEX\)?  |  Completely replacing Forms or APEX with a non\-Oracle solution is substantial\.  | 
 |  Does the database use SQLJ or \.NET stored procedures?  |  You can refactor external stored procedure code for use with PostgreSQL, but it adds development work\.  | 
 |  Does the database use Oracle Streams?  |  Some refactoring is required to replace Oracle Streams with a PostgreSQL\-compatible solution\.  | 

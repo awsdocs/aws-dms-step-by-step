@@ -22,7 +22,7 @@ Server version: 5.6.10 MySQL Community Server (GPL)
 
 Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
 
-Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+Enter 'help;' or '\h' for help. Enter '\c' to clear the current input statement.
 
 MySQL [migration]> select routine_schema as database_name,
     ->             routine_name,

@@ -71,4 +71,4 @@ To move connections from your Oracle database to your PostgreSQL database, do th
 
    1. Start the application services on new target PostgreSQL database \(including scripts , client software, and so on\)\.
 
-   1. Add Cloudwatch monitoring on your new PostgreSQL database\. See [Monitoring Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Monitoring.html)\.
+   1. Add CloudWatch monitoring on your new PostgreSQL database\. For more information, see [Monitoring Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Monitoring.html)\.

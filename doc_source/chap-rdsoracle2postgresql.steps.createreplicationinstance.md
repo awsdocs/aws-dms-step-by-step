@@ -6,7 +6,7 @@ After validating the schema structure between source and target databases, conti
 
 An AWS DMS replication instance performs the actual data migration between source and target\. The replication instance also caches the transaction logs during the migration\. How much CPU and memory capacity a replication instance has influences the overall time required for the migration\.
 
-1. Sign in to the AWS Management Console, and select AWS DMS at [https://console\.aws\.amazon\.com/dms/v2/](https://console.aws.amazon.com/dms/v2/)\. Next, choose **Create Migration**\. If you are signed in as an AWS Identity and Access Management \(IAM\) user, then you must have the appropriate permissions to access AWS DMS\. For more information on the permissions required, see [IAM Permissions](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.IAMPermissions.html)\.
+1. Sign in to the AWS Management Console, and select AWS DMS at [https://console\.aws\.amazon\.com/dms/v2/](https://console.aws.amazon.com/dms/v2/)\. Next, choose **Create Migration**\. If you are signed in as an AWS Identity and Access Management \(IAM\) user, then you must have the appropriate permissions to access AWS DMS\. For more information about the permissions required, see [IAM Permissions](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#CHAP_Security.IAMPermissions)\.
 
 1. Choose **Next** to start a database migration from the console’s Welcome page\.
 

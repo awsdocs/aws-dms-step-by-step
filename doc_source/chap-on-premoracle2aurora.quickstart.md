@@ -5,8 +5,8 @@ To migrate your data from Oracle to Aurora MySQL using AWS DMS, you take the fol
 ## Step 1: Prepare Your Oracle Source Database<a name="chap-on-premoracle2aurora.quickstart.stepone"></a>
 
 To use AWS DMS to migrate data from an Oracle source database requires some preparation and we also recommend a few additional steps as best practices\.
-+  AWS DMS account – It’s a good practice to create a separate account for the specific purpose of migrating your data\. This account should have the minimal set of privileges required to migrate your data\. Specific details regarding those privileges are outlined below\. If you are simply interested in testing AWS DMS on a non\-production database, any DBA account will be sufficient\.
-+ Supplemental logging – To capture changes, you must enable supplemental logging in order to use DMS\. To enable supplemental logging at the database level issue the following command\.
++  AWS DMS user — It’s a good practice to create a separate user for the specific purpose of migrating your data\. This user should have the minimal set of privileges required to migrate your data\. You can find specific details regarding those privileges later\. If you are simply interested in testing AWS DMS on a non\-production database, any DBA user will be sufficient\.
++ Supplemental logging — To capture changes, you must enable supplemental logging in order to use DMS\. To enable supplemental logging at the database level issue the following command\.
 
   ```
   ALTER DATABASE ADD SUPPLEMENTAL LOG DATA
@@ -23,13 +23,13 @@ To use AWS DMS to migrate data from an Oracle source database requires some prep
 
 Following are some things to consider when launching your Aurora MySQL instance:
 + For best results, we recommend that you locate your Aurora MySQL instance and your replication instance in the same VPC and, if possible, the same Availability Zone\.
-+ We recommend that you create a separate account with minimal privileges for migrating your data\. The AWS DMS account needs the following privileges on all databases to which data is being migrated\.
++ We recommend that you create a separate user with minimal privileges for migrating your data\. The AWS DMS user needs the following privileges on all databases to which data is being migrated\.
 
   ```
   ALTER, CREATE, DROP, INDEX, INSERT, UPDATE, DELETE, SELECT
   ```
 
-  Additionally, AWS DMS needs complete access to the awsdms\_control database\. This database holds information required by AWS DMS specific to the migration\. To provide access, run the following command\.
+  Additionally, AWS DMS needs complete access to the `awsdms_control` database\. This database holds information required by AWS DMS specific to the migration\. To provide access, run the following command\.
 
   ```
   ALL PRIVILEGES ON awsdms_control.* TO 'dms_user'
@@ -65,19 +65,19 @@ For AWS DMS to access your Aurora MySQL target database you’ll need to create 
 
 ## Step 6: Create and Run a Migration Task<a name="chap-on-premoracle2aurora.quickstart.stepsix"></a>
 
-A migration task tells AWS DMS where and how you want your data migrated\. When creating your migration task, you should consider setting migration parameters as follows\.
+A migration task tells AWS DMS where and how you want your data migrated\. When you create a migration task, consider setting migration parameters as shown following\.
 
- **Endpoints and replication server** — Choose the endpoints and replication server created above\.
+ **Endpoints and replication server** — Choose the endpoints and replication server created before\.
 
- **Migration type** — In most cases you’ll want to choose **migrate existing data and replication ongoing changes**\. With this option, AWS DMS loads your source data while capturing changes to that data\. When the data is fully loaded, AWS DMS applies any outstanding changes and keeps the source and target databases in sync until the task is stopped\.
+ **Migration type** — In most cases you’ll want to choose **migrate existing data and replication ongoing changes**\. With this option, AWS DMS loads your source data while capturing changes to that data\. When the data is fully loaded, AWS DMS applies any outstanding changes and keeps the source and target databases in sync until the task is stopped\.
 
- **Target table preparation mode** — If you’re having AWS DMS create your tables, **choose drop tables on target**\. If you’re using some other method to create your target tables such as the AWS Schema Conversion Tool, choose **truncate\.** 
+ **Target table preparation mode** — If you’re having AWS DMS create your tables, **choose drop tables on target**\. If you’re using some other method to create your target tables such as the AWS Schema Conversion Tool, choose **truncate\.** 
 
- **LOB parameters** — If you’re just trying AWS DMS, choose **include LOB columns in replication**, **Limited LOB mode**, and set your **max LOB size to 16** \(which is 16k\.\) For more information regarding LOBs, read the details in the step\-by\-step guide\.
+ **LOB parameters** — If you’re just trying AWS DMS, choose **include LOB columns in replication**, **Limited LOB mode**, and set your **max LOB size to 16** \(which is 16k\.\) For more information regarding LOBs, read the details in the step\-by\-step guide\.
 
- **Enable logging** — To help with debugging migration issues, always enable logging\.
+ **Enable logging** — To help with debugging migration issues, always enable logging\.
 
- **Table mappings** — When migrating from Oracle to Aurora MySQL, we recommend that you convert your schema, table, and column names to lowercase\. To do so, create a custom table mapping\. The following example migrates the schema DMS\_SAMPLE and converts schema, table and column names to lower case\.
+ **Table mappings** — When migrating from Oracle to Aurora MySQL, we recommend that you convert your schema, table, and column names to lowercase\. To do so, create a custom table mapping\. The following example migrates the schema DMS\_SAMPLE and converts schema, table and column names to lower case\.
 
 ```
 {

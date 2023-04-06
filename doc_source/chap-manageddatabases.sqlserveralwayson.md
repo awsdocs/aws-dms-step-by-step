@@ -1,4 +1,4 @@
-# Migrating a SQL Server Always On Database to AWS<a name="chap-manageddatabases.sqlserveralwayson"></a>
+# Migrating a SQL Server Always On Database to Amazon Web Services<a name="chap-manageddatabases.sqlserveralwayson"></a>
 
 Microsoft SQL Server Always On is a high\-availability feature for Microsoft SQL Server databases\. With the synchronous\-commit secondary replica, your application remains transparent to a failover\. If the primary node in the Always On Availability Group \(AAG\) fails due to unforeseen circumstances or due to maintenance, your applications remain unaware of the failure, and automatically redirect to a functional node\. You can use AWS Database Migration Service \(AWS DMS\) to migrate a SQL Server Always On database to all supported target engines\. AWS DMS has the flexibility to adapt to your Always On configuration, but it may be unclear how to set up the optimal AWS DMS configuration\.
 

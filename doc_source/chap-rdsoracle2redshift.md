@@ -20,6 +20,8 @@ This walkthrough uses a custom AWS CloudFormation template to create RDS DB inst
 
 This walkthrough takes approximately two hours to complete\. Be sure to follow the instructions to delete resources at the end of this walkthrough to avoid additional charges\.
 
+To estimate what it will cost to run this walkthrough on AWS, you can use the AWS Pricing Calculator\. For more information, see [https://calculator\.aws/](https://calculator.aws/)\.
+
 **Topics**
 + [Prerequisites](chap-rdsoracle2redshift.prerequisites.md)
 + [Migration Architecture](chap-rdsoracle2redshift.architecture.md)

@@ -45,4 +45,4 @@ For this tutorial, you launch an Amazon EC2 instance into your default VPC\.
 
    Specify your private key file \(\.pem file\) and the public DNS name of your EC2 instance\. The login ID is `ec2-user`\. No password is required\.
 
-   For further details about connecting to your EC instance, see [Connecting to your Linux instance using SSH](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html) in the *Amazon EC2 User Guide for Linux Instances\.* 
+   For further details about connecting to your EC instance, see [Connecting to your Linux instance using SSH](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html) in the *Amazon EC2 User Guide for Linux Instances*\.

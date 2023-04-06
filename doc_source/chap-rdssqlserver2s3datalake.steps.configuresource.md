@@ -2,7 +2,7 @@
 
 One of the primary considerations when setting up AWS DMS replication is the load that it induces on the source database\. During full load, AWS DMS tasks initiate two or three connections for each table that is configured for parallel load\. Because AWS DMS settings and data volumes vary across tasks, workloads, and even across different runs of the same task, providing an estimate of resource utilization that applies for all use cases is difficult\.
 
-Ongoing replication is single\-threaded and it usually consumes less resources than full load\. Providing estimates for change data capture \(CDC\) resource utilization has the same challenges described above\.
+Ongoing replication is single\-threaded and it usually consumes less resources than full load\. Providing estimates for change data capture \(CDC\) resource utilization has the same challenges described before\.
 
 That said, you can estimate the expected increase in load on your source Amazon RDS instance, by running test AWS DMS tasks on replicas of your source Amazon RDS for SQL Server instance and monitoring the CPU, memory, IO and throughput metrics\.
 
@@ -12,7 +12,7 @@ The following image displays the database settings required for ongoing replicat
 
 ![\[Database backup settings required for ongoing replication.\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdssqlserver2s3datalake-backup-settings.png)
 
-To perform the full load phase, AWS DMS requires read privileges to the tables in scope for migration\. For more information on required permissions, see [Permissions for full load only tasks](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.SQLServer.html#CHAP_Source.SQLServer.Permissions)\.
+To perform the full load phase, AWS DMS requires read privileges to the tables in scope for migration\. For more information about required permissions, see [Permissions for full load only tasks](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.SQLServer.html#CHAP_Source.SQLServer.Permissions)\.
 
 Connect to the Amazon RDS for SQL Server instance and run the following queries\. Use a login with master user privileges for both full load and CDC\.
 

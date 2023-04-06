@@ -18,14 +18,15 @@ The source endpoint is the endpoint for your MongoDB installation running on you
    + For **Authentication mechanism**, choose **default**\.
    + For **Metadata mode**, choose **document**\.
 
-   When the settings are as you want them, choose **Create endpoint**\.
+     When the settings are as you want them, choose **Create endpoint**\.
 
-Next, you create a target endpoint\. This endpoint is for your Amazon DocumentDB cluster, which should already be running\. For more information on launching your Amazon DocumentDB cluster, see [Getting started](https://docs.aws.amazon.com/documentdb/latest/developerguide/getting-started.html) in the *Amazon DocumentDB Developer Guide\.* 
+Next, you create a target endpoint\. This endpoint is for your Amazon DocumentDB cluster, which should already be running\. For more information about launching your Amazon DocumentDB cluster, see [Getting started](https://docs.aws.amazon.com/documentdb/latest/developerguide/getting-started.html) in the *Amazon DocumentDB Developer Guide\.* 
 
 **Important**  
 Before you proceed, do the following:  
-Have available the master user name and password for your Amazon DocumentDB cluster\.
-Have available the DNS name and port number of your Amazon DocumentDB cluster, so that AWS DMS can connect to it\. To determine this information, use the following AWS CLI command, replacing ` cluster-id ` with the name of your Amazon DocumentDB cluster\.  
+Create indexes on your Amazon DocumentDB cluster before you begin migration because it can reduce the overall time and increase the speed of the migration\. To extract indexes from a running MongoDB instance, you can use the [Amazon DocumentDB Index Tool](https://github.com/awslabs/amazon-documentdb-tools)\.
+Get the master user name and password for your Amazon DocumentDB cluster\.
+Get the DNS name and port number of your Amazon DocumentDB cluster, so that AWS DMS can connect to it\. To determine this information, use the following AWS CLI command, replacing ` cluster-id ` with the name of your Amazon DocumentDB cluster\.  
 
   ```
   aws docdb describe-db-clusters \
@@ -56,7 +57,7 @@ To create a target endpoint, do the following:
    + For **Password**, enter the master password of your Amazon DocumentDB cluster\.
    + For **Database name**, enter `zips-db`\.
 
-   When the settings are as you want them, choose **Create endpoint**\.
+     When the settings are as you want them, choose **Create endpoint**\.
 
 Now that you’ve created the source and target endpoints, test them to ensure that they work correctly\. Also, to ensure that AWS DMS can access the database objects at each endpoint, refresh the endpoints' schemas\.
 

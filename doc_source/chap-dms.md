@@ -8,9 +8,9 @@ You can use several AWS tools and services to migrate data from an external data
 
 The AWS Schema Conversion Tool \(AWS SCT\) makes heterogeneous database migrations easy by automatically converting the source database schema and a majority of the custom code, including views, stored procedures, and functions, to a format compatible with the target database\. Any code that cannot be automatically converted is clearly marked so that it can be manually converted\. You can use this tool to convert your source Oracle databases to an Amazon Aurora MySQL, MySQL, or PostgreSQL target database on either Amazon RDS or EC2\.
 
-It is important to understand that DMS and SCT are two different tools and serve different needs and they don’t interact with each other in the migration process\. As per the DMS best practice, migration methodology for this tutorial is outlined as below:
+It is important to understand that AWS DMS and AWS SCT are two different tools and serve different needs\.
 +  AWS DMS takes a minimalist approach and creates only those objects required to efficiently migrate the data for example tables with primary key\. Therefore, we will use DMS to load the tables with data without any foreign keys or constraints\. \(We can also use the SCT to generate the table scripts and create it on the target before performing the load via DMS\)\.
-+ We will leverage SCT:
++ We use AWS SCT:
   + To identify the issues, limitations and actions for the schema conversion
   + To generate the target schema scripts including foreign key and constraints
   + To convert code such as procedures and views from source to target and apply it on target
@@ -21,8 +21,13 @@ The size and type of Oracle database migration you want to do greatly determines
 + [Migrating an On\-Premises Oracle Database to Amazon Aurora MySQL](chap-on-premoracle2aurora.md)
 + [Migrating an Amazon RDS for Oracle Database to Amazon Aurora MySQL](chap-rdsoracle2aurora.md)
 + [Migrating a SQL Server Database to Amazon Aurora MySQL](chap-sqlserver2aurora.md)
++ [Migrating an Amazon RDS for Oracle Database to an Amazon S3 Data Lake](oracle-s3-data-lake.md)
 + [Migrating an Amazon RDS for SQL Server Database to an Amazon S3 Data Lake](chap-rdssqlserver2s3datalake.md)
 + [Migrating an Oracle Database to PostgreSQL](chap-rdsoracle2postgresql.md)
++ [Migrating Oracle databases to Amazon Aurora MySQL with DMS Schema Conversion](schema-conversion-oracle-aurora-mysql.md)
++ [Migrating Oracle databases to Amazon RDS for PostgreSQL with DMS Schema Conversion](schema-conversion-oracle-postgresql.md)
++ [Migrating SQL Server databases to Amazon Aurora PostgreSQL with DMS Schema Conversion](schema-conversion-sql-server-aurora-postgresql.md)
++ [Migrating SQL Server databases to Amazon RDS for MySQL with DMS Schema Conversion](schema-conversion-sql-server-mysql.md)
 + [Migrating an Amazon RDS for Oracle Database to Amazon Redshift](chap-rdsoracle2redshift.md)
 + [Migrating a BigQuery Project to Amazon Redshift](bigquery-redshift.md)
 + [Migrating MySQL\-Compatible Databases to AWS](chap-mysql.md)

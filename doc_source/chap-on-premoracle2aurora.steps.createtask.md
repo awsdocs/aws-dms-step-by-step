@@ -21,7 +21,7 @@ To create a migration task, do the following:
 
 1. Specify any table mapping settings\.
 
-   Table mappings tell AWS DMS which tables a task should migrate from source to target\. Table mappings are expressed in JSON, though some settings can be made using the [AWS Management Console](https://console.aws.amazon.com)\. Table mappings can also include transformations such as changing table names from upper case to lower case\.
+   Table mappings tell AWS DMS which tables a task should migrate from source to target\. Table mappings are expressed in JSON, though some settings can be made using the [AWS Management Console](https://console.aws.amazon.com)\. Table mappings can also include transformations such as changing table names from the upper case to lower case\.
 
     AWS DMS generates default table mappings for each \(non\-system\) schema in the source database\. In most cases you’ll want to customize your table mapping\. To customize your table mapping select the custom radio button\. For details on creating table mappings see the AWS DMS documentation\. The following table mapping does these things:
    + It includes the DMS\_SAMPLE schema in the migration\.

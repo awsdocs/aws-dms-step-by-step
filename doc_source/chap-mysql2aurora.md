@@ -27,17 +27,17 @@ Before you can copy your data to an Amazon S3 bucket and restore a DB cluster fr
 
 #### Installing Percona XtraBackup<a name="chap-mysql2aurora.s3.prerequisites.percona"></a>
 
-Amazon Aurora MySQL can restore a DB cluster from files that were created using Percona XtraBackup\. You can install Percona XtraBackup from the Percona website at [https://www\.percona\.com/doc/percona\-xtrabackup/2\.4/installation](https://www.percona.com/doc/percona-xtrabackup/2.4/installation)\.
+Amazon Aurora MySQL can restore a DB cluster from files that were created using Percona XtraBackup\. You can install Percona XtraBackup from the Percona website at [https://www\.percona\.com/software/mysql\-database/percona\-xtrabackup](https://www.percona.com/software/mysql-database/percona-xtrabackup)\.
 
 #### Required Permissions<a name="chap-mysql2aurora.permissions"></a>
 
 To migrate your MySQL data to an Amazon Aurora MySQL DB cluster, several permissions are required:
-+ The user that is requesting that Amazon RDS create a new cluster from an Amazon S3 bucket must have permission to list the buckets for your AWS account\. You grant the user this permission using an AWS Identity and Access Management \(IAM\) policy\.
++ The user that is requesting that Amazon RDS create a new cluster from an Amazon S3 bucket must have permission to list the buckets for your user\. You grant the user this permission using an AWS Identity and Access Management \(IAM\) policy\.
 +  Amazon RDS requires permission to act on your behalf to access the Amazon S3 bucket where you store the files used to create your Amazon Aurora MySQL DB cluster\. You grant Amazon RDS the required permissions using an IAM service role\.
-+ The user making the request must also have permission to list the IAM roles for your AWS account\.
-+ If the user making the request will create the IAM service role, or will request that Amazon RDS create the IAM service role \(by using the console\), then the user must have permission to create an IAM role for your AWS account\.
++ The user making the request must also have permission to list the IAM roles for your user\.
++ If the user making the request will create the IAM service role, or will request that Amazon RDS create the IAM service role \(by using the console\), then the user must have permission to create an IAM role for your user\.
 
-For example, the following IAM policy grants a user the minimum required permissions to use the console to both list IAM roles, create an IAM role, and list the S3 buckets for your account\.
+For example, the following IAM policy grants a user the minimum required permissions to use the console to both list IAM roles, create an IAM role, and list the S3 buckets for your user\.
 
 ```
 {
@@ -101,7 +101,7 @@ As an alternative, you can manually create the role using the following procedur
 
 1. On the **Set Permissions** page, choose **Custom Policy** and then choose **Select**\.
 
-1. Type a **Policy Name** such as `S3-bucket-policy`\. Add the following code for **Policy Document**, replacing *<bucket name>* with the name of the S3 bucket that you are allowing access to\.
+1. Enter a **Policy Name** such as `S3-bucket-policy`\. Add the following code for **Policy Document**, replacing *<bucket name>* with the name of the S3 bucket that you are allowing access to\.
 
    As part of the policy document, you can also include a file name prefix\. If you specify a prefix, then Amazon Aurora MySQL will create the DB cluster using the files in the S3 bucket that begin with the specified prefix\. If you don’t specify a prefix, then Amazon Aurora MySQL will create the DB cluster using all of the files in the S3 bucket\.
 
@@ -179,7 +179,7 @@ Amazon S3 limits the size of a file uploaded to a bucket to 5 terabytes \(TB\)\.
 
 Amazon Aurora MySQL does not support partial backups created using Percona Xtrabackup\. You cannot use the `--include`, `--tables-file`, or `--databases` options to create a partial backup when you backup the source files for your database\.
 
-For more information, see the [The innobackupex Script](https://www.percona.com/doc/percona-xtrabackup/2.1/innobackupex/innobackupex_script.html)\.
+For more information, see [The innobackupex Script](https://www.percona.com/doc/percona-xtrabackup/2.1/innobackupex/innobackupex_script.html)\.
 
 Amazon Aurora MySQL consumes your backup files based on the file name\. Be sure to name your backup files with the appropriate file extension based on the file format—​for example, `0xbstream` for files stored using the Percona xbstream format\.
 
@@ -189,7 +189,7 @@ Amazon Aurora MySQL consumes your backup files in alphabetical order as well as 
 
 Once you have backed up your MySQL database using the Percona Xtrabackup utility, then you can copy your backup files to an Amazon S3 bucket\.
 
-For information on creating and uploading a file to an Amazon S3 bucket, see [Getting Started with Amazon Simple Storage Service](https://docs.aws.amazon.com/AmazonS3/latest/gsg/GetStartedWithS3.html) in the *Amazon S3 Getting Started Guide*\.
+For information about creating and uploading a file to an Amazon S3 bucket, see [Getting Started with Amazon Simple Storage Service](https://docs.aws.amazon.com/AmazonS3/latest/gsg/GetStartedWithS3.html) in the *Amazon S3 Getting Started Guide*\.
 
 ### Step 3: Restoring an Aurora MySQL DB Cluster from an Amazon S3 Bucket<a name="chap-mysql2aurora.s3.restoringfroms3"></a>
 
@@ -232,7 +232,7 @@ You can restore your backup files from your Amazon S3 bucket to a create new Ama
 
    On the Amazon RDS console, the new DB instance appears in the list of DB instances\. The DB instance has a status of **creating** until the DB instance is created and ready for use\. When the state changes to **available**, you can connect to the primary instance for your DB cluster\. Depending on the DB instance class and store allocated, it can take several minutes for the new instance to be available\.
 
-   To view the newly created cluster, choose the **Clusters** view in the Amazon RDS console\. For more information, see the [Amazon RDS documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.Viewing.html)\.
+   To view the newly created cluster, choose the **Clusters** view in the Amazon RDS console\. For more information, see [Amazon RDS documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.Viewing.html)\.
 
    Note the port and the endpoint of the cluster\. Use the endpoint and port of the cluster in your JDBC and ODBC connection strings for any application that performs write or read operations\.
 

@@ -27,7 +27,7 @@ Follow these three steps to perform full data load using mysqldump\.
 
 1. Restore this dump file on the target database\.
 
-1. Retrieve the binlog position for ongoing replication\.
+1. Retrieve the binary log position for ongoing replication\.
 
 For example, the following command creates the dump file\. The `--master-data=2` parameter creates a backup file, which you can use to start the replication in AWS DMS\.
 
@@ -48,7 +48,7 @@ For example, the following command restores the dump file on the target host\.
 mysql -h host_name -P 3306 -u db_master_user -p < backup_file.sql
 ```
 
-For example, the following command retreives the binlog file name and position from the dump file\. Save this information for later when you configure AWS DMS for ongoing replication\.
+For example, the following command retrieves the binary log file name and position from the dump file\. Save this information for later when you configure AWS DMS for ongoing replication\.
 
 ```
 head mysqldump.sql -n80 | grep "MASTER_LOG_POS"
@@ -59,7 +59,7 @@ head mysqldump.sql -n80 | grep "MASTER_LOG_POS"
 
 ## Percona XtraBackup<a name="chap-manageddatabases.mysql2rds.fullload.percona"></a>
 
- Amazon RDS for MySQL and Amazon Aurora MySQL support migration from Percona XtraBackup files that are stored in an Amazon S3 bucket\. Percona XtraBackup produces a binary backup files which can be significantly faster than migrating from logical schema and data dumps using tools such as mysqldump\.The tool can be used for small\-scale to large\-scale migrations\.
+ Amazon RDS for MySQL and Amazon Aurora MySQL support migration from Percona XtraBackup files that are stored in an Amazon S3 bucket\. Percona XtraBackup produces a binary backup files which can be significantly faster than migrating from logical schema and data dumps using tools such as mysqldump\. The tool can be used for small\-scale to large\-scale migrations\.
 
 Percona XtraBackup is appropriate when the following conditions are met:
 + You have administrative, system\-level access to the source database\.
@@ -79,7 +79,7 @@ Follow these three steps to perform full data load using Percona XtraBackup\.
 
 1. Restore this backup file from Amazon S3 while launching a new target database\.
 
-1. Retrieve the binlog position for ongoing replication\.
+1. Retrieve the binary log position for ongoing replication\.
 
 For example, the following command creates the backup file and streams it directly to Amazon S3\.
 
@@ -89,15 +89,15 @@ xtrabackup --user=<myuser> --backup --parallel=4 \
 aws s3 cp - s3://<bucket_name>/<backup_file>.xbstream
 ```
 
-Use the Amazon RDS console to restore the backup files from the Amazon S3 bucket and create a new Amazon Aurora MySQL DB cluster\. For more information, see [Restoring an Amazon Aurora MySQL DB cluster from an Amazon S3 bucket](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Migrating.ExtMySQL.html#AuroraMySQL.Migrating.ExtMySQL.S3.Restore)\.
+Use the Amazon RDS console to restore the backup files from the Amazon S3 bucket and create a new Amazon Aurora MySQL DB cluster\. For more information, see [Restoring an Aurora MySQL DB cluster from an Amazon S3 bucket](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Migrating.ExtMySQL.html#AuroraMySQL.Migrating.ExtMySQL.S3.Restore)\.
 
-For example, the following command prints the binlog information after you finish the creation of a compressed backup\.
+For example, the following command prints the binary log \(binlog\) information after you finish the creation of a compressed backup\.
 
 ```
 MySQL binlog position: filename 'mysql-bin.000001', position '481'
 ```
 
-For example, the following command retreives the binlog file name and position from the from the xtrabackup\_binlog\_info file\. This file is located in the main backup directory of an uncompressed backup\.
+For example, the following command retrieves the binary log file name and position from the from the xtrabackup\_binlog\_info file\. This file is located in the main backup directory of an uncompressed backup\.
 
 ```
 $ cat </on-premises/backup>/xtrabackup_binlog_info
@@ -126,7 +126,7 @@ Follow these three steps to perform full data load using mydumper\.
 
 1. Restore this dump file on the target database using myloader\.
 
-1. Retrieve the binlog position for ongoing replication\.
+1. Retrieve the binary log position for ongoing replication\.
 
 For example, the following command creates the backup of DbName1 and DbName2 databases using mydumper\.
 
@@ -152,7 +152,7 @@ myloader \
 --compress-protocol --verbose=3 -e 2><myload-output-logs-path>
 ```
 
-For example, the following command retreives the binlog information from the mydumper metadata file\.
+For example, the following command retrieves the binary log information from the mydumper metadata file\.
 
 ```
 cat <mydumper-output-dir>/metadata
@@ -166,5 +166,5 @@ SHOW MASTER STATUS:SHOW MASTER STATUS:
 **Note**  
 To ensure a valid dump file of logical backups in mysqldump and mydumper, don’t run data definition language \(DDL\) statements while the dump process is running\. It is recommended to schedule a maintenance window for these operations\. For details, see the [single\-transaction documentation](https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html#option_mysqldump_single-transaction)\.
 While exporting the data with logical backups, it is recommended to exclude MySQL default schemas \(mysql, performance\_schema, and information\_schema\), functions, stored procedures, and triggers\.
-Remove definers from schema files before uploading extracted data to Amazon RDS\. For more information, see [How can I resolve definer errors](https://aws.amazon.com/premiumsupport/knowledge-center/definer-error-mysqldump/)\.
+Remove definers from schema files before uploading extracted data to Amazon RDS\. For more information, see [How can I resolve definer errors](https://aws.amazon.com/premiumsupport/knowledge-center/definer-error-mysqldump)\.
 Any backup operation acquires a global read lock on all tables \(using FLUSH TABLES WITH READ LOCK\)\. As soon as this lock has been acquired, the binary log coordinates are read and the lock is released\. For more information, see [Establishing a Backup Policy](https://dev.mysql.com/doc/mysql-backup-excerpt/5.7/en/backup-policy.html)\. For logical backups this step done at the beginning of the logical dump, however for physical backup \(Percona XtraBackup\) this step done at the end of backup\.

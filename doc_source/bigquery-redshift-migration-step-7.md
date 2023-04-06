@@ -20,7 +20,7 @@
 
 1. For **Add a source vendor**, enter `no`\. You don’t need to configure the data extraction agent to work with your BigQuery data warehouse because you don’t need a driver to connect to BigQuery\.
 
-1. For **Add the Amazon Redshift driver**, enter `yes` and then enter the path to the Amazon Redshift JDBC driver that you downloaded in the step 4\.
+1. For **Add the Amazon Redshift driver**, enter `yes` and then enter the path to the Amazon Redshift JDBC driver that you downloaded in [Step 4](bigquery-redshift-migration-step-4.md)\.
 
 1. For **Working folder**, enter the folder where the data extraction agent can store its data\. Choose the project folder and make sure that you don’t need admin rights to write data to this folder\.
 

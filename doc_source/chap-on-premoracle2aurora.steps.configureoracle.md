@@ -63,7 +63,7 @@ alter table table_name add supplemental log data (ALL) columns;
 
  **4\. Create or configure a database account to be used by AWS DMS ** 
 
-We recommend that you use an account with the minimal privileges required by AWS DMS for your AWS DMS connection\. AWS DMS requires the following privileges\.
+We recommend that you use a user with the minimal privileges required by AWS DMS for your AWS DMS connection\. AWS DMS requires the following privileges\.
 
 ```
 CREATE SESSION

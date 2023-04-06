@@ -57,7 +57,7 @@ SELECT <column-list> FROM <sales-table-name> WHERE <region> = <region-name> AND 
 
 If you use Amazon Athena to query data, partitioning helps reduce cost as Athena pricing is based on the amount of data that you scan when running queries\.
 
-To turn on partitioning for ongoing changes in the above format, use the following queries\.
+To turn on partitioning for ongoing changes in the preceding format, use the following queries\.
 
 ```
 bucketFolder=US-WEST-DATA

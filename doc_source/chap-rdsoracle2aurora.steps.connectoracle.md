@@ -7,14 +7,14 @@ To test the connection to your Oracle DB instance and create the sample schema, 
 1. In SQL Workbench/J, choose **File**, then choose **Connect window**\. Create a new connection profile using the following information as shown following    
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/dms/latest/sbs/chap-rdsoracle2aurora.steps.connectoracle.html)
 
-1. Test the connection by choosing **Test**\. Choose **OK** to close the dialog box, then choose OK to create the connection profile\.  
+1. To test the connection, choose **Test**\. Choose **OK** to close the dialog box, then choose **OK** to create the connection profile\.  
 ![\[Connecting to the Oracle DB instance\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora9.png)
 **Note**  
 If your connection is unsuccessful, ensure that the IP address you assigned when creating the AWS CloudFormation template is the one you are attempting to connect from\. This is the most common issue when trying to connect to an instance\.
 
 1. Create the HR schema you will use for migration using a custom SQL script \(Oracle\-HR\-Schema\-Build\.sql\)\. To obtain this script, do the following:
 
-   1. Download the following archive to your computer: ` [http://docs\.aws\.amazon\.com/dms/latest/sbs/samples/dms\-sbs\-RDSOracle2Aurora\.zip](http://docs.aws.amazon.com/dms/latest/sbs/samples/dms-sbs-RDSOracle2Aurora.zip) `\.
+   1. Download the following archive to your computer: [http://docs.aws.amazon.com/dms/latest/sbs/samples/dms-sbs-RDSOracle2Aurora.zip](http://docs.aws.amazon.com/dms/latest/sbs/samples/dms-sbs-RDSOracle2Aurora.zip)\.
 
    1. Extract the SQL script\(`Oracle-HR-Schema-Build.sql`\) from the archive\.
 
@@ -26,7 +26,7 @@ If your connection is unsuccessful, ensure that the IP address you assigned when
 
 1. Choose **SQL**, then choose **Execute All**\.
 
-   When you run the script, you will get an error message indicating that user **HR** does not exist\. You can ignore this error and run the script\. The script drops the user before creating it,which generates the error\.
+   When you run the script, you will get an error message indicating that user **HR** does not exist\. You can ignore this error and run the script\. The script drops the user before creating it, which generates the error\.
 
 1. Verify the object types and count in **HR** Schema were created successfully by running the following SQL query\.
 

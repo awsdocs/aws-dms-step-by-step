@@ -13,7 +13,7 @@ You can migrate either a manual or automated DB snapshot\. After the DB cluster 
 
 The general steps you must take are as follows:
 
-1. Determine the amount of space to provision for your Amazon Aurora MySQL DB cluster\. For more information, see the [Amazon RDS documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html)\.
+1. Determine the amount of space to provision for your Amazon Aurora MySQL DB cluster\. For more information, see [Amazon RDS documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html)\.
 
 1. Use the console to create the snapshot in the region where the Amazon RDS MySQL 5\.6 instance is located
 
@@ -22,7 +22,7 @@ The general steps you must take are as follows:
 1. Use the console to migrate the DB snapshot and create an Amazon Aurora MySQL DB cluster with the same databases as the original DB instance of MySQL 5\.6\.
 
 **Warning**  
- Amazon RDS limits each AWS account to one snapshot copy into each region at a time\.
+ Amazon RDS limits each user to one snapshot copy into each region at a time\.
 
 ### How Much Space Do I Need?<a name="chap-mysql2aurora.rdsmysql.snapshot.space"></a>
 
@@ -45,7 +45,11 @@ Be sure to perform these updates on a new DB instance restored from a snapshot o
 
 | Table Type | Limitation or Guideline | 
 | --- | --- | 
-|  MyISAM tables  |  Amazon Aurora MySQL supports InnoDB tables only\. If you have MyISAM tables in your database, then those tables must be converted before being migrated into Amazon Aurora MySQL\. The conversion process requires additional space for the MyISAM to InnoDB conversion during the migration procedure\. To reduce your chances of running out of space or to speed up the migration process, convert all of your MyISAM tables to InnoDB tables before migrating them\. The size of the resulting InnoDB table is equivalent to the size required by Amazon Aurora MySQL for that table\. To convert a MyISAM table to InnoDB, run the following command:  `alter table <schema>.<table_name> engine=innodb, algorithm=copy;`   | 
+|  MyISAM tables  |  Amazon Aurora MySQL supports InnoDB tables only\. If you have MyISAM tables in your database, then those tables must be converted before being migrated into Amazon Aurora MySQL\. The conversion process requires additional space for the MyISAM to InnoDB conversion during the migration procedure\. To reduce your chances of running out of space or to speed up the migration process, convert all of your MyISAM tables to InnoDB tables before migrating them\. The size of the resulting InnoDB table is equivalent to the size required by Amazon Aurora MySQL for that table\. To convert a MyISAM table to InnoDB, run the following command: 
+
+```
+alter table <schema>.<table_name> engine=innodb, algorithm=copy;
+```  | 
 |  Compressed tables  |  Amazon Aurora MySQL does not support compressed tables \(that is, tables created with `ROW_FORMAT=COMPRESSED`\)\. To reduce your chances of running out of space or to speed up the migration process, expand your compressed tables by setting `ROW_FORMAT` to `DEFAULT`, `COMPACT`, `DYNAMIC`, or `REDUNDANT`\. For more information, see [https://dev\.mysql\.com/doc/refman/5\.6/en/innodb\-row\-format\.html](https://dev.mysql.com/doc/refman/5.6/en/innodb-row-format.html)\.  | 
 
 You can use the following SQL script on your existing MySQL DB instance to list the tables in your database that are MyISAM tables or compressed tables\.
@@ -140,14 +144,14 @@ You can also choose for your new Aurora MySQL DB cluster to be encrypted "at res
 
 1. Set the following values on the **Migrate Database** page:
    +  **DB Instance Class**: Select a DB instance class that has the required storage and capacity for your database, for example `db.r3.large`\. Aurora MySQL cluster volumes automatically grow as the amount of data in your database increases, up to a maximum size of 64 terabytes \(TB\)\. So you only need to select a DB instance class that meets your current storage requirements\.
-   +  **DB Instance Identifier**: Type a name for the DB cluster that is unique for your account in the region you selected\. This identifier is used in the endpoint addresses for the instances in your DB cluster\. You might choose to add some intelligence to the name, such as including the region and DB engine you selected, for example `aurora-cluster1`\.
+   +  **DB Instance Identifier**: Enter a name for the DB cluster that is unique for your account in the region you selected\. This identifier is used in the endpoint addresses for the instances in your DB cluster\. You might choose to add some intelligence to the name, such as including the region and DB engine you selected, for example `aurora-cluster1`\.
 
      The DB instance identifier has the following constraints:
      + It must contain from 1 to 63 alphanumeric characters or hyphens\.
      + Its first character must be a letter\.
      + It cannot end with a hyphen or contain two consecutive hyphens\.
-     + It must be unique for all DB instances per AWS account, for each AWS Region\.
-   +  ** **VPC**:** If you have an existing VPC, then you can use that VPC with your Amazon Aurora MySQL DB cluster by selecting your VPC identifier, for example `vpc-a464d1c1`\. For information on using an existing VPC, see the [Amazon RDS documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.CreateVPC.html)\.
+     + It must be unique for all DB instances per user, for each AWS Region\.
+   +  ** **VPC**:** If you have an existing VPC, then you can use that VPC with your Amazon Aurora MySQL DB cluster by selecting your VPC identifier, for example `vpc-a464d1c1`\. For information about using an existing VPC, see the [Amazon RDS documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.CreateVPC.html)\.
 
      Otherwise, you can choose to have Amazon RDS create a VPC for you by selecting **Create a new VPC**\.
    +  ** **Subnet Group**:** If you have an existing subnet group, then you can use that subnet group with your Amazon Aurora MySQL DB cluster by selecting your subnet group identifier, for example `gs-subnet-group1`\.
@@ -157,7 +161,7 @@ You can also choose for your new Aurora MySQL DB cluster to be encrypted "at res
 **Note**  
 Your production DB cluster might not need to be in a public subnet, because only your application servers will require access to your DB cluster\. If your DB cluster doesn’t need to be in a public subnet, set **Publicly Accessible** to **No**\.
    +  ** **Availability Zone**:** Select the Availability Zone to host the primary instance for your Aurora MySQL DB cluster\. To have Amazon RDS select an Availability Zone for you, select **No Preference**\.
-   +  ** **Database Port**:** Type the default port to be used when connecting to instances in the DB cluster\. The default is `3306`\.
+   +  ** **Database Port**:** Enter the default port to be used when connecting to instances in the DB cluster\. The default is `3306`\.
 **Note**  
 You might be behind a corporate firewall that doesn’t allow access to default ports such as the MySQL default port, 3306\. In this case, provide a port value that your corporate firewall allows\. Remember that port value later when you connect to the Aurora MySQL DB cluster\.
    +  ** **Enable Encryption**:** Choose **Yes** for your new Aurora MySQL DB cluster to be encrypted "at rest\." If you choose **Yes**, you will be required to choose an AWS KMS encryption key as the KMS key value\.
@@ -168,5 +172,5 @@ You might be behind a corporate firewall that doesn’t allow access to default 
 
 1. Choose **Migrate** to migrate your DB snapshot\.
 
-1. Choose **Instances**, and then choose the arrow icon to show the DB cluster details and monitor the progress of the migration\. On the details page, you will find the cluster endpoint used to connect to the primary instance of the DB cluster\. For more information on connecting to an Amazon Aurora MySQL DB cluster, see the [Amazon RDS documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.Connect.html)\.  
+1. Choose **Instances**, and then choose the arrow icon to show the DB cluster details and monitor the progress of the migration\. On the details page, you will find the cluster endpoint used to connect to the primary instance of the DB cluster\. For more information about connecting to an Amazon Aurora MySQL DB cluster, see the [Amazon RDS documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Aurora.Connect.html)\.  
 ![\[DB Cluster Details\]](http://docs.aws.amazon.com/dms/latest/sbs/images/AuroraMigrate04.png)

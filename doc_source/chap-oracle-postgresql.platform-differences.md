@@ -10,7 +10,7 @@ Along with possible performance difference, architecturally partitions on Oracle
 
 Some PostgreSQL data types are much easier to work with than their corresponding Oracle types\. For example, the Text type can store up to 1 GB of text and can be handled in SQL just like the char and varchar fields\. They don’t require special large object functions like character large objects \(CLOBs\) do\.
 
-However, there are some important differences to note\. The Numeric field in PostgreSQL can be used to map any Number data types\. But when it’s used for joins \(such as for a foreign key\), it is less performant than using an int or bigint\. This is a typical area where custom data type mapping should be considered\.
+However, there are some important differences to note\. You can use the `Numeric` field in PostgreSQL to map any `Number` data types\. But when you use it for joins \(such as for a foreign key\), it is less performant than using an `int` or `bigint` data type\. This is a typical area where custom data type mapping should be considered\.
 
 The PostgreSQL Timestamp with time zone field is slightly different from and corresponds to the Oracle Timestamp with local time zone\. These small differences can cause either performance issues or subtle application bugs that require thorough testing\.
 

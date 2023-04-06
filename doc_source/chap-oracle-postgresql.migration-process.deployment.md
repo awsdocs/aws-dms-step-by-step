@@ -16,7 +16,7 @@ Infrastructure automation is a code layer that wraps API calls to a cloud provid
 
  [Terraform](https://www.terraform.io/) represents a cross cloud incarnation of this idea\. The downside of Terraform is that its cross\-cloud and open source nature makes it slower to adopt new features and provide detailed provisioning, often months after a new feature or configuration is released\.
 
- [https://aws\.amazon\.com/cloudformation/](https://aws.amazon.com/cloudformation/) `CFNLong`\] is a native AWS language in json or YAML format\. Use AWS CloudFormation to write infrastructure code more specifically to specific features because it doesn’t have to work with other clouds\.
+ [CloudFormation](https://aws.amazon.com/cloudformation/) is a native AWS language in JSON or YAML format\. Use AWS CloudFormation to write infrastructure code more specifically to specific features because it doesn’t have to work with other clouds\.
 
 ## Configuration Management<a name="chap-oracle-postgresql.migration-process.deployment.configuration"></a>
 
@@ -30,7 +30,7 @@ Configuration management systems manages configuration of software and state of 
 
 ## Code Repository<a name="chap-oracle-postgresql.migration-process.deployment.coderepository"></a>
 
-A code repository offers safe storage of code and a change capture log which facilitates parallel development of a codebase by many developers simultaneously with the use of code branches, and integration with CI/CD pipelines\. Other files than application source code might be stored in a git repo such as infrastructure as code \(IaC\), database reports; recorded state changes or even short logs\. Importantly you should never store credentials in the code repository\. Credentials should be handled in other ways discussed below to avoid sensitive files being deleted or scrubbed, remnants left behind of the original state\. The two most widely used code repositories are [GitHub](http://github.com/) and [GitLab](http://gitlab.com/) with similar features and functionality\.
+A code repository offers safe storage of code and a change capture log which facilitates parallel development of a codebase by many developers simultaneously with the use of code branches, and integration with CI/CD pipelines\. Other files than application source code might be stored in a Git repository such as infrastructure as code \(IaC\), database reports; recorded state changes or even short logs\. Importantly you should never store credentials in the code repository\. Credentials should be handled in other ways discussed below to avoid sensitive files being deleted or scrubbed, remnants left behind of the original state\. The two most widely used code repositories are [GitHub](http://github.com/) and [GitLab](http://gitlab.com/) with similar features and functionality\.
 
 ## Secrets Management<a name="chap-oracle-postgresql.migration-process.deployment.secrets-management"></a>
 

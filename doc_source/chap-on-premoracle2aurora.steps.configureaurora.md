@@ -8,7 +8,7 @@ GRANT ALTER, CREATE, DROP, INDEX, INSERT, UPDATE, DELETE,
 SELECT ON <target database(s)>.* TO 'dms_user'@'%';
 ```
 
- AWS DMS uses some control tables on the target in the database awsdms\_control\. The following command ensures that your dms\_user has the necessary access to the awsdms\_control database:
+ AWS DMS uses some control tables on the target in the database awsdms\_control\. The following command ensures that your dms\_user has the necessary access to the `awsdms_control` database:
 
 ```
 GRANT ALL PRIVILEGES ON awsdms_control.* TO 'dms_user'@'%';

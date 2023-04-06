@@ -5,7 +5,7 @@ Backup and restore is the easiest and usually the preferred method for the initi
 The backup and restore method is suitable for the following use cases:
 + Your database size is less than 16 TB\.
 + You want to carry out a lift and shift migration with no changes or minimal changes to the database\. For example, you want to migrate secondary database objects such as users, views, stored procedures, triggers, and so on in addition to your data\.
-+ Network connectivity between your on\-premises data center and AWS is often congested or has frequent disconnects\. Backup and restore gives you the flexibility to transmit backup files during non business hours\.
++ Network connectivity between your on\-premises data center and AWS is often congested or has frequent disconnects\. Backup and restore gives you the flexibility to transmit backup files during non\-business hours\.
 
 The backup and restore method has the following limitations:
 + Amazon RDS for SQL Server supports native restore of databases up to 16 TB in size\. For SQL Server Express Edition databases, Amazon RDS supports native restore of up to 10 GB\.

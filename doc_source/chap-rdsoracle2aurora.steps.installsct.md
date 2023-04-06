@@ -31,11 +31,11 @@ To install the SQL client software, do the following:
 
 To install the AWS Schema Conversion Tool and the required JDBC drivers, do the following:
 
-1. Download the AWS Schema Conversion Tool from [https://docs\.aws\.amazon\.com/SchemaConversionTool/latest/userguide/CHAP\_Installing\.html](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_Installing.html)\.
+1. Download the AWS Schema Conversion Tool from [Installing, verifying, and updating the Schema Conversion Tool](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_Installing.html)\.
 
 1. Launch the AWS Schema Conversion Tool\.
 
-1. In the AWS Schema Conversion Tool, choose **Global Settings** from **Settings**\.
+1. In the AWS Schema Conversion Tool, choose **Global settings** from **Settings**\.
 
-1. In **Global Settings**, choose **Driver**, and then choose **Browse** for **Oracle Driver Path**\. Locate the JDBC Oracle driver and choose **OK**\. Next, choose **Browse** for **MySql Driver Path**\. Locate the JDBC MySQL driver and choose **OK**\. Choose **OK** to close the dialog box\.  
-![\[Connecting to the Oracle DB instance\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sbs-rdsor2aurora8.5.png)
+1. In **Global settings**, choose **Driver**, and then choose **Browse** for **Oracle driver path**\. Locate the JDBC Oracle driver and choose **OK**\. Next, choose **Browse** for **MySQL driver path**\. Locate the JDBC MySQL driver and choose **OK**\. Choose **OK** to close the dialog box\.  
+![\[Connecting to the Oracle DB instance\]](http://docs.aws.amazon.com/dms/latest/sbs/images/sct-drivers.png)

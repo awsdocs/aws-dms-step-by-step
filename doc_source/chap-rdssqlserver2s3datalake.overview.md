@@ -17,6 +17,6 @@ To replicate data, you need to create and configure the following artifacts in A
 For this walkthrough, we will use the `AdventureWorks` sample database on an Amazon RDS for SQL Server instance as the base data for the walkthrough\. The `AdventureWorks` database holds sales, marketing, and order data\. We will use AWS DMS to move sales data from the source database to Amazon S3 object store, which can be used as a data lake for downstream analytics needs\.
 
 **Note**  
-You can refer to [Migrating a SQL Server Always On Database to AWS](chap-manageddatabases.sqlserveralwayson.md) for details on migrating from a Microsoft SQL Server Always On database instance\.
+You can refer to [Migrating a SQL Server Always On Database to Amazon Web Services](chap-manageddatabases.sqlserveralwayson.md) for details on migrating from a Microsoft SQL Server Always On database instance\.
 
 We will create an AWS DMS task, which will perform a one\-time full load to migrate a point in time snapshot and will then stream incremental data to the target Amazon S3 bucket\. This way, sales data in the S3 bucket will be kept in sync with the source database\.

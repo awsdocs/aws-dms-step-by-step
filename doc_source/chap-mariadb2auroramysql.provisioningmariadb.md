@@ -1,6 +1,6 @@
 # Set up MariaDB as a source database<a name="chap-mariadb2auroramysql.provisioningmariadb"></a>
 
-To provision MariaDB as a source database, download [Mariadb\_CF\.zip with the yaml template](http://docs.aws.amazon.com/dms/latest/sbs/samples/Mariadb_CF.zip)\. This AWS CloudFormation template creates an Amazon RDS for MariaDB instance with the required parameters\.
+To provision MariaDB as a source database, download [Mariadb\_CF\.zip with the YAML template](http://docs.aws.amazon.com/dms/latest/sbs/samples/Mariadb_CF.zip)\. This AWS CloudFormation template creates an Amazon RDS for MariaDB instance with the required parameters\.
 
 1. On the [AWS Management Console](https://console.aws.amazon.com), under **Services**, choose **CloudFormation**\.
 
@@ -46,7 +46,7 @@ grant REPLICATION SLAVE ON *.* TO webdb_user;
 grant REPLICATION CLIENT ON *.* TO webdb_user;
 ```
 
-In this walkthrough, we created a database called *migration* and few sample tables, along with stored procedures, triggers, functions, and so on\.The below query provides the list of tables in *migration* database:
+In this walkthrough, we created a database called *migration* and few sample tables, along with stored procedures, triggers, functions, and so on\. The following query provides the list of tables in *migration* database:
 
 ```
 MariaDB [(none)]> use migration
@@ -126,7 +126,7 @@ Use the following command exports tables and index definitions:
 $ mysqldump --no-data --no-create-db --single_transaction -u root -p migration --skip-triggers > mysql_tables_indexes.sql
 ```
 
-Use following command to exports routines \(stored procedures, functions, and triggers\) into the file `routines.sql`:
+Use following command to exports routines \(stored procedures, functions, and triggers\) into the `routines.sql` file:
 
 ```
 $ mysqldump -u root --routines --no-create-info --no-data --no-create-db --skip-opt -p migration > routines.sql

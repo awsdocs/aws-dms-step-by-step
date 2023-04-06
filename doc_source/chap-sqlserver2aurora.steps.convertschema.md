@@ -39,26 +39,24 @@ To convert a SQL Server schema to an Aurora MySQL schema, do the following:
    The **Action Items** tab shows each issue for each object that requires attention\.
 
    For each conversion issue, you can complete one of the following actions:
+   + Modify the objects on the source SQL Server database so that AWS SCT can convert the objects to the target Aurora MySQL database\.
 
-   1. Modify the objects on the source SQL Server database so that AWS SCT can convert the objects to the target Aurora MySQL database\.
+     1. Modify the objects on the source SQL Server database\.
 
-      1. Modify the objects on the source SQL Server database\.
+     1. Repeat the previous steps to convert the schema and check the assessment report\.
 
-      1. Repeat the previous steps to convert the schema and check the assessment report\.
+     1. If necessary, repeat this process until there are no conversion issues\.
 
-      1. If necessary, repeat this process until there are no conversion issues\.
+     1. Choose **Main View** from the menu\. Open the context \(right\-click\) menu for the target Aurora MySQL schema, and choose **Apply to database** to apply the schema changes to the Aurora MySQL database, and confirm that you want to apply the schema changes\.
+   + Instead of modifying the source schema, modify scripts that AWS SCT generates before applying the scripts on the target Aurora MySQL database\.
 
-      1. Choose **Main View** from the menu\. Open the context \(right\-click\) menu for the target Aurora MySQL schema, and choose **Apply to database** to apply the schema changes to the Aurora MySQL database, and confirm that you want to apply the schema changes\.
+     1. Choose **Main View** from the menu\. Open the context \(right\-click\) menu for the target Aurora MySQL schema name, and choose **Save as SQL**\. Next, choose a name and destination for the script\.
 
-   1. Instead of modifying the source schema, modify scripts that AWS SCT generates before applying the scripts on the target Aurora MySQL database\.
+     1. In the script, modify the objects to correct conversion issues\.
 
-      1. Choose **Main View** from the menu\. Open the context \(right\-click\) menu for the target Aurora MySQL schema name, and choose **Save as SQL**\. Next, choose a name and destination for the script\.
+        You can also exclude foreign key constraints, triggers, and secondary indexes from the script because they can cause problems during the migration\. After the migration is complete, you can create these objects on the Aurora MySQL database\.
 
-      1. In the script, modify the objects to correct conversion issues\.
-
-         You can also exclude foreign key constraints, triggers, and secondary indexes from the script because they can cause problems during the migration\. After the migration is complete, you can create these objects on the Aurora MySQL database\.
-
-      1. Run the script on the target Aurora MySQL database\.
+     1. Run the script on the target Aurora MySQL database\.
 
    For more information, see [Converting Database Schema to Amazon RDS](https://docs.aws.amazon.com/SchemaConversionTool/latest/userguide/CHAP_Converting.html)\.
 

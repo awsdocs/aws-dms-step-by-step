@@ -36,7 +36,7 @@ If the ETL or Report code is available in scripts or hosted in third\-party tool
 
 1. Write YAML configuration files for AWS SCT CLI to convert external files\.
 
-1. Run AWS SCT CLI on the external scripts using the YAML configuration files\.For more information, see [AWS Schema Conversion Tool CLI and Interactive Mode Reference](https://s3.amazonaws.com/publicsctdownload/AWS+SCT+CLI+Reference.pdf)\.
+1. Run AWS SCT CLI on the external scripts using the YAML configuration files\. For more information, see [AWS Schema Conversion Tool CLI and Interactive Mode Reference](https://s3.amazonaws.com/publicsctdownload/AWS+SCT+CLI+Reference.pdf)\.
 
 1. Fix any warnings and errors in the ETL or report code conversion\.
 

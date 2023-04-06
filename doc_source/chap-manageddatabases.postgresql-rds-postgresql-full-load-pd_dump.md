@@ -28,7 +28,7 @@ At a high level, you can use the following steps to migrate the [https://github.
 You can use the following command to create dump files for your source database\.
 
 ```
-pg_dump -h <hostname> -p 5432 -U <username> -Fc -b -v -f <dumpfilelocation.sql> -j 2 -d  <database_name>
+pg_dump -h <hostname> -p 5432 -U <username> -Fc -b -v -f <dumpfilelocation.sql> -d  <database_name>
 
 -h is the name of source server where you would like to migrate your database.
 -U is the name of the user present on the source server
@@ -36,7 +36,6 @@ pg_dump -h <hostname> -p 5432 -U <username> -Fc -b -v -f <dumpfilelocation.sql> 
 -b: Include large objects in the dump.
 -v: Specifies verbose mode
 -f: Dump file path
--j: Number of jobs to dump the data in parallel
 ```
 
 ## Create a Database on Your Target Instance<a name="chap-manageddatabases.postgresql-rds-postgresql-full-load-pd_dump-create"></a>

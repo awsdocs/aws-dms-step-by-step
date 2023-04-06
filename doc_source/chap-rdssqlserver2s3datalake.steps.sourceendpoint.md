@@ -18,4 +18,4 @@ To create a source endpoint, do the following:
 1. Choose **Create endpoint**\.
 
 **Note**  
-To migrate a Microsoft SQL Server Always On database, you need to use different configurations\. For more information, see [Migrating a SQL Server Always On Database to AWS](chap-manageddatabases.sqlserveralwayson.md)\.
+To migrate a Microsoft SQL Server Always On database, you need to use different configurations\. For more information, see [Migrating a SQL Server Always On Database to Amazon Web Services](chap-manageddatabases.sqlserveralwayson.md)\.

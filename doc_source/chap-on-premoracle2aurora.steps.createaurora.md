@@ -13,7 +13,7 @@ To specify a target database endpoint, do the following:
 
 1. Define additional specific settings for your endpoints using wizard or editor in **Endpoint settings**\.
 
-1. Choose the encryption key to use to encrypt replication storage and connection information in **KMS key**\. If you choose **\(Default\) aws/dms**, the default AWS Key Management Service \(AWS KMS\) key associated with your account and region is used\.
+1. Choose the encryption key to use to encrypt replication storage and connection information in **KMS key**\. If you choose **\(Default\) aws/dms**, the default AWS Key Management Service \(AWS KMS\) key associated with your user and region is used\.
 
 1. Add tags to organize your DMS resources in **Tags**\. You can use tags to manage your IAM roles and policies, and track your DMS costs\.
 

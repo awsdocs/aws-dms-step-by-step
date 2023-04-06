@@ -21,14 +21,8 @@ If you’ve used AWS DMS before or you prefer clicking a mouse to reading, you p
 
 ## Costs<a name="chap-on-premoracle2aurora.costs"></a>
 
-Because AWS DMS isn’t incorporated into the calculator yet, see the following table for a pricing estimate\.
+For this walkthrough, you provision AWS Database Migration Service \(AWS DMS\) resources\. You can use a t2\.large replication instance with 50 GB of storage to keep your replication logs\. Also, you provision an Amazon Aurora MySQL DB instance\. You can use a db\.r3\.large Aurora MySQL DB instance with 10 GB of storage\. Provisioning these resources will incur charges to your user by the hour\.
 
-In addition to the setup on your own PC, you must create several AWS components to complete the migration process\. The AWS components include:
+To estimate what it will cost to run this walkthrough on AWS, you can use the AWS Pricing Calculator\. For more information, see [https://calculator\.aws/](https://calculator.aws/) and [Database Migration Service pricing](https://aws.amazon.com/dms/pricing/)\.
 
-
-|  AWS service  | Type | Description | 
-| --- | --- | --- | 
-|  Amazon Aurora MySQL DB instance  |  db\.r3\.large  |  Single AZ, 10 GB storage, 1 million I/O  | 
-|   AWS DMS replication instance  |  T2\.large  |  50 GB of storage for keeping replication logs included  | 
-|   AWS DMS data transfer  |  Free, based on the amount of data transferred for the sample database\.  |  | 
-|  Data transfer out  |  First 1 GB per month free  |  | 
+To avoid additional charges, delete all resources after you complete the walkthrough\.

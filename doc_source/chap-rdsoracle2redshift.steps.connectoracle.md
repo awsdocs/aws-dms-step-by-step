@@ -10,9 +10,9 @@ After the AWS CloudFormation stack has been created, test the connection to the 
 **Note**  
 If your connection is unsuccessful, ensure that the IP address you assigned when creating the AWS CloudFormation template is the one you are attempting to connect from\. This issue is the most common one when trying to connect to an instance\.
 
-1. Create the **SH** schema you will use for migration using a custom SQL script \(Oraclesalesstarschema\.sql\)\. To obtain this script, do the following:
+1. Create the **SH** schema you will use for migration using a custom `Oraclesalesstarschema.sql` SQL script\. To obtain this script, do the following:
    + Download the following archive to your computer: ` [http://docs\.aws\.amazon\.com/dms/latest/sbs/samples/dms\-sbs\-RDSOracle2Redshift\.zip](http://docs.aws.amazon.com/dms/latest/sbs/samples/dms-sbs-RDSOracle2Redshift.zip) ` 
-   + Extract the SQL script\(`Oraclesalesstarschema.sql`\) from the archive\.
+   + Extract the `Oraclesalesstarschema.sql` SQL script from the archive\.
    + Copy and paste the `Oraclesalesstarschema.sql` file into your current directory\.
 
      1. Open the SQL script in a text editor\. Copy the entire script\.

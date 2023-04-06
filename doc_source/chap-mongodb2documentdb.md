@@ -9,6 +9,8 @@ Use the following tutorial to guide you through the process of migrating from Mo
 **Important**  
 Before you begin, make sure to launch an Amazon DocumentDB cluster in your default virtual private cloud \(VPC\)\. For more information, see [Getting started](https://docs.aws.amazon.com/documentdb/latest/developerguide/getting-started.html) in the *Amazon DocumentDB Developer Guide\.* 
 
+To estimate what it will cost to run this walkthrough on AWS, you can use the AWS Pricing Calculator\. For more information, see [https://calculator\.aws/](https://calculator.aws/)\.
+
 **Topics**
 + [Launch an Amazon EC2 instance](chap-mongodb2documentdb.01.md)
 + [Install and configure MongoDB community edition](chap-mongodb2documentdb.02.md)
